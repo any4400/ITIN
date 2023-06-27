@@ -1,0 +1,127 @@
+.equipment-add {
+  padding-bottom: 120px;
+  min-height: calc(100vh - 121px);
+  background: radial-gradient(700px at 90% 90%, #F0FAFF 60%, #FFF);
+}
+
+.equipment-add h1 {
+  margin-bottom: 8px;
+}
+
+.equipment-add__description {
+  margin-bottom: 40px;
+}
+
+.equipment-add form[data-page="info"] {
+  padding-top: 21px;
+  max-width: 552px;
+}
+
+.equipment-add__input-group {
+  margin-bottom: 32px;
+  gap: 24px;
+}
+.equipment-add__input-group textarea {
+  min-height: 167px;
+}
+
+.equipment-add__button-group {
+  gap: 16px;
+}
+
+.equipment-add form button {
+  width: 200px;
+  height: 48px;
+}
+.select_placeholder {
+  position: absolute;
+  padding: 4px 10px;
+  top: 8px;
+  left: 8px;
+  z-index: -1;
+  background-color: var(--white);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 19px;
+  color: var(--light-black);
+  transition: top 0.1s;
+}
+.select_placeholder.visible {
+  top: -14px;
+  z-index: 1;
+} 
+
+/* МЕДИА-ЗАПРОСЫ */
+
+@media (max-width: 1199px) {
+  .equipment-add {
+    padding-top: 128px;
+    padding-bottom: 90px;
+    min-height: calc(100vh);
+    text-align: center;
+    background: radial-gradient(500px at 90% 90%, #F0FAFF 60%, #FFF);
+  }
+
+  .container {
+    margin: 0 auto;
+  }
+ 
+  .container-small {
+    max-width: 528px;
+  }
+  .equipment-add__description {
+    margin-bottom: 48px;
+  }
+
+  .equipment-add form[data-page="info"] {
+    max-width: 528px;
+    margin: 0 auto;
+  }
+
+  .equipment-add__input-group {
+    margin-bottom: 40px;
+  }
+  
+
+  .equipment-add input {
+    padding: 13px 16px;
+    height: 48px;
+  }
+
+  .equipment-add__button-group {
+    gap: 24px;
+  }
+
+  .equipment-add form button {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .container-small {
+    max-width: none;
+  }
+
+  .equipment-add {
+    padding-top: 112px;
+    padding-bottom: 48px;
+    background: none;
+  }
+
+  .equipment-add__company-description {
+    height: 230px;
+  }
+
+  .equipment-add form[data-page="info"] {
+    max-width: none;
+  }
+
+  .equipment-add__button-group {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .equipment-add form button {
+    width: 100%;
+  }
+}

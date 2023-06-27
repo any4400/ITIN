@@ -1,0 +1,195 @@
+/* ТАБЛИЦА */
+
+.companies {
+  width: 100%;
+  padding-bottom: 48px;
+}
+
+.companies h1 {
+  margin-bottom: 8px;
+}
+
+.companies__description {
+  margin-bottom: 24px;
+}
+
+.companies__top-panel {
+  margin-bottom: 24px;
+  height: 48px;
+  gap: 16px;
+}
+
+.companies__search-wrapper {
+  position: relative;
+  width: 100%;
+  height: 48px;
+}
+
+.companies__top-panel input[type="search"] {
+  padding: 12px 48px;
+  background-image: url("../img/search.svg");
+  background-repeat: no-repeat;
+  background-position: 19px center;
+  background-size: 18px;
+  border: 1px solid var(--light-gray);
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.companies__search-clear-btn {
+  display: none;
+  position: absolute;
+  padding: 0;
+  min-width: auto !important;
+  top: 0;
+  right: 22px;
+  width: 12px;
+  height: 12px;
+}
+
+.btn-active {
+  display: block;
+}
+
+.companies__top-panel select {
+  width: 368px;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.companies__top-panel button {
+  min-width: 368px;
+  height: 48px;
+}
+
+.companies__td-paid a::before,
+.companies__td-processing a::before,
+.companies__td-not-paid a::before {
+  content: " ";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.companies__td-paid a::before {
+  background-color: var(--green-status);
+}
+
+.companies__td-processing a::before {
+  background-color: var(--yellow-status);
+}
+
+.companies__td-not-paid a::before {
+  background-color: var(--red);
+}
+
+.companies__bottom-panel {
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.companies__bottom-panel select {
+  padding: 6px 8px;
+  width: 80px;
+  height: 32px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 19px;
+}
+
+.companies__pagination-buttons-group {
+  gap: 8px;
+}
+
+.companies__page-button {
+  padding: 4px 6px;
+}
+
+.companies__page {
+  padding: 6px 11px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--light-black);
+}
+
+.companies__page svg {
+  width: 6px;
+  height: 10px;
+}
+
+.current {
+  background-color: var(--ghost-gray);
+}
+
+.companies__show {
+  gap: 16px;
+}
+
+.companies__selected {
+  gap: 24px;
+}
+
+.companies__highlited {
+  font-weight: 600;
+  color: var(--blue);
+}
+
+.companies__reset {
+  font-weight: 400;
+  color: var(--red);
+}
+
+@media (max-width: 1919px) {
+  .companies {
+    padding-bottom: 40px;
+  }
+
+  .companies__top-panel select {
+    width: 200px;
+  }
+
+  .companies__top-panel button {
+    min-width: 272px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .companies {
+    padding-top: 112px;
+  }
+
+  .companies__top-panel {
+    gap: 24px;
+  }
+
+  .companies__table-container {
+    min-height: calc(11 * 56px);
+  }
+
+  .companies tr {
+    max-height: 56px;
+  }
+
+  .companies__table-container::-webkit-scrollbar {
+    border-left: 36px var(--white) solid;
+    background-color: #EFF0F3;
+  }
+  
+  .companies__table-container::-webkit-scrollbar-track {
+    margin-left: 36px;
+  }
+}
+
+@media (max-width: 767px) {
+  .companies__table-container::-webkit-scrollbar {
+    border-left: 16px var(--white) solid;
+    background-color: #EFF0F3;
+  }
+  
+  .companies__table-container::-webkit-scrollbar-track {
+    margin-left: 16px;
+  }
+}

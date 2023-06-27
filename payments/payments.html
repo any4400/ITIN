@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/index.css">
+  <link rel="stylesheet" href="styles/payments-table.css">
+  <link rel="stylesheet" href="styles/control-elements-adaptive.css">
+  <title>IT-сервис</title>
+  <script src="../scripts/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+<div class="overlay overlay-js"></div>
+
+   <!-- "Начало модального окна личного кабинета " -->
+
+  <div class="personal-menu modal-menu">
+    <div class="personal-menu-header modal-menu-header">
+      Иванов М. А.
+    </div>
+    <div class="personal-menu-item modal-menu-item personal-menu-close-js">
+      <a href="javascript:void(0)">Личный кабинет</a>
+    </div>
+    <div class="personal-menu-item modal-menu-item personal-menu-close-js">
+      <a href="javascript:void(0)">Безопасность</a>
+    </div>
+    <div class="personal-menu-item modal-menu-item personal-menu-close-js">
+      <a href="javascript:void(0)">Выйти</a>
+    </div>
+  </div>
+
+  <!-- "Конец модального окна личного кабинета " -->
+
+      <!-- "Начало модального окна количества строк на странице " -->
+
+
+  <div class="row-count-menu modal-menu">
+    <div class="row-count-menu-header modal-menu-header">
+      Отображать по:
+    </div>
+    <div class="row-count-menu-item modal-menu-item row-count-menu-close-js">
+      <a href="javascript:void(0)">10</a>
+    </div>
+    <div class="row-count-menu-item modal-menu-item row-count-menu-close-js">
+      <a href="javascript:void(0)">20</a>
+    </div>
+    <div class="row-count-menu-item modal-menu-item row-count-menu-close-js">
+      <a href="javascript:void(0)">40</a>
+    </div>
+  </div>
+
+  <!-- "Конец модального окна количества строк на странице " -->
+
+  <!-- "Начало модального окна фильтра компаний " -->
+
+
+      <div class="modal-menu company-menu">
+        <div class="company-menu-top">
+          <div class="company-menu-header modal-menu-header">
+            Отображаемые компании:
+          </div>
+          <div class=" search-wrapper-js">
+            <div class="payments__search-wrapper">
+              <input type="search" placeholder="Поиск по названию, ИНН, КПП... " class="search--js" value="">
+              <button class="payments__search-clear-btn search-clear-btn--js">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8.59093 7L13.0441 2.54687C13.2554 2.3359 13.3743 2.04961 13.3745 1.75099C13.3748 1.45237 13.2564 1.16587 13.0455 0.95453C12.8345 0.743185 12.5482 0.624305 12.2496 0.624041C11.951 0.623778 11.6645 0.742152 11.4531 0.953123L7 5.40625L2.54687 0.953123C2.33553 0.741779 2.04888 0.623047 1.75 0.623047C1.45111 0.623047 1.16447 0.741779 0.953123 0.953123C0.741779 1.16447 0.623047 1.45111 0.623047 1.75C0.623047 2.04888 0.741779 2.33553 0.953123 2.54687L5.40625 7L0.953123 11.4531C0.741779 11.6645 0.623047 11.9511 0.623047 12.25C0.623047 12.5489 0.741779 12.8355 0.953123 13.0469C1.16447 13.2582 1.45111 13.3769 1.75 13.3769C2.04888 13.3769 2.33553 13.2582 2.54687 13.0469L7 8.59375L11.4531 13.0469C11.6645 13.2582 11.9511 13.3769 12.25 13.3769C12.5489 13.3769 12.8355 13.2582 13.0469 13.0469C13.2582 12.8355 13.3769 12.5489 13.3769 12.25C13.3769 11.9511 13.2582 11.6645 13.0469 11.4531L8.59093 7Z"
+                    fill="#C6CBD6" />
+                </svg>
+              </button>
+            </div>
+            <div class="company-menu-wrapper">
+              <div class="company-menu-item modal-menu-item checkbox_wrapper">
+                <label class="custom-checkbox company-menu-label-js">
+                  <input type="checkbox"  name="" id="">
+                  <span class="checkbox_content">ООО Литтера</span>
+                </label>
+              </div>
+              <div class="company-menu-item modal-menu-item checkbox_wrapper">
+                <label class="custom-checkbox company-menu-label-js">
+                  <input type="checkbox"  name="" id="">
+                  <span class="checkbox_content">ИП ГрандГарант</span>
+                </label>
+              </div>
+              <div class="company-menu-item modal-menu-item checkbox_wrapper">
+                <label class="custom-checkbox company-menu-label-js">
+                  <input type="checkbox"  name="" id="">
+                  <span class="checkbox_content">ООО Глагол Нижний Новгород</span>
+                </label>
+              </div>
+              <div class="company-menu-item modal-menu-item checkbox_wrapper">
+                <label class="custom-checkbox company-menu-label-js">
+                  <input type="checkbox"  name="" id="">
+                  <span class="checkbox_content">ИП Инкликит</span>
+                </label>
+              </div>
+              <div class="company-menu-item modal-menu-item checkbox_wrapper">
+                <label class="custom-checkbox company-menu-label-js">
+                  <input type="checkbox"  name="" id="">
+                  <span class="checkbox_content">ИП МувБиз Трансфер</span>
+                </label>
+              </div>
+              <div class="company-menu-item modal-menu-item checkbox_wrapper">
+                <label class="custom-checkbox company-menu-label-js">
+                  <input type="checkbox"  name="" id="">
+                  <span class="checkbox_content">Торговая сеть Развитие Нижний Новгород</span>
+                </label>
+              </div>
+              <div class="company-menu-item modal-menu-item checkbox_wrapper">
+                <label class="custom-checkbox company-menu-label-js">
+                  <input type="checkbox"  name="" id="">
+                  <span class="checkbox_content">Торговая сеть Восход</span>
+                </label>
+              </div>
+              <div class="company-menu-item modal-menu-item checkbox_wrapper">
+                <label class="custom-checkbox company-menu-label-js">
+                  <input type="checkbox"  name="" id="">
+                  <span class="checkbox_content">ООО Глагол Нижний Новгород Советский район, ул. Чукотская</span>
+                </label>
+              </div>
+              <div class="company-menu-item modal-menu-item checkbox_wrapper">
+                <label class="custom-checkbox company-menu-label-js">
+                  <input type="checkbox"  name="" id="">
+                  <span class="checkbox_content">ИП Инкликит</span>
+                </label>
+              </div>
+              <div class="company-menu-item modal-menu-item checkbox_wrapper">
+                <label class="custom-checkbox company-menu-label-js">
+                  <input type="checkbox"  name="" id="">
+                  <span class="checkbox_content">ИП Инкликит</span>
+                </label>
+              </div>
+              <div class="company-menu-item modal-menu-item checkbox_wrapper">
+                <label class="custom-checkbox company-menu-label-js">
+                  <input type="checkbox"  name="" id="">
+                  <span class="checkbox_content">ИП Инкликит</span>
+                </label>
+              </div>
+              <div class="company-menu-item modal-menu-item checkbox_wrapper">
+                <label class="custom-checkbox company-menu-label-js">
+                  <input type="checkbox"  name="" id="">
+                  <span class="checkbox_content">ИП Инкликит</span>
+                </label>
+              </div>
+            </div>
+          </div>
+           <div class="company-btn-wrapper modal-btn-wrapper">
+            <button class="company-btn-blue modal-btn-blue btn-blue company-menu-close-ok-js">Применить</button>
+            <!-- <button class="company-btn-white modal-btn-white btn-white company-menu-close-esc-js">Отмена</button> -->
+           </div>
+          </div>
+        </div>
+      
+        <!-- "Конец модального окна фильтра компаний" -->
+
+      
+      <!-- "Начало модального окна фильтра тарифа " -->
+
+
+      <div class="modal-menu tariff-menu">
+        <div class="tariff-menu-top">
+          <div class="tariff-menu-header modal-menu-header">
+            Отображаемые тарифы:
+          </div>
+          <div class="tariff-menu-item modal-menu-item ">
+            <label class="custom-checkbox tariff-menu-label-js">
+              <input type="checkbox"  name="" id="">
+              <span class="checkbox_content">Бизнес</span>
+            </label>
+          </div>
+          <div class="tariff-menu-item modal-menu-item ">
+            <label class="custom-checkbox tariff-menu-label-js">
+              <input type="checkbox"  name="" id="">
+              <span class="checkbox_content">Стандарт</span>
+            </label>
+          </div>
+        </div>
+         <div class="tariff-btn-wrapper modal-btn-wrapper">
+          <button class="tariff-btn-blue modal-btn-blue btn-blue tariff-menu-close-ok-js">Применить</button>
+          <!-- <button class="tariff-btn-white modal-btn-white btn-white tariff-menu-close-esc-js">Отмена</button> -->
+         </div>
+      </div>
+    
+      <!-- "Конец модального окна фильтра тарифа " -->
+      <!-- "Начало модального окна фильтра статуса " -->
+
+      <div class="modal-menu  status-menu">
+          <div class="status-menu-top">
+            <div class="status-menu-header modal-menu-header">
+              Отображаемые статусы:
+            </div>
+            <div class="status-menu-item modal-menu-item ">
+              <label class="custom-checkbox status-menu-label-js">
+                <input type="checkbox"  name="" id="">
+                <span class="checkbox_content">Оплачен</span>
+              </label>
+            </div>
+            <div class="status-menu-item modal-menu-item ">
+              <label class="custom-checkbox status-menu-label-js">
+                <input type="checkbox"  name="" id="">
+                <span class="checkbox_content">В обработке</span>
+              </label>
+              </div>
+            <div class="status-menu-item modal-menu-item ">
+              <label class="custom-checkbox status-menu-label-js">
+                <input type="checkbox"  name="" id="">
+                <span class="checkbox_content">Не оплачен</span>
+              </label>
+              </div>
+          </div>
+          <div class="status-btn-wrapper modal-btn-wrapper">
+          <button class="status-btn-blue modal-btn-blue btn-blue status-menu-close-ok-js">Применить</button>
+          <!-- <button class="status-btn-white modal-btn-white btn-white status-menu-close-esc-js">Отмена</button> -->
+          </div>
+      </div>
+    
+      <!-- "Конец модального окна фильтра статуса " -->
+
+
+  <!-- "Начало бокового меню" -->
+  <aside class="compaines-menu aside-menu">
+    <a href="/" class="companies-menu-logo aside-menu-logo">
+      <img src="../img/logo.svg" alt="logo">
+    </a>
+    <button class="aside-menu-btn aside-menu-btn-js"></button>
+    <nav class="compaines-nav aside-nav">
+      <ul>
+        <li>
+          <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+            <div class="companies-menu-link aside-menu-link">
+              <div>
+                <img class="companies-menu-icon aside-menu-icon" src="../img/business.svg" alt="business-icon">
+              </div>
+              <div class="companies-menu-text aside-menu-text">Компании</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+            <div class="companies-menu-link aside-menu-link">
+              <div>
+                <img class="companies-menu-icon aside-menu-icon" src="../img/wallet.svg" alt="wallet-icon">
+              </div>
+              <div class="companies-menu-text aside-menu-text">Оплаты</div>
+            </div>
+          </a>
+        </li>
+
+            <li class="li-accordion">
+                <a href="javascript:void(0)" class="companies-menu-item aside-menu-item accordion accordion-js" data-state="">
+                    <div class="companies-menu-link aside-menu-link">
+                      <div>
+                        <img class="companies-menu-icon aside-menu-icon" src="../img/receipt.svg" alt="receipt-icon">
+                      </div>
+                      <div class="companies-menu-text aside-menu-text">Мои списки</div>
+                      <div class="accordion-arrow">
+                        <img src="../img/arrow.svg" alt="arrow-down">
+                      </div>
+                    </div>                 
+                </a>
+                <div class="panel">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                                <div class="companies-menu-sublink aside-menu-sublink">
+                                    <div class="companies-menu-subtext aside-menu-subtext">Оборудование</div>
+                                </div>
+                            </a>
+                         </li>
+                        <li>
+                            <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                                <div class="companies-menu-sublink aside-menu-sublink">
+                                    <div class="companies-menu-subtext aside-menu-subtext">ПО</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                                <div class="companies-menu-sublink aside-menu-sublink">
+                                    <div class="companies-menu-subtext aside-menu-subtext">Услуги</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                                <div class="companies-menu-sublink aside-menu-sublink">
+                                    <div class="companies-menu-subtext aside-menu-subtext">Пользователи</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                                <div class="companies-menu-sublink aside-menu-sublink">
+                                    <div class="companies-menu-subtext aside-menu-subtext">Поставщики</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="aside-menu-small small aside-menu-small-js">
+                  <a href="javacript:void(0)" class="header__menu-link">Оборудование</a>
+                  <a href="javacript:void(0)" class="header__menu-link">ПО</a>
+                  <a href="javacript:void(0)" class="header__menu-link">Услуги</a>
+                  <a href="javacript:void(0)" class="header__menu-link">Пользователи</a>
+                  <a href="javacript:void(0)" class="header__menu-link">Поставщики</a>
+                </div>
+            </li>
+               
+            
+            
+            <li class="li-accordion">
+                <a href="javascript:void(0)" class="companies-menu-item aside-menu-item accordion accordion-js" data-state="">
+                    <div class="companies-menu-link aside-menu-link">
+                      <div>
+                        <img class="companies-menu-icon aside-menu-icon" src="../img/raise.svg" alt="raise-icon">
+                      </div>
+                      <div class="companies-menu-text aside-menu-text">Бюджет</div>
+                      <div class="accordion-arrow">
+                        <img src="../img/arrow.svg" alt="arrow-down">
+                      </div>
+                    </div>
+                </a>
+                <div class="panel">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                                <div class="companies-menu-sublink aside-menu-sublink">
+                                    <div class="companies-menu-subtext aside-menu-subtext">Сводная</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                                <div class="companies-menu-sublink aside-menu-sublink">
+                                    <div class="companies-menu-subtext aside-menu-subtext">Планирование</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="aside-menu-small small aside-menu-small-js">
+                  <a href="javacript:void(0)" class="header__menu-link">Сводная</a>
+                  <a href="javacript:void(0)" class="header__menu-link">Планирование</a>
+                </div>
+            </li>
+
+           
+
+
+        <li>
+          <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+            <div class="companies-menu-link aside-menu-link">
+              <div>
+                <img class="companies-menu-icon aside-menu-icon" src="../img/gear.svg" alt="gear-icon">
+              </div>
+              <div class="companies-menu-text aside-menu-text">Настройки</div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  </aside>
+  <!-- "Конец бокового меню" -->
+
+
+  <header class="header-white header-blue">
+    <div class="header-blue-wrapper flex ai-center jc-sb">
+      <div class="flex ai-center">
+        <div class="menu__btn" for="menu__toggle">
+          <span></span>
+        </div>
+        <a href="javacript:void(0)" class="header-blue-logo">
+          <img src="../img/logo.svg" alt="logo">
+        </a>
+      </div>
+
+      <div class="flex ai-center jc-sb personal-btn personal-btn-js header__profile--js">
+        <button class="header-blue__profile header__profile--js" aria-label="Профиль пользователя"></button>
+        <div class="user_name">Иванов М. А.</div>
+      </div>
+      <div class="header__menu-small small header__menu-small--js">
+        <a href="javacript:void(0)" class="header__menu-link">Личный кабинет</a>
+        <a href="javacript:void(0)" class="header__menu-link">Сменить пароль</a>
+        <a href="javacript:void(0)" class="header__menu-link">Выйти</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- НАЧАЛО СЕКЦИИ ВАШИ ОПЛАТЫ -->
+
+  <section class="payments">
+    <div class="container container-small">
+      <h1>Ваши оплаты</h1>
+      <p class="payments__description">Здесь вы можете скачать счёт на оплату или чек за совершенную операцию</p>
+
+      <div class="payments__top-panel flex">
+
+        <!-- Начало селекта "Все тарифы" с чекбоксами внутри -->
+        
+          <div class="__select __select-search __select-checkbox-js  __select-checkbox-search-js" data-state="">
+            <div class="__select__title __select__title-search" data-default="Все компании">
+              <span class="__select__title__span">Все компании</span>
+            </div>
+            <div class="__select__content __select__content-search search-wrapper-js">
+
+              <div class="payments__search-wrapper ">
+                <input type="search" placeholder="Поиск названию, ИНН, КПП... " class="search--js" value="">
+                <button class="payments__search-clear-btn search-clear-btn--js">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M8.59093 7L13.0441 2.54687C13.2554 2.3359 13.3743 2.04961 13.3745 1.75099C13.3748 1.45237 13.2564 1.16587 13.0455 0.95453C12.8345 0.743185 12.5482 0.624305 12.2496 0.624041C11.951 0.623778 11.6645 0.742152 11.4531 0.953123L7 5.40625L2.54687 0.953123C2.33553 0.741779 2.04888 0.623047 1.75 0.623047C1.45111 0.623047 1.16447 0.741779 0.953123 0.953123C0.741779 1.16447 0.623047 1.45111 0.623047 1.75C0.623047 2.04888 0.741779 2.33553 0.953123 2.54687L5.40625 7L0.953123 11.4531C0.741779 11.6645 0.623047 11.9511 0.623047 12.25C0.623047 12.5489 0.741779 12.8355 0.953123 13.0469C1.16447 13.2582 1.45111 13.3769 1.75 13.3769C2.04888 13.3769 2.33553 13.2582 2.54687 13.0469L7 8.59375L11.4531 13.0469C11.6645 13.2582 11.9511 13.3769 12.25 13.3769C12.5489 13.3769 12.8355 13.2582 13.0469 13.0469C13.2582 12.8355 13.3769 12.5489 13.3769 12.25C13.3769 11.9511 13.2582 11.6645 13.0469 11.4531L8.59093 7Z"
+                      fill="#C6CBD6" />
+                  </svg>
+                </button>
+              </div>
+
+               <div class="search-checkbox-wrapper">
+                <div class="checkbox_wrapper">
+                  <label class="custom-checkbox __select__label __select__label-search">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkbox_content">ООО Литтера</span>
+                  </label>
+                 </div>
+  
+                 <div class="checkbox_wrapper">
+                  <label class="custom-checkbox __select__label __select__label-search">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkbox_content">ИП ГрандГарант</span>
+                  </label>
+                 </div>
+  
+                 <div class="checkbox_wrapper">
+                  <label class="custom-checkbox __select__label __select__label-search">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkbox_content">ООО Глагол Нижний Новгород Советский район ул. Чукотская</span>
+                  </label>
+                 </div>
+  
+                 <div class="checkbox_wrapper">
+                  <label class="custom-checkbox __select__label __select__label-search">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkbox_content">ИП Инкликит</span>
+                  </label>
+                 </div>
+  
+                 <div class="checkbox_wrapper">
+                  <label class="custom-checkbox __select__label __select__label-search">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkbox_content">ИП МувБиз Трансфер</span>
+                  </label>
+                 </div>
+  
+                 <div class="checkbox_wrapper">
+                  <label class="custom-checkbox __select__label __select__label-search">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkbox_content">Торговая сеть Юность</span>
+                  </label>
+                 </div>
+  
+                 <div class="checkbox_wrapper">
+                  <label class="custom-checkbox __select__label __select__label-search">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkbox_content">Торговая сеть Развитие Нижний Новгород</span>
+                  </label>
+                 </div>
+  
+                 <div class="checkbox_wrapper">
+                  <label class="custom-checkbox __select__label __select__label-search">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkbox_content">Торговая сеть Восход</span>
+                  </label>
+                 </div>
+  
+                 <div class="checkbox_wrapper">
+                  <label class="custom-checkbox __select__label __select__label-search">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkbox_content">ООО Глагол Нижний Новгород Советский район ул. Чукотская</span>
+                  </label>
+                 </div>
+  
+                 <div class="checkbox_wrapper">
+                  <label class="custom-checkbox __select__label __select__label-search">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkbox_content">ИП Инкликит</span>
+                  </label>
+                 </div>
+  
+                 <div class="checkbox_wrapper">
+                  <label class="custom-checkbox __select__label __select__label-search">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkbox_content">ИП Инкликит</span>
+                  </label>
+                 </div>
+  
+                 <div class="checkbox_wrapper">
+                  <label class="custom-checkbox __select__label __select__label-search">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkbox_content">ИП Инкликит</span>
+                  </label>
+                 </div>
+  
+                 <div class="checkbox_wrapper">
+                  <label class="custom-checkbox __select__label __select__label-search">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkbox_content">ИП Инкликит</span>
+                  </label>
+                 </div>
+  
+                 <div class="checkbox_wrapper">
+                  <label class="custom-checkbox __select__label __select__label-search">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkbox_content">ИП Инкликит</span>
+                  </label>
+                 </div>
+  
+                 <div class="checkbox_wrapper">
+                  <label class="custom-checkbox __select__label __select__label-search">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkbox_content">ИП Инкликит</span>
+                  </label>
+                 </div>
+              </div>
+            </div>
+               </div>
+        
+<!-- Конец селекта "Все тарифы" с чекбоксами внутри -->
+<!-- Начало селекта "Все тарифы" с чекбоксами внутри -->
+        
+          <div class="__select __select-big __select-checkbox-js __select-js __select-checkbox-tariff-js" data-state="">
+            <div class="__select__title __select__title-big" data-default="Все тарифы">
+              <span class="__select__title__span">Все тарифы</span>
+            </div>
+            <div class="__select__content __select__content-big">
+              
+
+               <div class="checkbox_wrapper">
+                <label class="custom-checkbox __select__label __select__label-big">
+                  <input type="checkbox" name="" id="">
+                  <span class="checkbox_content">Бизнес</span>
+                </label>
+               </div>
+
+               <div class="checkbox_wrapper">
+                <label class="custom-checkbox __select__label __select__label-big">
+                  <input type="checkbox" name="" id="">
+                  <span class="checkbox_content">Стандарт</span>
+                </label>
+               </div>
+            </div>
+          </div>
+        
+<!-- Конец селекта "Все тарифы" с чекбоксами внутри -->
+<!-- Начало селекта "Все статусы" с чекбоксами внутри -->
+
+          <div class="__select __select-big __select-checkbox-js __select-js  __select-checkbox-status-js" data-state="">
+            <div class="__select__title __select__title-big" data-default="Все статусы">
+              <span class="__select__title__span">Все статусы</span>
+            </div>
+            <div class="__select__content __select__content-big">
+              
+
+              <div class="checkbox_wrapper">
+                <label class="custom-checkbox __select__label __select__label-big">
+                  <input type="checkbox" name="" id="">
+                  <span class="checkbox_content">Оплачен</span>
+                </label>
+              </div>
+
+              <div class="checkbox_wrapper">
+                <label class="custom-checkbox __select__label __select__label-big">
+                  <input type="checkbox" name="" id="">
+                  <span class="checkbox_content">В обработке</span>
+                </label>
+
+                <div class="checkbox_wrapper">
+                  <label class="custom-checkbox __select__label __select__label-big">
+                    <input type="checkbox" name="" id="">
+                    <span class="checkbox_content">Не оплачен</span>
+                  </label>
+              </div>
+            </div>
+            </div>
+          </div>
+
+<!-- Конец селекта "Все статусы" с чекбоксами внутри -->
+
+  
+      </div>
+    </div>
+  </div>
+
+    <!-- НАЧАЛО ТАБЛИЦЫ -->
+
+    <div class="payments__table-wrapper container-small container-small_table">
+      <div class="payments__table-container">
+        <!-- НАДПИСЬ ПРИ ОТСУТСТВИИ ЭЛЕМЕНТОВ -->
+        <div class="filter-not-found hidden">По такому фильтру совпадений не найдено...</div>
+
+        <table class="small" cellpadding="0" cellspacing="0">
+          <thead>
+            <tr>
+              <th></th>
+              <th class="payments__checkbox-field">
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="" id="">
+                  <span></span>
+                </label>
+              </th>
+              <th class="fix-150">Дата</th>
+              <th class="stretch-130">Юр. название</th>
+              <th class="fix-150">Тариф</th>
+              <th class="sort-up fix-150">Статус</th>
+              <th class="fix-150">Скачать счёт/чек</th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td></td>
+              <td class="payments__checkbox-field">
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="" id="">
+                  <span></span>
+                </label>
+              </td>
+              <td class="fix-150">16.03.23</td>
+              <td class="stretch-130">Торговая сеть Развитие Нижний Новгород</td>
+              <td class="fix-150">Бизнес</td>
+              <td class="payments__td-not-paid fix-150">Не оплачен</td>
+              <td class="fix-150">
+                <a href="javascript:void(0)" download>Скачать счёт</a>
+              </td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td class="payments__checkbox-field">
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="" id="">
+                  <span></span>
+                </label>
+              </td>
+              <td class="fix-150">16.03.23</td>
+              <td class="stretch-130">Торговая сеть Развитие Нижний Новгород</td>
+              <td class="fix-150">Бизнес</td>
+              <td class="payments__td-not-paid fix-150">Не оплачен</td>
+              <td class="fix-150">
+                <a href="javascript:void(0)" download>Скачать счёт</a>
+              </td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td class="payments__checkbox-field">
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="" id="">
+                  <span></span>
+                </label>
+              </td>
+              <td class="fix-150">16.03.23</td>
+              <td class="stretch-130">Торговая сеть Развитие Нижний Новгород</td>
+              <td class="fix-150">Бизнес</td>
+              <td class="payments__td-not-paid fix-150">Не оплачен</td>
+              <td class="fix-150">
+                <a href="javascript:void(0)" download>Скачать счёт</a>
+              </td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td class="payments__checkbox-field">
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="" id="">
+                  <span></span>
+                </label>
+              </td>
+              <td class="fix-150">16.03.23</td>
+              <td class="stretch-130">Торговая сеть Развитие Нижний Новгород</td>
+              <td class="fix-150">Бизнес</td>
+              <td class="payments__td-processing fix-150">В обработке</td>
+              <td class="fix-150">
+                <a href="javascript:void(0)" download>Скачать чек</a>
+              </td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td class="payments__checkbox-field">
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="" id="">
+                  <span></span>
+                </label>
+              </td>
+              <td class="fix-150">16.03.23</td>
+              <td class="stretch-130">Торговая сеть Развитие Нижний Новгород</td>
+              <td class="fix-150">Бизнес</td>
+              <td class="payments__td-paid fix-150">Оплачен</td>
+              <td class="fix-150">
+                <a href="javascript:void(0)" download>Скачать чек</a>
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- КОНЕЦ ТАБЛИЦЫ -->
+
+    <div class="container container-small">
+      <div class="payments__bottom-panel flex jc-sb ai-center small">
+        <p>Результатов: 1-20 из 290</p>
+
+        <div class="payments__pagination-buttons-group flex ai-center">
+          <a class="payments__page-button" href="javascript:void(0)">
+            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.25 0.5L0.75 5L5.25 9.5" stroke="#1B254A" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a class="payments__page current" href="javascript:void(0)">1</a>
+          <a class="payments__page" href="javascript:void(0)">2</a>
+          <a class="payments__page" href="javascript:void(0)">3</a>
+          <a class="payments__page-button" href="javascript:void(0)">
+            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.75 9.5L5.25 5L0.75 0.5" stroke="#1B254A" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="payments__show flex ai-center">
+          <p>Отобразить</p>
+          <!-- <select class = "select-small" name="" id="">
+            <option value="">10</option>
+            <option value="">20</option>
+            <option value="">40</option>
+          </select> -->
+          
+            <div class="__select __select-small __select-count-js" data-state="">
+              <div class="__select__title __select__title-small" data-default="Option 0">20</div>
+              <div class="__select__content __select__content-small">
+                <!-- <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect" checked />
+                <label for="singleSelect0" class="__select__label __select__label-small">Option 0</label> -->
+                <input id="singleSelect1" class="__select__input" type="radio" name="singleSelect" />
+                <label for="singleSelect1"
+                  class="__select__label __select__label-small select-rows-label-bottom--js">10</label>
+                <input id="singleSelect2" class="__select__input" type="radio" name="singleSelect" />
+                <label for="singleSelect2"
+                  class="__select__label __select__label-small select-rows-label-bottom--js">20</label>
+                <input id="singleSelect3" class="__select__input" type="radio" name="singleSelect" />
+                <label for="singleSelect3"
+                  class="__select__label __select__label-small select-rows-label-bottom--js">40</label>
+
+              </div>
+            </div>
+          
+        </div>
+      </div>
+
+      <div class="payments__selected flex small">
+        <div class="selected-text--js">Отмечено: 0</div>
+        <button class="payments__highlited">Показать только выделенные</button>
+        <button class="payments__reset reset--js">Сбросить всё</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- КОНЕЦ СЕКЦИИ ВАШИ ОПЛАТЫ -->
+
+ 
+
+
+
+  <script src="../scripts/main.js"></script>
+  <script src="./scripts/status-menu.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+.tariff-plans {
+  padding: 50px 0;
+}
+
+.tariff-plans h2 {
+  margin-bottom: 8px;
+}
+
+.tariff-plans .description {
+  margin-bottom: 32px;
+}
+
+.tariff-plans__list {
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+@media (max-width: 1199px) {
+  .tariff-plans__swiper {
+    max-width: 100vw;
+  }
+
+  .tariff-plans__list {
+    width: 100%;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .tariff-plans {
+    padding: 32px 0;
+  }
+
+  .tariff-plans .description {
+    margin-bottom: 54px;
+  }
+}

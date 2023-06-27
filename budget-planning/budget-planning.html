@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/index.css">
+  <link rel="stylesheet" href="../styles/control-elements-adaptive.css">
+  <link rel="stylesheet" href="../styles/filters-modal.css">
+  <link rel="stylesheet" href="styles/budget-planning.css">
+  <link rel="stylesheet" href="../styles/modal-loading-result.css">
+  <link rel="stylesheet" href="../styles/modal-delete-confirm.css">
+  <link rel="stylesheet" href="../styles/modal-comments.css">
+  <script src="../scripts/jquery-3.6.4.min.js"></script>
+  <title>IT-сервис</title>
+</head>
+
+<body>
+
+<div class="overlay overlay-js"></div>
+<div class="overlay overlay-desktop overlay-desktop-js"></div>
+<div class="overlay-datepicker overlay-datepicker--js"></div>
+
+  <!-- "Начало модального окна "Три точки" " -->
+ 
+  <div class="modal-menu">
+    <div class="modal-menu-header">
+      ООО Глагол Нижний Новгород Сормово
+    </div>
+    <div class="modal-menu-item menu-close-js">
+      <a href="javascript:void(0)">Редактировать</a>
+    </div>
+    <div class="modal-menu-item menu-close-js">
+      <a href="javascript:void(0)">Бюджет</a>
+    </div>
+    <div class="modal-menu-item menu-close-js">
+      <a href="javascript:void(0)">Оборудование</a>
+    </div>
+    <div class="modal-menu-item menu-close-js">
+      <a href="javascript:void(0)">ПО</a>
+    </div>
+    <div class="modal-menu-item menu-close-js">
+      <a href="javascript:void(0)">Услуги</a>
+    </div>
+    <div class="modal-menu-item menu-close-js">
+      <a href="javascript:void(0)">Пользователи</a>
+    </div>
+    <div class="modal-menu-item menu-close-js">
+      <a href="javascript:void(0)">Поставщики</a>
+    </div>
+  </div>
+
+  <!-- "Конец модального окна "Три точки"" -->
+
+   <!-- "Начало модального окна личного кабинета " -->
+
+   <div class="personal-menu modal-menu">
+     <div class="personal-menu-header modal-menu-header">
+      Иванов М. А.
+     </div>
+     <div class="personal-menu-item modal-menu-item personal-menu-close-js">
+       <a href="javascript:void(0)">Личный кабинет</a>
+     </div>
+     <div class="personal-menu-item modal-menu-item personal-menu-close-js">
+       <a href="javascript:void(0)">Безопасность</a>
+     </div>
+     <div class="personal-menu-item modal-menu-item personal-menu-close-js">
+       <a href="javascript:void(0)">Выйти</a>
+      </div>
+   </div>
+ 
+   <!-- "Конец модального окна личного кабинета " -->
+
+      <!-- "Начало модального окна количества строк на странице " -->
+
+      <div class="row-count-menu modal-menu">
+        <div class="row-count-menu-header modal-menu-header">
+          Отображать по:
+        </div>
+        <div class="row-count-menu-item modal-menu-item row-count-menu-close-js">
+          <a href="javascript:void(0)">10</a>
+        </div>
+        <div class="row-count-menu-item modal-menu-item row-count-menu-close-js">
+          <a href="javascript:void(0)">20</a>
+        </div>
+        <div class="row-count-menu-item modal-menu-item row-count-menu-close-js">
+          <a href="javascript:void(0)">40</a>
+         </div>
+      </div>
+    
+      <!-- "Конец модального окна количества строк на странице " -->
+
+      
+      <!-- "Начало модального окна фильтров " -->
+
+        <div class="modal-menu filters-modal __filters filters-modal--js">
+          <div class="filters-modal__title modal-menu-header">
+            <h2>Фильтры</h2>
+            <button class="modal-close-btn modal-close-btn--js"></button>
+          </div>
+
+                <div class="filters-modal-content">
+    
+                    <div class=" __filters_content_filter">
+                        <div class="filters_wrapper">
+                            <div class="equipment__filter">
+                                <div class="filter_title">Выбор периода:</div>
+                                <div class="datepickers-group flex fd-column">
+                                    <div class="form-input-field-group form-datepicker-group form-input-field-group--js">
+                                      <input type="text" placeholder="Дата начала" id="date-start" name="date-start" class="date-input--js date-input-start--js datepicker-small--js datepicker--js">
+                                      <label for="date-start">Дата начала</label>
+                        
+                                    </div>
+                          
+                                    <div class="form-input-field-group form-datepicker-group  form-input-field-group--js">
+                                      <input type="text" placeholder="Дата окончания" id="date-end" name="date-end" class="date-input--js date-input-end--js datepicker-small--js datepicker--js">
+                                      <label for="date-end">Дата окончания</label>
+                        
+                                    </div>
+                                  </div>
+
+                            </div>
+                        </div>
+    
+                        <div class="btn-wrapper">
+                            <button class="btn-confirm modal-btn-blue btn-blue btn-confirm--js">Применить</button>
+                            <button class="reset__filters  reset__filters--js">Сбросить все фильтры</button>
+                        </div>
+                    </div>
+    
+                    <div class="__filters_content_search search-wrapper-js __select-checkbox-js">
+                        <div class="__filters__search-wrapper ">
+                            <input type="search" placeholder="Поиск по названию" class="__select__title search--js" value="">
+                            <button class="search-clear-btn search-clear-btn_small search-clear-btn--js">
+                              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M8.59093 7L13.0441 2.54687C13.2554 2.3359 13.3743 2.04961 13.3745 1.75099C13.3748 1.45237 13.2564 1.16587 13.0455 0.95453C12.8345 0.743185 12.5482 0.624305 12.2496 0.624041C11.951 0.623778 11.6645 0.742152 11.4531 0.953123L7 5.40625L2.54687 0.953123C2.33553 0.741779 2.04888 0.623047 1.75 0.623047C1.45111 0.623047 1.16447 0.741779 0.953123 0.953123C0.741779 1.16447 0.623047 1.45111 0.623047 1.75C0.623047 2.04888 0.741779 2.33553 0.953123 2.54687L5.40625 7L0.953123 11.4531C0.741779 11.6645 0.623047 11.9511 0.623047 12.25C0.623047 12.5489 0.741779 12.8355 0.953123 13.0469C1.16447 13.2582 1.45111 13.3769 1.75 13.3769C2.04888 13.3769 2.33553 13.2582 2.54687 13.0469L7 8.59375L11.4531 13.0469C11.6645 13.2582 11.9511 13.3769 12.25 13.3769C12.5489 13.3769 12.8355 13.2582 13.0469 13.0469C13.2582 12.8355 13.3769 12.5489 13.3769 12.25C13.3769 11.9511 13.2582 11.6645 13.0469 11.4531L8.59093 7Z"
+                                  fill="#C6CBD6" />
+                              </svg>
+                            </button>
+                          </div>
+        
+                        <div class="search-checkbox-wrapper">
+                            <div class="checkbox_wrapper">
+                              <label class="custom-checkbox __select__label __select__label-search">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkbox_content">ООО Литтера</span>
+                              </label>
+                             </div>
+              
+                             <div class="checkbox_wrapper">
+                              <label class="custom-checkbox __select__label __select__label-search">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkbox_content">ИП ГрандГарант</span>
+                              </label>
+                             </div>
+              
+                             <div class="checkbox_wrapper">
+                              <label class="custom-checkbox __select__label __select__label-search">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkbox_content">ООО Глагол Нижний Новгород Советский район ул. Чукотская</span>
+                              </label>
+                             </div>
+              
+                             <div class="checkbox_wrapper">
+                              <label class="custom-checkbox __select__label __select__label-search">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkbox_content">ИП Инкликит</span>
+                              </label>
+                             </div>
+              
+                             <div class="checkbox_wrapper">
+                              <label class="custom-checkbox __select__label __select__label-search">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkbox_content">ИП МувБиз Трансфер</span>
+                              </label>
+                             </div>
+              
+                             <div class="checkbox_wrapper">
+                              <label class="custom-checkbox __select__label __select__label-search">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkbox_content">Торговая сеть Юность</span>
+                              </label>
+                             </div>
+              
+                             <div class="checkbox_wrapper">
+                              <label class="custom-checkbox __select__label __select__label-search">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkbox_content">Торговая сеть Развитие Нижний Новгород</span>
+                              </label>
+                             </div>
+              
+                             <div class="checkbox_wrapper">
+                              <label class="custom-checkbox __select__label __select__label-search">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkbox_content">Торговая сеть Восход</span>
+                              </label>
+                             </div>
+              
+                             <div class="checkbox_wrapper">
+                              <label class="custom-checkbox __select__label __select__label-search">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkbox_content">ООО Глагол Нижний Новгород Советский район ул. Чукотская</span>
+                              </label>
+                             </div>
+              
+                             <div class="checkbox_wrapper">
+                              <label class="custom-checkbox __select__label __select__label-search">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkbox_content">ИП Инкликит</span>
+                              </label>
+                             </div>
+              
+                             <div class="checkbox_wrapper">
+                              <label class="custom-checkbox __select__label __select__label-search">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkbox_content">ИП Инкликит</span>
+                              </label>
+                             </div>
+              
+                             <div class="checkbox_wrapper">
+                              <label class="custom-checkbox __select__label __select__label-search">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkbox_content">ИП Инкликит</span>
+                              </label>
+                             </div>
+              
+                             <div class="checkbox_wrapper">
+                              <label class="custom-checkbox __select__label __select__label-search">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkbox_content">ИП Инкликит</span>
+                              </label>
+                             </div>
+              
+                             <div class="checkbox_wrapper">
+                              <label class="custom-checkbox __select__label __select__label-search">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkbox_content">ИП Инкликит</span>
+                              </label>
+                             </div>
+              
+                             <div class="checkbox_wrapper">
+                              <label class="custom-checkbox __select__label __select__label-search">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkbox_content">ИП Инкликит</span>
+                              </label>
+                             </div>
+                          </div>
+                    </div>
+                </div>
+              </div>
+
+    
+      <!-- "Конец модального окна фильтров" -->
+
+
+  <!-- НАЧАЛО МОДАЛЬНОЕ ОКНО ЗАГРУЗКА -->
+
+  <div class="modal-loading-result flex fd-column ai-center">
+    <div class="modal-loading-result__title tac">Загрузка прошла успешно</div>
+    <p class="tac small">Было загружено 10 новых элементов</p>
+    <button class="btn-blue p13-24">Продолжить работу</button>
+  </div>
+
+  <!-- КОНЕЦ МОДАЛЬНОЕ ОКНО ЗАГРУЗКА -->
+
+  <!-- НАЧАЛО МОДАЛЬНОЕ ОКНО УДАЛЕНИЕ -->
+
+  <div class="modal-delete-confirm flex fd-column ai-center">
+    <div class="modal-delete-confirm__title tac">Удалить элементы?</div>
+    <p class="tac small">Выбранные элементы будут удалены из системы</p>
+    <div class="modal-delete-confirm__button-group flex fd-column-xs">
+      <button class="btn-red p13-24">Удалить</button>
+      <button class="btn-white p13-24">Отмена</button>
+    </div>
+  </div>
+
+  <!-- КОНЕЦ МОДАЛЬНОЕ ОКНО УДАЛЕНИЕ -->
+
+  <!-- НАЧАЛО МОДАЛЬНОЕ ОКНО КОММЕНТАРИИ -->
+
+  <div class="modal-comments flex fd-column ai-center">
+    <h4 class="modal-comments__title">Комментарии к Ноутбук HP 250 G9 Core i5</h4>
+    <button class="modal-close-btn modal-close-btn--js"></button>
+
+    <ul class="modal-comments__list">
+      <li class="modal-comments__item">
+        <div class="modal-comments__date">21.03.23 в 15:00</div>
+        <div class="modal-comments__message">Иванов М. А. подтвердил оборудование</div>
+      </li>
+
+      <li class="modal-comments__item">
+        <div class="modal-comments__date">21.03.23 в 15:00</div>
+        <div class="modal-comments__message">Иванов М. А. оставил(а) комментарий:</div>
+        <div class="modal-comments__text">
+          Необходимо вручную добавить и подтвердить оставшееся оборудование по компании ИП Инклит до 10.04.23
+        </div>
+      </li>
+
+      <li class="modal-comments__item modal-comments__item_highlited">
+        <div class="modal-comments__date">21.03.23 в 15:00</div>
+        <div class="modal-comments__message">Иванов М. А. оставил(а) комментарий:</div>
+        <div class="modal-comments__text">
+          Необходимо вручную добавить и подтвердить оставшееся оборудование по компании ИП Инклит до 10.04.23
+        </div>
+      </li>
+    </ul>
+
+    <div class="modal-comments__functional">
+      <textarea name="new-comment" placeholder="Новый комментарий..."></textarea>
+
+      <div class="modal-comments__button-group flex fd-column-xs">
+        <button type="submit" class="btn-blue p13-24">Отправить</button>
+        <button class="btn-white p13-24">Отмена</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- "Начало бокового меню" -->
+  <aside class="compaines-menu aside-menu">
+    <a href="/" class="aside-menu-logo">
+      <img src="../img/logo.svg" alt="logo">
+    </a>
+    <button class="aside-menu-btn aside-menu-btn-js"></button>
+    <nav class="compaines-nav aside-nav">
+      <ul>
+        <li>
+          <a href="javascript:void(0)" class="aside-menu-item">
+            <div class="aside-menu-link">
+              <div>
+                <img class="aside-menu-icon" src="../img/business.svg" alt="business-icon">
+              </div>
+              <div class="aside-menu-text">Компании</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)" class="aside-menu-item">
+            <div class="aside-menu-link">
+              <div>
+                <img class="aside-menu-icon" src="../img/wallet.svg" alt="wallet-icon">
+              </div>
+              <div class="aside-menu-text">Оплаты</div>
+            </div>
+          </a>
+        </li>
+
+            <li class="li-accordion">
+                <a href="javascript:void(0)" class="aside-menu-item accordion accordion-js" data-state="">
+                    <div class="aside-menu-link">
+                      <div>
+                        <img class="aside-menu-icon" src="../img/receipt.svg" alt="receipt-icon">
+                      </div>
+                      <div class="aside-menu-text">Мои&nbspсписки</div>
+                      <div class="accordion-arrow">
+                        <img src="../img/arrow.svg" alt="arrow-down">
+                      </div>
+                    </div>                 
+                </a>
+                <div class="panel">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)" class="aside-menu-item">
+                                <div class="aside-menu-sublink">
+                                    <div class="aside-menu-subtext">Оборудование</div>
+                                </div>
+                            </a>
+                         </li>
+                        <li>
+                            <a href="javascript:void(0)" class="aside-menu-item">
+                                <div class="aside-menu-sublink">
+                                    <div class="aside-menu-subtext">ПО</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="aside-menu-item">
+                                <div class="aside-menu-sublink">
+                                    <div class="aside-menu-subtext">Услуги</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="aside-menu-item">
+                                <div class="aside-menu-sublink">
+                                    <div class="aside-menu-subtext">Пользователи</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="aside-menu-item">
+                                <div class="aside-menu-sublink">
+                                    <div class="aside-menu-subtext">Поставщики</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="aside-menu-small small aside-menu-small-js">
+                  <a href="javacript:void(0)" class="header__menu-link">Оборудование</a>
+                  <a href="javacript:void(0)" class="header__menu-link">ПО</a>
+                  <a href="javacript:void(0)" class="header__menu-link">Услуги</a>
+                  <a href="javacript:void(0)" class="header__menu-link">Пользователи</a>
+                  <a href="javacript:void(0)" class="header__menu-link">Поставщики</a>
+                </div>
+            </li>
+               
+            
+            
+            <li class="li-accordion">
+                <a href="javascript:void(0)" class="aside-menu-item accordion accordion-js" data-state="">
+                    <div class="aside-menu-link">
+                      <div>
+                        <img class="aside-menu-icon" src="../img/raise.svg" alt="raise-icon">
+                      </div>
+                      <div class="aside-menu-text">Бюджет</div>
+                      <div class="accordion-arrow">
+                        <img src="../img/arrow.svg" alt="arrow-down">
+                      </div>
+                    </div>
+                </a>
+                <div class="panel">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)" class=" aside-menu-item">
+                                <div class=" aside-menu-sublink">
+                                    <div class="aside-menu-subtext">Сводная</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class=" aside-menu-item">
+                                <div class=" aside-menu-sublink">
+                                    <div class="aside-menu-subtext">Планирование</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="aside-menu-small small aside-menu-small-js">
+                  <a href="javacript:void(0)" class="header__menu-link">Сводная</a>
+                  <a href="javacript:void(0)" class="header__menu-link">Планирование</a>
+                </div>
+            </li>
+
+           
+
+
+        <li>
+          <a href="javascript:void(0)" class=" aside-menu-item">
+            <div class=" aside-menu-link">
+              <div>
+                <img class=" aside-menu-icon" src="../img/gear.svg" alt="gear-icon">
+              </div>
+              <div class=" aside-menu-text">Настройки</div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  </aside>
+  <!-- "Конец бокового меню" -->
+
+
+  <header class=" header-white header-blue">
+    <div class="header-blue-wrapper flex ai-center jc-sb">
+        <div class="flex ai-center">
+            <div class="menu__btn" for="menu__toggle">
+                <span></span>
+            </div>
+            <a href="javacript:void(0)" class="header-blue-logo">
+                <img src="../img/logo.svg" alt="logo">
+            </a>
+        </div>
+
+        <div class="flex ai-center jc-sb personal-btn personal-btn-js header__profile--js">
+            <button class="header-blue__profile header__profile--js" aria-label="Профиль пользователя"></button>
+            <div class="user_name">Иванов М. А.</div> 
+        </div>
+        <div class="header__menu-small small header__menu-small--js">
+          <a href="javacript:void(0)" class="header__menu-link">Личный кабинет</a>
+          <a href="javacript:void(0)" class="header__menu-link">Сменить пароль</a>
+          <a href="javacript:void(0)" class="header__menu-link">Выйти</a>
+        </div>
+    </div>
+  </header>
+
+  <section class="budget-planning">
+    <div class="container container-small">
+      <h1>планирование бюджета</h1>
+      <p class="__description">Здесь вы можете планировать ваш бюджет</p>
+
+      <div class="top-panel flex">
+        <div class="search-wrapper">
+          <input type="search" placeholder="Поиск по таблице " class="search--js">
+          <button class="search-clear-btn search-clear-btn--js">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8.59093 7L13.0441 2.54687C13.2554 2.3359 13.3743 2.04961 13.3745 1.75099C13.3748 1.45237 13.2564 1.16587 13.0455 0.95453C12.8345 0.743185 12.5482 0.624305 12.2496 0.624041C11.951 0.623778 11.6645 0.742152 11.4531 0.953123L7 5.40625L2.54687 0.953123C2.33553 0.741779 2.04888 0.623047 1.75 0.623047C1.45111 0.623047 1.16447 0.741779 0.953123 0.953123C0.741779 1.16447 0.623047 1.45111 0.623047 1.75C0.623047 2.04888 0.741779 2.33553 0.953123 2.54687L5.40625 7L0.953123 11.4531C0.741779 11.6645 0.623047 11.9511 0.623047 12.25C0.623047 12.5489 0.741779 12.8355 0.953123 13.0469C1.16447 13.2582 1.45111 13.3769 1.75 13.3769C2.04888 13.3769 2.33553 13.2582 2.54687 13.0469L7 8.59375L11.4531 13.0469C11.6645 13.2582 11.9511 13.3769 12.25 13.3769C12.5489 13.3769 12.8355 13.2582 13.0469 13.0469C13.2582 12.8355 13.3769 12.5489 13.3769 12.25C13.3769 11.9511 13.2582 11.6645 13.0469 11.4531L8.59093 7Z" fill="#C6CBD6"/>
+            </svg>
+          </button>
+        </div>
+
+          <div class="__select  __filters  __select-checkbox-js __select-js  __select-checkbox-search-js" data-state="">
+            <div class="__select__title  __filters-title" data-default="Фильтры">
+              <span class="__select__title__span">Фильтры</span>
+            </div>
+            <div class="__select__content __filters_content search-wrapper-js">
+
+                <div class="__filters_content_filter">
+                    <div class="filters_wrapper">
+                        <div class="__filter">
+                            <div class="filter_title">Выбор периода:</div>
+                            <div class="datepickers-group flex fd-column">
+                                <div class="form-input-field-group form-datepicker-group form-input-field-group--js">
+                                  <input type="text" placeholder="Дата начала" id="date-start-1" name="date-start" class="date-input--js date-input-start--js datepicker--js">
+                                  <label for="date-start-1">Дата начала</label>
+                                </div>
+                      
+                                <div class="form-input-field-group form-datepicker-group  form-input-field-group--js">
+                                  <input type="text" placeholder="Дата окончания" id="date-end-1" name="date-end" class="date-input--js date-input-end--js datepicker--js">
+                                  <label for="date-end-1">Дата окончания</label>
+                                </div>
+                    
+                              </div>
+                        </div>
+                    
+                    </div>
+
+                    <div class="btn-wrapper">
+                        <button class="btn-confirm modal-btn-blue btn-blue btn-confirm--js">Применить</button>
+                        <button class="reset__filters  reset__filters--js">Сбросить все фильтры</button>
+                    </div>
+                </div>
+
+                <div class="__filters_content_search search-wrapper-js ">
+                    <div class="__filters__search-wrapper ">
+                        <input type="search" placeholder="Поиск по названию" class=" search--js" value="">
+                        <button class="search-clear-btn search-clear-btn_small search-clear-btn--js">
+                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M8.59093 7L13.0441 2.54687C13.2554 2.3359 13.3743 2.04961 13.3745 1.75099C13.3748 1.45237 13.2564 1.16587 13.0455 0.95453C12.8345 0.743185 12.5482 0.624305 12.2496 0.624041C11.951 0.623778 11.6645 0.742152 11.4531 0.953123L7 5.40625L2.54687 0.953123C2.33553 0.741779 2.04888 0.623047 1.75 0.623047C1.45111 0.623047 1.16447 0.741779 0.953123 0.953123C0.741779 1.16447 0.623047 1.45111 0.623047 1.75C0.623047 2.04888 0.741779 2.33553 0.953123 2.54687L5.40625 7L0.953123 11.4531C0.741779 11.6645 0.623047 11.9511 0.623047 12.25C0.623047 12.5489 0.741779 12.8355 0.953123 13.0469C1.16447 13.2582 1.45111 13.3769 1.75 13.3769C2.04888 13.3769 2.33553 13.2582 2.54687 13.0469L7 8.59375L11.4531 13.0469C11.6645 13.2582 11.9511 13.3769 12.25 13.3769C12.5489 13.3769 12.8355 13.2582 13.0469 13.0469C13.2582 12.8355 13.3769 12.5489 13.3769 12.25C13.3769 11.9511 13.2582 11.6645 13.0469 11.4531L8.59093 7Z"
+                              fill="#C6CBD6" />
+                          </svg>
+                        </button>
+                      </div>
+    
+                    <div class="search-checkbox-wrapper">
+                        <div class="checkbox_wrapper">
+                          <label class="custom-checkbox __select__label __select__label-search">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkbox_content">ООО Литтера</span>
+                          </label>
+                         </div>
+          
+                         <div class="checkbox_wrapper">
+                          <label class="custom-checkbox __select__label __select__label-search">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkbox_content">ИП ГрандГарант</span>
+                          </label>
+                         </div>
+          
+                         <div class="checkbox_wrapper">
+                          <label class="custom-checkbox __select__label __select__label-search">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkbox_content">ООО Глагол Нижний Новгород Советский район ул. Чукотская</span>
+                          </label>
+                         </div>
+          
+                         <div class="checkbox_wrapper">
+                          <label class="custom-checkbox __select__label __select__label-search">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkbox_content">ИП Инкликит</span>
+                          </label>
+                         </div>
+          
+                         <div class="checkbox_wrapper">
+                          <label class="custom-checkbox __select__label __select__label-search">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkbox_content">ИП МувБиз Трансфер</span>
+                          </label>
+                         </div>
+          
+                         <div class="checkbox_wrapper">
+                          <label class="custom-checkbox __select__label __select__label-search">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkbox_content">Торговая сеть Юность</span>
+                          </label>
+                         </div>
+          
+                         <div class="checkbox_wrapper">
+                          <label class="custom-checkbox __select__label __select__label-search">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkbox_content">Торговая сеть Развитие Нижний Новгород</span>
+                          </label>
+                         </div>
+          
+                         <div class="checkbox_wrapper">
+                          <label class="custom-checkbox __select__label __select__label-search">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkbox_content">Торговая сеть Восход</span>
+                          </label>
+                         </div>
+          
+                         <div class="checkbox_wrapper">
+                          <label class="custom-checkbox __select__label __select__label-search">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkbox_content">ООО Глагол Нижний Новгород Советский район ул. Чукотская</span>
+                          </label>
+                         </div>
+          
+                         <div class="checkbox_wrapper">
+                          <label class="custom-checkbox __select__label __select__label-search">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkbox_content">ИП Инкликит</span>
+                          </label>
+                         </div>
+          
+                         <div class="checkbox_wrapper">
+                          <label class="custom-checkbox __select__label __select__label-search">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkbox_content">ИП Инкликит</span>
+                          </label>
+                         </div>
+          
+                         <div class="checkbox_wrapper">
+                          <label class="custom-checkbox __select__label __select__label-search">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkbox_content">ИП Инкликит</span>
+                          </label>
+                         </div>
+          
+                         <div class="checkbox_wrapper">
+                          <label class="custom-checkbox __select__label __select__label-search">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkbox_content">ИП Инкликит</span>
+                          </label>
+                         </div>
+          
+                         <div class="checkbox_wrapper">
+                          <label class="custom-checkbox __select__label __select__label-search">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkbox_content">ИП Инкликит</span>
+                          </label>
+                         </div>
+          
+                         <div class="checkbox_wrapper">
+                          <label class="custom-checkbox __select__label __select__label-search">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkbox_content">ИП Инкликит</span>
+                          </label>
+                         </div>
+                      </div>
+                </div>      
+            </div>
+          </div>
+
+          <button class="btn_filters btn_filters--js"></button>
+
+          <!-- <div class="__select __download __select-count-js " data-state=""> -->
+            <button class="btn-blue p13-24 btn__download">Загрузить вручную</button>
+
+          <!-- </div> -->
+      </div>
+    </div>
+
+        <!-- НАЧАЛО ТАБЛИЦЫ -->
+
+        <div class="table-wrapper container-small container-small_table">
+          <div class="table-container">
+            <!-- НАДПИСЬ ПРИ ОТСУТСТВИИ ЭЛЕМЕНТОВ -->
+            <div class="filter-not-found hidden">По такому фильтру совпадений не найдено...</div>
+    
+            <table class="small" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th class="checkbox-field">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" name="" id="">
+                      <span></span>
+                    </label>
+                  </th>
+                  <th class="stretch-130">Наименование</th>
+                  <th class="fix-200">Компания</th>
+                  <th class="fix-150">Класс затрат</th>
+                  <th class="sort-up fix-150">Сумма</th>
+                  <th class="fix-150">Срок покупки</th>
+                  <th></th>
+                </tr>
+              </thead>
+    
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td class="checkbox-field">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" name="" id="">
+                      <span></span>
+                    </label>
+                  </td>
+                  <td class="stretch-130">
+                    <a href="javascript:void(0)">Обновление операционной системы Windows до MacOS</a>
+                  </td>
+                  <td class="fix-200">Торговая сеть Развитие Нижний Новгород</td>
+                  <td class="fix-150">Основные</td>
+                  <td class="fix-150">1 554 000 ₽</td>
+                  <td class="fix-150">12.10.2023</td>
+                  <td></td>
+                </tr>
+    
+                <tr>
+                  <td></td>
+                  <td class="checkbox-field">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" name="" id="">
+                      <span></span>
+                    </label>
+                  </td>
+                  <td class="stretch-130">
+                    <a href="javascript:void(0)">Обновление операционной системы Windows до MacOS</a>
+                  </td>
+                  <td class="fix-200">Торговая сеть Развитие Нижний Новгород</td>
+                  <td class="fix-150">Основные</td>
+                  <td class="fix-150">1 554 000 ₽</td>
+                  <td class="fix-150">12.10.2023</td>
+                  <td></td>
+                </tr>
+    
+                <tr>
+                  <td></td>
+                  <td class="checkbox-field">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" name="" id="">
+                      <span></span>
+                    </label>
+                  </td>
+                  <td class="stretch-130">
+                    <a href="javascript:void(0)">Обновление операционной системы Windows до MacOS</a>
+                  </td>
+                  <td class="fix-200">Торговая сеть Развитие Нижний Новгород</td>
+                  <td class="fix-150">Основные</td>
+                  <td class="fix-150">1 554 000 ₽</td>
+                  <td class="fix-150">12.10.2023</td>
+                  <td></td>
+                </tr>
+    
+                <tr>
+                  <td></td>
+                  <td class="checkbox-field">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" name="" id="">
+                      <span></span>
+                    </label>
+                  </td>
+                  <td class="stretch-130">
+                    <a href="javascript:void(0)">Обновление операционной системы Windows до MacOS</a>
+                  </td>
+                  <td class="fix-200">Торговая сеть Развитие Нижний Новгород</td>
+                  <td class="fix-150">Основные</td>
+                  <td class="fix-150">1 554 000 ₽</td>
+                  <td class="fix-150">12.10.2023</td>
+                  <td></td>
+                </tr>
+    
+                <tr>
+                  <td></td>
+                  <td class="checkbox-field">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" name="" id="">
+                      <span></span>
+                    </label>
+                  </td>
+                  <td class="stretch-130">
+                    <a href="javascript:void(0)">Обновление операционной системы Windows до MacOS</a>
+                  </td>
+                  <td class="fix-200">Торговая сеть Развитие Нижний Новгород</td>
+                  <td class="fix-150">Основные</td>
+                  <td class="fix-150">1 554 000 ₽</td>
+                  <td class="fix-150">12.10.2023</td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                  <td></td>
+                  <td class="checkbox-field">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" name="" id="">
+                      <span></span>
+                    </label>
+                  </td>
+                  <td class="stretch-130">
+                    <a href="javascript:void(0)">Обновление операционной системы Windows до MacOS</a>
+                  </td>
+                  <td class="fix-200">Торговая сеть Развитие Нижний Новгород</td>
+                  <td class="fix-150">Основные</td>
+                  <td class="fix-150">1 554 000 ₽</td>
+                  <td class="fix-150">12.10.2023</td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                  <td></td>
+                  <td class="checkbox-field">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" name="" id="">
+                      <span></span>
+                    </label>
+                  </td>
+                  <td class="stretch-130">
+                    <a href="javascript:void(0)">Обновление операционной системы Windows до MacOS</a>
+                  </td>
+                  <td class="fix-200">Торговая сеть Развитие Нижний Новгород</td>
+                  <td class="fix-150">Основные</td>
+                  <td class="fix-150">1 554 000 ₽</td>
+                  <td class="fix-150">12.10.2023</td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                  <td></td>
+                  <td class="checkbox-field">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" name="" id="">
+                      <span></span>
+                    </label>
+                  </td>
+                  <td class="stretch-130">
+                    <a href="javascript:void(0)">Обновление операционной системы Windows до MacOS</a>
+                  </td>
+                  <td class="fix-200">Торговая сеть Развитие Нижний Новгород</td>
+                  <td class="fix-150">Основные</td>
+                  <td class="fix-150">1 554 000 ₽</td>
+                  <td class="fix-150">12.10.2023</td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                  <td></td>
+                  <td class="checkbox-field">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" name="" id="">
+                      <span></span>
+                    </label>
+                  </td>
+                  <td class="stretch-130">
+                    <a href="javascript:void(0)">Обновление операционной системы Windows до MacOS</a>
+                  </td>
+                  <td class="fix-200">Торговая сеть Развитие Нижний Новгород</td>
+                  <td class="fix-150">Основные</td>
+                  <td class="fix-150">1 554 000 ₽</td>
+                  <td class="fix-150">12.10.2023</td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                  <td></td>
+                  <td class="checkbox-field">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" name="" id="">
+                      <span></span>
+                    </label>
+                  </td>
+                  <td class="stretch-130">
+                    <a href="javascript:void(0)">Обновление операционной системы Windows до MacOS</a>
+                  </td>
+                  <td class="fix-200">Торговая сеть Развитие Нижний Новгород</td>
+                  <td class="fix-150">Основные</td>
+                  <td class="fix-150">1 554 000 ₽</td>
+                  <td class="fix-150">12.10.2023</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+    
+        <!-- КОНЕЦ ТАБЛИЦЫ -->
+
+    <div class="container container-small">
+      <div class="bottom-panel flex jc-sb ai-center small">
+        <p>Результатов: 1-20 из 290</p>
+
+        <div class="pagination-buttons-group flex ai-center">
+          <a class="page-button" href="javascript:void(0)">
+            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.25 0.5L0.75 5L5.25 9.5" stroke="#1B254A" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a class="page current" href="javascript:void(0)">1</a>
+          <a class="page" href="javascript:void(0)">2</a>
+          <a class="page" href="javascript:void(0)">3</a>
+          <a class="page-button" href="javascript:void(0)">
+            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.75 9.5L5.25 5L0.75 0.5" stroke="#1B254A" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="show flex ai-center">
+          <p>Отобразить</p>  
+
+          <form>
+            <div class="__select __select-small __select-count-js" data-state="">
+              <div class="__select__title __select__title-small __select-count-title-js" data-default="Option 0">20</div>
+              <div class="__select__content __select__content-small">
+
+                <input id="singleSelect1" class="__select__input" type="radio" name="singleSelect" />
+                <label for="singleSelect1" class="__select__label __select__label-small __select-count-label-js">10</label>
+                <input id="singleSelect2" class="__select__input" type="radio" name="singleSelect" />
+                <label for="singleSelect2" class="__select__label __select__label-small __select-count-label-js">20</label>
+                <input id="singleSelect3" class="__select__input" type="radio" name="singleSelect" />
+                <label for="singleSelect3" class="__select__label __select__label-small __select-count-label-js">40</label>
+              
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+      
+
+      <div class="selected flex small">
+        <div class="selected-text--js">Отмечено: 0</div>
+        <button class="highlited">Показать только выделенные</button>
+        <button class="reset reset--js">Сбросить всё</button>
+      </div>
+    </div>
+  </section>
+
+
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/modules/imask.js"></script>
+  <script src="../scripts/date-mask.js"></script>
+  <script src="../scripts/modules/autosize.js"></script>
+  <script src="../scripts/textarea-autosize.js"></script>
+  <script src="../scripts/modules/jquery-ui.js"></script>
+  <script src="../scripts/datepicker.js"></script>
+
+
+</body>
+
+</html>

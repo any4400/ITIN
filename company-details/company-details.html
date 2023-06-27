@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/index.css">
+  <link rel="stylesheet" href="./styles/company-details.css">
+  <link rel="stylesheet" href="../styles/modal-window.css">
+  <link rel="stylesheet" href="styles/company-details-tariff-modal.css">
+  <script src="../scripts/jquery-3.6.4.min.js"></script>
+
+  <title>IT-сервис</title>
+</head>
+
+<body>
+  <div class="overlay overlay-js"></div>
+  <div class="overlay overlay-desktop overlay-desktop-js"></div>
+
+
+  <!-- "Начало модального окна выбра тарифа " -->
+
+  <!-- <div class="select-menu modal-menu">
+    <div class="tariff-menu-header modal-menu-header">
+      Выбор тарифа
+    </div>
+    <div class="tariff-menu-item modal-menu-item tafiff-menu-close-js">
+      <a href="javascript:void(0)">Бизнес</a>
+    </div>
+    <div class="tariff-menu-item modal-menu-item tafiff-menu-close-js">
+      <a href="javascript:void(0)">Стандарт</a>
+    </div>
+  </div> -->
+
+  <!-- "Конец модального окна выбора тарифа " -->
+
+  <!-- "Начало модального окна личного кабинета " -->
+  <div class="personal-menu modal-menu">
+    <div class="personal-menu-header modal-menu-header">
+      Иванов М. А.
+    </div>
+    <div class="personal-menu-item modal-menu-item personal-menu-close-js">
+      <a href="javascript:void(0)">Личный кабинет</a>
+    </div>
+    <div class="personal-menu-item modal-menu-item personal-menu-close-js">
+      <a href="javascript:void(0)">Безопасность</a>
+    </div>
+    <div class="personal-menu-item modal-menu-item personal-menu-close-js">
+      <a href="javascript:void(0)">Выйти</a>
+    </div>
+  </div>
+
+  <!-- "Конец модального окна личного кабинета " -->
+
+
+  <!-- "Начало бокового меню" -->
+  <aside class="compaines-menu aside-menu">
+    <a href="/" class="companies-menu-logo aside-menu-logo">
+      <img src="../img/logo.svg" alt="logo">
+    </a>
+    <button class="aside-menu-btn aside-menu-btn-js"></button>
+    <nav class="compaines-nav aside-nav">
+      <ul>
+        <li>
+          <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+            <div class="companies-menu-link aside-menu-link">
+              <div>
+                <img class="companies-menu-icon aside-menu-icon" src="../img/business.svg" alt="business-icon">
+              </div>
+              <div class="companies-menu-text aside-menu-text">Компании</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+            <div class="companies-menu-link aside-menu-link">
+              <div>
+                <img class="companies-menu-icon aside-menu-icon" src="../img/wallet.svg" alt="wallet-icon">
+              </div>
+              <div class="companies-menu-text aside-menu-text">Оплаты</div>
+            </div>
+          </a>
+        </li>
+
+            <li class="li-accordion">
+                <a href="javascript:void(0)" class="companies-menu-item aside-menu-item accordion accordion-js" data-state="">
+                    <div class="companies-menu-link aside-menu-link">
+                      <div>
+                        <img class="companies-menu-icon aside-menu-icon" src="../img/receipt.svg" alt="receipt-icon">
+                      </div>
+                      <div class="companies-menu-text aside-menu-text">Мои списки</div>
+                      <div class="accordion-arrow">
+                        <img src="../img/arrow.svg" alt="arrow-down">
+                      </div>
+                    </div>                 
+                </a>
+                <div class="panel">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                                <div class="companies-menu-sublink aside-menu-sublink">
+                                    <div class="companies-menu-subtext aside-menu-subtext">Оборудование</div>
+                                </div>
+                            </a>
+                         </li>
+                        <li>
+                            <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                                <div class="companies-menu-sublink aside-menu-sublink">
+                                    <div class="companies-menu-subtext aside-menu-subtext">ПО</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                                <div class="companies-menu-sublink aside-menu-sublink">
+                                    <div class="companies-menu-subtext aside-menu-subtext">Услуги</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                                <div class="companies-menu-sublink aside-menu-sublink">
+                                    <div class="companies-menu-subtext aside-menu-subtext">Пользователи</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                                <div class="companies-menu-sublink aside-menu-sublink">
+                                    <div class="companies-menu-subtext aside-menu-subtext">Поставщики</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="aside-menu-small small aside-menu-small-js">
+                  <a href="javacript:void(0)" class="header__menu-link">Оборудование</a>
+                  <a href="javacript:void(0)" class="header__menu-link">ПО</a>
+                  <a href="javacript:void(0)" class="header__menu-link">Услуги</a>
+                  <a href="javacript:void(0)" class="header__menu-link">Пользователи</a>
+                  <a href="javacript:void(0)" class="header__menu-link">Поставщики</a>
+                </div>
+            </li>
+               
+            
+            
+            <li class="li-accordion">
+                <a href="javascript:void(0)" class="companies-menu-item aside-menu-item accordion accordion-js" data-state="">
+                    <div class="companies-menu-link aside-menu-link">
+                      <div>
+                        <img class="companies-menu-icon aside-menu-icon" src="../img/raise.svg" alt="raise-icon">
+                      </div>
+                      <div class="companies-menu-text aside-menu-text">Бюджет</div>
+                      <div class="accordion-arrow">
+                        <img src="../img/arrow.svg" alt="arrow-down">
+                      </div>
+                    </div>
+                </a>
+                <div class="panel">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                                <div class="companies-menu-sublink aside-menu-sublink">
+                                    <div class="companies-menu-subtext aside-menu-subtext">Сводная</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                                <div class="companies-menu-sublink aside-menu-sublink">
+                                    <div class="companies-menu-subtext aside-menu-subtext">Планирование</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="aside-menu-small small aside-menu-small-js">
+                  <a href="javacript:void(0)" class="header__menu-link">Сводная</a>
+                  <a href="javacript:void(0)" class="header__menu-link">Планирование</a>
+                </div>
+            </li>
+
+           
+
+
+        <li>
+          <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+            <div class="companies-menu-link aside-menu-link">
+              <div>
+                <img class="companies-menu-icon aside-menu-icon" src="../img/gear.svg" alt="gear-icon">
+              </div>
+              <div class="companies-menu-text aside-menu-text">Настройки</div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  </aside>
+  <!-- "Конец бокового меню" -->
+
+
+  <header class=" header-white header-blue">
+    <div class="header-blue-wrapper flex ai-center jc-sb">
+      <div class="flex ai-center">
+        <div class="menu__btn" for="menu__toggle">
+          <span></span>
+        </div>
+        <a href="javacript:void(0)" class="header-blue-logo">
+          <img src="../img/logo.svg" alt="logo">
+        </a>
+      </div>
+
+      <div class="flex ai-center jc-sb personal-btn personal-btn-js header__profile--js">
+        <button class="header-blue__profile header__profile--js" aria-label="Профиль пользователя"></button>
+        <div class="user_name">Иванов М. А.</div>
+      </div>
+      <div class="header__menu-small small header__menu-small--js">
+        <a href="javacript:void(0)" class="header__menu-link">Личный кабинет</a>
+        <a href="javacript:void(0)" class="header__menu-link">Сменить пароль</a>
+        <a href="javacript:void(0)" class="header__menu-link">Выйти</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- НАЧАЛО МОДАЛЬНОГО ОКНА С ПРЕДУПРЕЖДЕНИЕМ -->
+  <div class="modal-window flex fd-column ai-center">
+    <h3 class="tac">Вы действительно хотите сменить тарифный план?</h3>
+    <p class="tac small">В разделе «Оплаты» будут внесены изменения и при необходимости выставлен счет на оплату</p>
+    <div class="modal-window__button-group flex fd-column-s">
+      <button class="btn-blue p13-24">Сменить тарифный план</button>
+      <button class="btn-white p13-24">Отмена</button>
+    </div>
+  </div>
+  <!-- КОНЕЦ МОДАЛЬНОГО ОКНА С ПРЕДУПРЕЖДЕНИЕМ -->
+
+  <!-- НАЧАЛО СЕКЦИИ ДЕТАЛЬНАЯ СТРАНИЦА КОМПАНИИ -->
+  <section class="company-details">
+    <div class="container container-small">
+      <div class="title-wrapper">
+        <h1>Детальная страница компании</h1>
+        <p class="company-details__description">Проверьте правильность данных или внесите необходимые изменения</p>
+      </div>
+
+      <form action="javascript:void(0)" method="post" class="form--js">
+        <div class="company-details__input-group flex fd-column">
+
+          <div class="form-input-field-group form-input-field-group--js">
+            <input type="text" placeholder="Юридическое название" name="legal-name" required value="Торговая сеть Юность">
+            <label for="legal-name">Юридическое название</label>
+          </div>
+
+          <div class="company-details__tariff">
+            <div class="__select __select_tariff __select-rows-js " data-state="">
+              <div class="__select__title __select_tariff__title " data-default="">Тарифный план*</div>
+              <div class="__select__content __select_tariff__content">
+
+                <input id="buisness" class="__select__input" type="radio" name="buisness" />
+                <label for="buisness" class="__select__label __select_tariff__label select-rows-label-bottom--js">Бизнес</label>
+                <input id="standart" class="__select__input" type="radio" name="standart" />
+                <label for="standart" class="__select__label __select_tariff__label select-rows-label-bottom--js">Стандарт</label>
+
+              </div>
+            </div>
+
+            <div class="company-details__status company-details__status_processing">В обработке</div>
+          </div>
+
+          <div class="form-input-field-group form-input-field-group--js">
+            <textarea name="address" placeholder="Юридический адрес">603146, Нижегородская область, г. Нижний Новгород, Молодежный проспект, д. 25, корп. 1</textarea>
+            <label for="address">Юридический адрес</label>
+          </div>
+
+          <div class="form-input-field-group form-input-field-group--js">
+            <input type="number" placeholder="ИНН" name="inn" required value="5335674245" disabled>
+            <label for="inn">ИНН</label>
+          </div>
+
+          <div class="form-input-field-group form-input-field-group--js">
+            <input type="number" placeholder="КПП" name="kpp" required value="4368929599" disabled>
+            <label for="kpp">КПП</label>
+          </div>
+
+          <div class="form-input-field-group form-input-field-group--js">
+            <input type="number" placeholder="ОГРН" name="ogrn" required value="1117746358608" disabled>
+            <label for="ogrn">ОГРН</label>
+          </div>
+
+          <div class="form-input-field-group form-input-field-group--js">
+            <textarea name="organization-type" placeholder="Тип организации">Общество с ограниченной ответственностью</textarea>
+            <label for="organization-type">Тип организации</label>
+          </div>
+
+          <div class="form-input-field-group form-input-field-group--js">
+            <textarea name="description" placeholder="Описание компании">Розничная торговля, кроме торговли автотранспортными средствами и мотоциклами, ремонт бытовых изделий и предметов личного пользования</textarea>
+            <label for="description">Описание компании</label>
+          </div>
+
+          <div class="form-input-field-group form-input-field-group--js">
+            <input type="text" placeholder="ФИО ответственного лица" name="person-in-charge" required value="Иванов Максим Алексеевич">
+            <label for="person-in-charge">ФИО ответственного лица</label>
+          </div>
+
+          <div class="form-input-field-group form-input-field-group--js">
+            <input type="text" placeholder="Должность ответственного лица" name="post" required value="Управляющий">
+            <label for="post">Должность ответственного лица</label>
+          </div>
+
+          <!-- СООБЩЕНИЕ ОБ ОШИБКЕ -->
+          <div class="text-error" hidden>Проверьте корректность введенных данных</div>
+
+        </div>
+
+          <div class="company-details__button-group flex">
+            <button class="btn-blue p13-24 button--js" type="submit" disabled>Сохранить</button>
+            <button class="btn-white p13-24 button--js" type="button" disabled>Отменить</button>
+          </div>
+      </form>
+    </div>
+  </section>
+  <!-- КОНЕЦ СЕКЦИИ ДЕТАЛЬНАЯ СТРАНИЦА КОМПАНИИ -->
+
+
+
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/modules/autosize.js"></script>
+  <script src="../scripts/textarea-autosize.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+.feedback {
+  padding: 60px 0 120px;
+}
+
+.feedback__container {
+  position: relative;
+  gap: 34px;
+}
+
+.feedback__img {
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+
+.feedback__img img {
+  max-width: 558px;
+}
+
+.feedback__wrapper {
+  padding-left: 540px;
+}
+
+.feedback h2 {
+  margin-bottom: 16px;
+}
+
+.feedback .description {
+  margin-bottom: 32px; 
+}
+
+.feedback form {
+  width: 520px;
+}
+
+.feedback__inputs-group {
+  display: grid;
+  grid-template-areas:
+    "name name"
+    "phone email"
+    "text text";
+  margin-bottom: 16px;
+  gap: 20px;
+}
+
+.feedback-name {
+  grid-area: name;
+}
+
+.feedback-tel {
+  grid-area: phone;
+
+}
+
+.feedback-email {
+  grid-area: email;
+}
+
+.feedback-text {
+  resize: none;
+  height: 125px;
+  grid-area: text;
+}
+
+.feedback button {
+  padding: 13px 24px;
+}
+.feedback__note {
+  margin-bottom: 32px;
+}
+
+@media (max-width: 1199px) {
+  .feedback__img {
+    display: none;
+  }
+
+  .feedback__wrapper {
+    padding-left: 0;
+  }
+
+  .feedback__info {
+    text-align: center;
+  }
+
+  .feedback form {
+    width: 100%;
+  }
+
+  .feedback button {
+    display: block;
+    margin: 0 auto;
+    padding: 17px 101px;
+  }
+  .feedback__note {
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .feedback {
+    padding: 32px 0 68px;
+  }
+
+  .feedback h2 {
+    margin-bottom: 8px;
+  }
+
+  .feedback__inputs-group {
+    grid-template-areas:
+      "name"
+      "phone"
+      "email"
+      "text";
+    gap: 16px;
+  }
+
+  .feedback button {
+    padding: 17px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,230 @@
+.company-create {
+  padding-bottom: 120px;
+  min-height: calc(100vh - 121px);
+  background: radial-gradient(700px at 90% 90%, #F0FAFF 60%, #FFF);
+}
+
+.company-create h1 {
+  margin-bottom: 8px;
+}
+
+.company-create__description {
+  margin-bottom: 40px;
+}
+
+.company-create__input-group {
+  max-width: 488px;
+  margin-bottom: 32px;
+  gap: 24px;
+}
+
+.company-create__address {
+  height: 78px;
+}
+
+.company-create__company-description {
+  height: 167px;
+}
+
+.company-create__requirements {
+  color: #1B254A;
+}
+
+.company-create__button-group {
+  margin-top: 32px;
+  gap: 16px;
+}
+
+.company-create__btn {
+  width: 200px;
+  height: 48px;
+}
+
+.company-create__btn-check {
+  width: 227px;
+  padding-left: 64px;
+  position: relative;
+  background-color: #329B0D;
+}
+
+.company-create__btn-check::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 25.5px;
+  height: 0;
+  width: 21px;
+  height: 21px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='22' height='22' viewBox='0 0 22 22' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M21.4561 4.22001C21.4455 4.05247 21.379 3.89333 21.2672 3.76806C21.1555 3.64279 21.0049 3.55864 20.8397 3.52907C16.785 2.80157 15.0923 2.27563 11.3086 0.56657C11.2115 0.522693 11.1062 0.5 10.9997 0.5C10.8931 0.5 10.7878 0.522693 10.6907 0.56657C6.907 2.27563 5.21434 2.80157 1.15965 3.52907C0.994404 3.55864 0.843853 3.64279 0.732097 3.76806C0.620341 3.89333 0.553843 4.05247 0.543247 4.22001C0.362779 7.08454 0.747622 9.7536 1.6884 12.1531C2.4588 14.1104 3.59894 15.901 5.04653 17.427C7.55294 20.0863 10.214 21.2413 10.7217 21.4456C10.9021 21.5186 11.1038 21.5186 11.2842 21.4456C11.7918 21.2413 14.4529 20.0863 16.9593 17.427C18.4046 15.9004 19.5425 14.1099 20.3109 12.1531C21.2517 9.7536 21.6365 7.08454 21.4561 4.22001ZM15.3154 7.74079L10.1217 13.7408C10.0549 13.8182 9.97301 13.8811 9.88104 13.9256C9.78906 13.9702 9.68895 13.9955 9.58684 14H9.5559C9.35961 14.0001 9.17113 13.9231 9.0309 13.7858L6.72465 11.5264C6.65429 11.4575 6.5982 11.3753 6.55958 11.2847C6.52096 11.1941 6.50057 11.0968 6.49957 10.9983C6.49755 10.7993 6.57463 10.6077 6.71387 10.4656C6.85311 10.3235 7.0431 10.2426 7.24203 10.2405C7.44097 10.2385 7.63256 10.3156 7.77465 10.4549L9.50903 12.1559L14.1825 6.75923C14.2469 6.68474 14.3254 6.62368 14.4135 6.57953C14.5015 6.53538 14.5974 6.50901 14.6956 6.50191C14.7939 6.49481 14.8925 6.50714 14.986 6.53818C15.0795 6.56922 15.166 6.61837 15.2404 6.68282C15.3149 6.74727 15.376 6.82576 15.4201 6.91381C15.4643 7.00186 15.4907 7.09774 15.4978 7.19598C15.5048 7.29422 15.4925 7.3929 15.4615 7.48638C15.4304 7.57985 15.3813 7.6663 15.3168 7.74079H15.3154Z' fill='white'/%3e%3c/svg%3e ");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: 0.3s;
+}
+
+.shield-button {
+  position: absolute;
+  right: 13.5px;
+  top: calc(50% - 10.5px);
+  width: 21px;
+  height: 21px;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: inherit;
+}
+
+.shield-button-correct {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M21.4561 4.22001C21.4455 4.05247 21.379 3.89333 21.2672 3.76806C21.1555 3.64279 21.0049 3.55864 20.8397 3.52907C16.785 2.80157 15.0923 2.27563 11.3086 0.56657C11.2115 0.522693 11.1062 0.5 10.9997 0.5C10.8931 0.5 10.7878 0.522693 10.6907 0.56657C6.907 2.27563 5.21434 2.80157 1.15965 3.52907C0.994404 3.55864 0.843853 3.64279 0.732097 3.76806C0.620341 3.89333 0.553843 4.05247 0.543247 4.22001C0.362779 7.08454 0.747622 9.7536 1.6884 12.1531C2.4588 14.1104 3.59894 15.901 5.04653 17.427C7.55294 20.0863 10.214 21.2413 10.7217 21.4456C10.9021 21.5186 11.1038 21.5186 11.2842 21.4456C11.7918 21.2413 14.4529 20.0863 16.9593 17.427C18.4046 15.9004 19.5425 14.1099 20.3109 12.1531C21.2517 9.7536 21.6365 7.08454 21.4561 4.22001ZM15.3154 7.74079L10.1217 13.7408C10.0549 13.8182 9.97301 13.8811 9.88104 13.9256C9.78906 13.9702 9.68895 13.9955 9.58684 14H9.5559C9.35961 14.0001 9.17113 13.9231 9.0309 13.7858L6.72465 11.5264C6.65429 11.4575 6.5982 11.3753 6.55958 11.2847C6.52096 11.1941 6.50057 11.0968 6.49957 10.9983C6.49755 10.7993 6.57463 10.6077 6.71387 10.4656C6.85311 10.3235 7.0431 10.2426 7.24203 10.2405C7.44097 10.2385 7.63256 10.3156 7.77465 10.4549L9.50903 12.1559L14.1825 6.75923C14.2469 6.68474 14.3254 6.62368 14.4135 6.57953C14.5015 6.53538 14.5974 6.50901 14.6956 6.50191C14.7939 6.49481 14.8925 6.50714 14.986 6.53818C15.0795 6.56922 15.166 6.61837 15.2404 6.68282C15.3149 6.74727 15.376 6.82576 15.4201 6.91381C15.4643 7.00186 15.4907 7.09774 15.4978 7.19598C15.5048 7.29422 15.4925 7.3929 15.4615 7.48638C15.4304 7.57985 15.3813 7.6663 15.3168 7.74079H15.3154Z' fill='%23329B0D'/%3e%3c/svg%3e ");
+
+}
+
+.shield-button-error {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.5 3.5C4.68969 3.05281 7.15625 2.23719 11 0.5C14.8438 2.23719 17.3103 3.05281 21.5 3.5C21.5 7.13703 21.253 9.75125 20.3145 12.1489C19.5472 14.104 18.4104 15.893 16.9662 17.4181C14.6412 19.8866 12.0833 21.1869 11 21.5C9.91672 21.1869 7.35875 19.8866 5.03375 17.4181C3.58963 15.893 2.45282 14.104 1.68547 12.1489C0.747031 9.75125 0.5 7.13703 0.5 3.5ZM14.7912 7.20674L11.9979 10L14.793 12.7933C14.9255 12.9258 15 13.1056 15 13.2931C15 13.4806 14.9255 13.6604 14.793 13.793C14.6604 13.9255 14.4806 14 14.2931 14C14.1056 14 13.9258 13.9255 13.7933 13.793L11 10.9997L8.20674 13.793C8.07417 13.9255 7.89437 14 7.70689 14C7.51941 14 7.33961 13.9255 7.20704 13.793C7.07448 13.6604 7 13.4806 7 13.2931C7 13.1056 7.07448 12.9258 7.20704 12.7933L10.0003 10L7.20704 7.20674C7.07448 7.07417 7 6.89437 7 6.70689C7 6.51941 7.07448 6.33961 7.20704 6.20704C7.33961 6.07448 7.51941 6 7.70689 6C7.89437 6 8.07417 6.07448 8.20674 6.20704L11 9.00031L13.7933 6.20704C13.9258 6.07471 14.1055 6.00046 14.2929 6.00062C14.4802 6.00079 14.6597 6.07536 14.7921 6.20793C14.9244 6.34049 14.9987 6.5202 14.9985 6.70751C14.9983 6.89483 14.9238 7.0744 14.7912 7.20674Z' fill='%23C91919'/%3e%3c/svg%3e ");
+}
+
+/* СТАТУСЫ ТАРИФА */
+
+.company-create__tariff {
+  position: relative;
+}
+
+.company-create__status {
+  position: absolute;
+  width: 100%;
+  height: 19px;
+  top: calc(50% - 19px / 2);
+  left: calc(100% + 48px);
+}
+
+.company-create__status_paid::before,
+.company-create__status_processing::before,
+.company-create__status_not-paid::before {
+  content: " ";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.company-create__status_paid::before {
+  background-color: var(--green-status);
+}
+
+.company-create__status_processing::before {
+  background-color: var(--yellow-status);
+}
+
+.company-create__status_not-paid::before {
+  background-color: var(--red);
+}
+
+/* МЕДИА-ЗАПРОСЫ */
+
+@media (max-width: 1199px) {
+  .company-create {
+    padding-top: 128px;
+    padding-bottom: 90px;
+    min-height: calc(100vh);
+    text-align: center;
+    background: radial-gradient(500px at 90% 90%, #F0FAFF 60%, #FFF);
+  }
+
+  .container {
+    margin: 0 auto;
+  }
+
+  .container-small {
+    max-width: 527px;
+  }
+
+  .company-create form {
+    margin: 0 auto;
+  }
+
+  .company-create_input-group {
+    margin-bottom: 40px;
+  }
+
+  .company-create__company-description {
+    height: 186px;
+  }
+
+  .company-create input {
+    padding: 13px 16px;
+  }
+
+  .company-create__button-group {
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .company-create__btn {
+    width: 215px;
+  }
+
+  .company-create__btn-check {
+    width: 100%;
+    padding-left: 40px;
+  }
+
+  .company-create__btn-check::before {
+    left: 140px;
+  }
+
+  .company-create__tariff {
+    margin-bottom: 32px;
+  }
+
+  .company-create__status {
+    position: absolute;
+    width: 111px;
+    height: 19px;
+    top: calc(100% + 14px);
+    left: calc(100% - 111px);
+  }
+
+}
+
+@media (max-width: 767px) {
+  .container-small {
+    max-width: none;
+  }
+
+  .company-create {
+    padding-top: 112px;
+    padding-bottom: 48px;
+    background: none;
+  }
+
+  .company-create__input-group {
+    max-width: 100%;
+  }
+
+  .company-create__address {
+    height: 120px;
+  }
+
+  .company-create_company-description {
+    height: 230px;
+  }
+
+  .company-create__button-group {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .company-create__btn {
+    width: 100%;
+  }
+
+  .company-create__btn-check::before {
+    left: calc(50% - 85px);
+  }
+
+  .company-create__tariff {
+    margin-bottom: 38px;
+  }
+}

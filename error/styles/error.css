@@ -1,0 +1,81 @@
+/* Начало стилей для десктопной версии */
+.error {
+  padding: 88px 0;
+  background-image: radial-gradient(at bottom right, #f7fdff, #ffffff);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vh - 318px);
+}
+
+.error__title {
+    margin-bottom: 24px;
+}
+
+.error__title img {
+    width: 236px;
+    height: 99px;
+}
+
+.error-wrapper {
+  width: 491px;
+  margin: 0 auto;
+}
+
+.error h1 {
+  margin-bottom: 24px;
+}
+
+.error-subtitile {
+  margin-bottom: 40px;
+}
+
+.error__button-group .btn-blue {
+  padding: 13px 0;
+  width: 270px;
+}
+
+.error__button-group .btn-white {
+  padding: 13px 0;
+  width: 205px;
+}
+
+/* Конец стилей для десктопной версии */
+
+/* Начало стилей для планшетной версии */
+@media (max-width: 1199px) {
+  .error {
+    padding-top: 56px;
+    padding-bottom: 65px;
+    min-height: calc(100vh - 305px);
+  }
+}
+/* Конец стилей для планшетной версии */
+
+/* Начало стилей для мобильной версии */
+
+@media (max-width: 767px) {
+  .error {
+    padding: 48px 0;
+    background-image: none;
+  }
+  .error-wrapper {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .error-subtitile {
+    width: 100%;
+  }
+
+  .error__button-group {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .error__button-group .btn-link {
+    width: 100%;
+  }
+}
+/* Конец стилей для мобильной версии */

@@ -1,0 +1,157 @@
+.company-details {
+  padding-bottom: 120px;
+  min-height: calc(100vh - 121px);
+  background: radial-gradient(700px at 90% 90%, #F0FAFF 60%, #FFF);
+}
+
+.company-details h1 {
+  margin-bottom: 8px;
+}
+
+.company-details__description {
+  margin-bottom: 40px;
+}
+
+.company-details form {
+  max-width: 488px;
+}
+
+.company-details__input-group {
+  margin-bottom: 32px;
+  gap: 24px;
+}
+
+.company-details__button-group {
+  gap: 16px;
+}
+
+.company-details form button {
+  width: 200px;
+  height: 48px;
+}
+
+/* СТАТУСЫ ТАРИФА */
+
+.company-details__tariff {
+  position: relative;
+}
+
+.company-details__status {
+  position: absolute;
+  width: 100%;
+  height: 19px;
+  top: calc(50% - 19px / 2);
+  left: calc(100% + 48px);
+}
+
+.company-details__status_paid::before,
+.company-details__status_processing::before,
+.company-details__status_not-paid::before {
+  content: " ";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.company-details__status_paid::before {
+  background-color: var(--green-status);
+}
+
+.company-details__status_processing::before {
+  background-color: var(--yellow-status);
+}
+
+.company-details__status_not-paid::before {
+  background-color: var(--red);
+}
+
+/* МЕДИА-ЗАПРОСЫ */
+
+@media (max-width: 1199px) {
+  .company-details {
+    padding-top: 128px;
+    padding-bottom: 90px;
+    min-height: calc(100vh);
+    text-align: center;
+    background: radial-gradient(500px at 90% 90%, #F0FAFF 60%, #FFF);
+  }
+
+  .container {
+    margin: 0 auto;
+  }
+
+  .container-small {
+    max-width: 527px;
+  }
+
+  .company-details form {
+    margin: 0 auto;
+  }
+
+  .company-details__input-group {
+    margin-bottom: 40px;
+  }
+
+  .company-details__company-description {
+    height: 186px;
+  }
+
+  .company-details input {
+    padding: 13px 16px;
+  }
+
+  .company-details__button-group {
+    gap: 24px;
+  }
+
+  .company-details form button {
+    width: 50%;
+  }
+
+  .company-details__tariff {
+    margin-bottom: 32px;
+  }
+
+  .company-details__status {
+    position: absolute;
+    width: 111px;
+    height: 19px;
+    top: calc(100% + 14px);
+    left: calc(100% - 111px);
+  }
+}
+
+@media (max-width: 767px) {
+  .container-small {
+    max-width: none;
+  }
+
+  .company-details {
+    padding-top: 112px;
+    padding-bottom: 48px;
+    background: none;
+  }
+
+  .company-details__address {
+    height: 120px;
+  }
+
+  .company-details__company-description {
+    height: 230px;
+  }
+
+  .company-details__button-group {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .company-details form button {
+    width: 100%;
+  }
+
+  .company-details__tariff {
+    margin-bottom: 38px;
+  }
+}

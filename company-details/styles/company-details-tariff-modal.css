@@ -1,0 +1,15 @@
+.tariff-menu {
+    display: none;
+}
+@media(max-width:1199px) {
+    .tariff-menu {
+        display: block;
+        width: 336px;
+    }
+}
+@media(max-width:767px) {
+    .tariff-menu {
+        display: block;
+        width: 288px;
+    }
+}

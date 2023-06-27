@@ -1,0 +1,26 @@
+/* ТАБЛИЦА */
+
+.equipment {
+  width: 100%;
+  padding-bottom: 48px;
+}
+
+.equipment h1 {
+  margin-bottom: 8px;
+}
+
+.equipment__description {
+  margin-bottom: 24px;
+}
+
+@media (max-width: 1919px) {
+  .equipment {
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .equipment {
+    padding-top: 112px;
+  }
+}

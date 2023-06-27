@@ -1,0 +1,157 @@
+.__select__title__span {
+  max-width: calc(100vw - 1218px);
+  padding-right: 15px;
+}
+
+.company-menu-wrapper .custom-checkbox>span::before {
+  vertical-align: top;
+}
+
+@media (max-width: 1919px) {
+  .payments__top-panel button {
+    min-width: 272px;
+  }
+
+  .__select__title__span {
+    max-width: calc(100vw - 830px);
+  }
+}
+
+@media (max-width: 1199px) {
+  .container-small {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  .__select__title__span {
+    max-width: calc(100vw - 570px);
+  }
+
+  .company-menu-top .payments__search-wrapper {
+    height: 80px;
+  }
+
+  .payments__top-panel button {
+    min-width: 216px;
+  }
+
+  .payments__search-wrapper .payments__search-clear-btn {
+    top: 31px;
+  }
+
+  .company-menu-wrapper {
+    min-height: 480px;
+    max-height: 480px;
+    overflow-y: scroll;
+    margin-right: 16px;
+  }
+
+  .tariff-btn-white,
+  .status-btn-white,
+  .company-btn-white {
+    display: none;
+  }
+
+  .company-menu-item span {
+    width: 277px;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-line-clamp: 1;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    display: -webkit-box;
+    display: inline-block;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .__select__title__span {
+    max-width: calc(100vw - 80px);
+  }
+
+  .payments__description {
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .payments__top-panel {
+    flex-direction: column;
+    height: 176px;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .payments__bottom-panel {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+
+  .payments__show {
+    display: none;
+  }
+
+  .payments__selected {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .tariff-menu,
+  .status-menu,
+  .company-menu {
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+  }
+
+  .tariff-menu-header,
+  .status-menu-header,
+  .company-menu-header {
+    border-radius: 0;
+  }
+
+  .company-menu-wrapper {
+    min-height: calc(100vh - 222px);
+    ;
+    max-height: calc(100vh - 222px);
+    overflow-y: scroll;
+  }
+
+  .tariff-btn-wrapper,
+  .status-menu-wrapper,
+  .company-menu-wrapper {
+    border-radius: 0;
+  }
+
+  .tariff-btn-blue,
+  .status-btn-blue,
+  .company-btn-blue {
+    width: 100%;
+  }
+
+  .tariff-btn-white,
+  .status-btn-white,
+  .company-btn-white {
+    display: block;
+    width: 100%;
+    height: 48px;
+    margin-top: 8px;
+  }
+
+  .company-menu-item span {
+    width: 100%;
+  }
+}
