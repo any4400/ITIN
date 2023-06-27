@@ -1,0 +1,122 @@
+.service-details {
+  padding-bottom: 120px;
+  min-height: calc(100vh - 121px);
+  background: radial-gradient(700px at 90% 90%, #F0FAFF 60%, #FFF);
+}
+
+.service-details__title-wrapper {
+  flex-wrap: wrap;
+  column-gap: 37px;
+  row-gap: 8px;
+  margin-bottom: 8px;
+}
+
+.service-details__title-buttons-group {
+  gap: 20px;
+}
+
+.service-details__description {
+  margin-bottom: 40px;
+}
+
+.service-details form[data-page="info"] {
+  padding-top: 21px;
+  max-width: 552px;
+}
+
+.service-details__input-group {
+  margin-bottom: 32px;
+  gap: 24px;
+}
+
+.service-details__button-group {
+  gap: 16px;
+}
+
+.service-details form button {
+  width: 200px;
+  height: 48px;
+}
+
+/* МЕДИА-ЗАПРОСЫ */
+
+@media (max-width: 1199px) {
+  .service-details {
+    padding-top: 128px;
+    padding-bottom: 90px;
+    min-height: calc(100vh);
+    text-align: center;
+    background: radial-gradient(500px at 90% 90%, #F0FAFF 60%, #FFF);
+  }
+
+  .container {
+    margin: 0 auto;
+  }
+
+  .container-small {
+    max-width: 528px;
+  }
+  .service-details__description {
+    margin-bottom: 48px;
+  }
+
+  .service-details__title-wrapper {
+    column-gap: 23px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .service-details__title-buttons-group {
+    gap: 16px;
+  }
+
+  .service-details form[data-page="info"] {
+    max-width: 528px;
+    margin: 0 auto;
+  }
+
+  .service-details__input-group {
+    margin-bottom: 40px;
+  }
+
+  .service-details input {
+    padding: 13px 16px;
+  }
+
+  .service-details__button-group {
+    gap: 24px;
+  }
+
+  .service-details form button {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .container-small {
+    max-width: none;
+  }
+
+  .service-details {
+    padding-top: 112px;
+    padding-bottom: 48px;
+    background: none;
+  }
+
+  .service-details__company-description {
+    height: 230px;
+  }
+
+  .service-details form[data-page="info"] {
+    max-width: none;
+  }
+
+  .service-details__button-group {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .service-details form button {
+    width: 100%;
+  }
+}

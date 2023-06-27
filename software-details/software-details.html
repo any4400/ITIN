@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/index.css">
+  <link rel="stylesheet" href="./styles/software-details.css">
+  <link rel="stylesheet" href="../styles/comments.css">
+  <link rel="stylesheet" href="../styles/modal-save-error.css">
+  <link rel="stylesheet" href="../styles/modal-delete-confirm.css">
+  <link rel="stylesheet" href="../styles/modal-changes.css">
+  <link rel="stylesheet" href="../styles/modal-logout.css">
+  <script src="../scripts/jquery-3.6.4.min.js"></script>
+
+  <title>IT-сервис</title>
+</head>
+
+<body>
+  <div class="overlay overlay-js"></div>
+  <div class="overlay overlay-desktop overlay-desktop-js"></div>
+
+  <!-- "Начало модального окна личного кабинета " -->
+  <div class="personal-menu modal-menu">
+    <div class="personal-menu-header modal-menu-header">
+      Иванов М. А.
+    </div>
+    <div class="personal-menu-item modal-menu-item personal-menu-close-js">
+      <a href="javascript:void(0)">Личный кабинет</a>
+    </div>
+    <div class="personal-menu-item modal-menu-item personal-menu-close-js">
+      <a href="javascript:void(0)">Безопасность</a>
+    </div>
+    <div class="personal-menu-item modal-menu-item personal-menu-close-js personal-menu-logout-js">
+      <a href="javascript:void(0)">Выйти</a>
+    </div>
+  </div>
+
+  <!-- "Конец модального окна личного кабинета " -->
+
+  <!-- НАЧАЛО МОДАЛЬНОЕ ОКНО ОШИБКА СОХРАНЕНИЯ -->
+
+  <div class="modal-save-error flex fd-column ai-center">
+    <div class="modal-save-error__title tac">ошибка сохранения</div>
+    <p class="tac small">Во время сохранения произошла ошибка, пожалуйста повторите попытку</p>
+    <button class="btn-red p13-24">Вернуться к редактированию</button>
+    </div>
+  </div>
+
+  <!-- КОНЕЦ МОДАЛЬНОЕ ОКНО ОШИБКА СОХРАНЕНИЯ -->
+
+  <!-- НАЧАЛО МОДАЛЬНОЕ ОКНО УДАЛЕНИЕ -->
+
+  <div class="modal-delete-confirm flex fd-column ai-center">
+    <div class="modal-delete-confirm__title tac">Удалить элемент?</div>
+    <p class="tac small">Данный элемент будет удален из системы</p>
+    <div class="modal-delete-confirm__button-group flex fd-column-xs">
+      <button class="btn-red p13-24">Удалить</button>
+      <button class="btn-white p13-24">Отмена</button>
+    </div>
+  </div>
+
+  <!-- КОНЕЦ МОДАЛЬНОЕ ОКНО УДАЛЕНИЕ -->
+
+  <!-- НАЧАЛО МОДАЛЬНОЕ ОКНО ИЗМЕНЕНИЯ -->
+
+  <div class="modal-changes flex fd-column ai-center">
+    <div class="modal-changes__title tac">Изменения сохранены</div>
+    <p class="tac small">Внесенные вами изменения сохранены</p>
+    <button class="btn-blue p13-24">Вернуться к списку</button>
+  </div>
+
+  <!-- КОНЕЦ МОДАЛЬНОЕ ОКНО ИЗМЕНЕНИЯ -->
+
+    <!-- НАЧАЛО МОДАЛЬНОЕ ОКНО ВЫХОД ИЗ АККАУНТА -->
+
+    <div class="modal-logout flex fd-column ai-center">
+      <div class="modal-logout__title tac">Выйти из аккаунта</div>
+      <p class="tac small">Ды действительно хотите выйти из аккаунта?</p>
+  
+      <div class="modal-logout__btn-wrapper flex jc-sb">
+        <button class="btn-blue p13-24 btn-logout--js">Выйти</button>
+        <button class="btn-white p13-24 btn-logout--js btn-logout-esc--js">Отмена</button>
+      </div>
+    </div>
+  
+    <!-- КОНЕЦ МОДАЛЬНОЕ ОКНО ВЫХОД ИЗ АККАУНТА  -->
+
+
+  <!-- "Начало бокового меню" -->
+  <aside class="compaines-menu aside-menu">
+    <a href="/" class="companies-menu-logo aside-menu-logo">
+      <img src="../img/logo.svg" alt="logo">
+    </a>
+    <button class="aside-menu-btn aside-menu-btn-js"></button>
+    <nav class="compaines-nav aside-nav">
+      <ul>
+        <li>
+          <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+            <div class="companies-menu-link aside-menu-link">
+              <div>
+                <img class="companies-menu-icon aside-menu-icon" src="../img/business.svg" alt="business-icon">
+              </div>
+              <div class="companies-menu-text aside-menu-text">Компании</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+            <div class="companies-menu-link aside-menu-link">
+              <div>
+                <img class="companies-menu-icon aside-menu-icon" src="../img/wallet.svg" alt="wallet-icon">
+              </div>
+              <div class="companies-menu-text aside-menu-text">Оплаты</div>
+            </div>
+          </a>
+        </li>
+
+        <li class="li-accordion">
+          <a href="javascript:void(0)" class="companies-menu-item aside-menu-item accordion accordion-js" data-state="">
+            <div class="companies-menu-link aside-menu-link">
+              <div>
+                <img class="companies-menu-icon aside-menu-icon" src="../img/receipt.svg" alt="receipt-icon">
+              </div>
+              <div class="companies-menu-text aside-menu-text">Мои списки</div>
+              <div class="accordion-arrow">
+                <img src="../img/arrow.svg" alt="arrow-down">
+              </div>
+            </div>
+          </a>
+          <div class="panel">
+            <ul>
+              <li>
+                <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                  <div class="companies-menu-sublink aside-menu-sublink">
+                    <div class="companies-menu-subtext aside-menu-subtext">Оборудование</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                  <div class="companies-menu-sublink aside-menu-sublink">
+                    <div class="companies-menu-subtext aside-menu-subtext">ПО</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                  <div class="companies-menu-sublink aside-menu-sublink">
+                    <div class="companies-menu-subtext aside-menu-subtext">Услуги</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                  <div class="companies-menu-sublink aside-menu-sublink">
+                    <div class="companies-menu-subtext aside-menu-subtext">Пользователи</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                  <div class="companies-menu-sublink aside-menu-sublink">
+                    <div class="companies-menu-subtext aside-menu-subtext">Поставщики</div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="aside-menu-small small aside-menu-small-js">
+            <a href="javascript:void(0)" class="header__menu-link">Оборудование</a>
+            <a href="javascript:void(0)" class="header__menu-link">ПО</a>
+            <a href="javascript:void(0)" class="header__menu-link">Услуги</a>
+            <a href="javascript:void(0)" class="header__menu-link">Пользователи</a>
+            <a href="javascript:void(0)" class="header__menu-link">Поставщики</a>
+          </div>
+        </li>
+
+
+
+        <li class="li-accordion">
+          <a href="javascript:void(0)" class="companies-menu-item aside-menu-item accordion accordion-js" data-state="">
+            <div class="companies-menu-link aside-menu-link">
+              <div>
+                <img class="companies-menu-icon aside-menu-icon" src="../img/raise.svg" alt="raise-icon">
+              </div>
+              <div class="companies-menu-text aside-menu-text">Бюджет</div>
+              <div class="accordion-arrow">
+                <img src="../img/arrow.svg" alt="arrow-down">
+              </div>
+            </div>
+          </a>
+          <div class="panel">
+            <ul>
+              <li>
+                <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                  <div class="companies-menu-sublink aside-menu-sublink">
+                    <div class="companies-menu-subtext aside-menu-subtext">Сводная</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                  <div class="companies-menu-sublink aside-menu-sublink">
+                    <div class="companies-menu-subtext aside-menu-subtext">Планирование</div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="aside-menu-small small aside-menu-small-js">
+            <a href="javascript:void(0)" class="header__menu-link">Сводная</a>
+            <a href="javascript:void(0)" class="header__menu-link">Планирование</a>
+          </div>
+        </li>
+
+
+
+
+        <li>
+          <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+            <div class="companies-menu-link aside-menu-link">
+              <div>
+                <img class="companies-menu-icon aside-menu-icon" src="../img/gear.svg" alt="gear-icon">
+              </div>
+              <div class="companies-menu-text aside-menu-text">Настройки</div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  </aside>
+  <!-- "Конец бокового меню" -->
+
+
+  <header class=" header-white header-blue">
+    <div class="header-blue-wrapper flex ai-center jc-sb">
+      <div class="flex ai-center">
+        <div class="menu__btn" for="menu__toggle">
+          <span></span>
+        </div>
+        <a href="javascript:void(0)" class="header-blue-logo">
+          <img src="../img/logo.svg" alt="logo">
+        </a>
+      </div>
+
+      <div class="flex ai-center jc-sb personal-btn personal-btn-js header__profile--js">
+        <button class="header-blue__profile header__profile--js" aria-label="Профиль пользователя"></button>
+        <div class="user_name">Иванов М. А.</div>
+      </div>
+      <div class="header__menu-small small header__menu-small--js">
+        <a href="javascript:void(0)" class="header__menu-link">Личный кабинет</a>
+        <a href="javascript:void(0)" class="header__menu-link">Сменить пароль</a>
+        <a href="javascript:void(0)" class="header__menu-link personal-menu-logout-js">Выйти</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- НАЧАЛО СЕКЦИИ ДЕТАЛЬНАЯ СТРАНИЦА ПО -->
+  <section class="software-details">
+    <div class="container container-small">
+      <div class="title-wrapper">
+        <div class="software-details__title-wrapper flex">
+          <h1 class="text-error">Windows 10 Professional</h1>
+          
+  
+          <div class="software-details__title-buttons-group flex">
+            <button class="title-button title-button_confirmed">
+              <svg width="27" height="21" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8137 1.13746C13.0404 1.33951 13.0634 1.69049 12.865 1.9214L5.22868 10.8103C5.12926 10.926 4.98721 10.9946 4.83633 10.9997C4.68545 11.0048 4.53923 10.946 4.43249 10.8373L1.15976 7.50395C0.946747 7.28699 0.946747 6.93523 1.15976 6.71828C1.37277 6.50132 1.71814 6.50132 1.93115 6.71828L4.79161 9.63171L12.044 1.18973C12.2424 0.958818 12.587 0.935419 12.8137 1.13746Z" fill="#329B0D" stroke="#329B0D" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>              
+            </button>
+  
+            <button class="title-button title-button_trash table-button-delete--js">
+              <svg width="18" height="24" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.58333 1.85714H7.08333V1.16071C7.08333 0.852874 6.97359 0.557642 6.77824 0.339965C6.58289 0.122289 6.31793 0 6.04167 0H3.95833C3.68207 0 3.41711 0.122289 3.22176 0.339965C3.02641 0.557642 2.91667 0.852874 2.91667 1.16071V1.85714H0.416667C0.30616 1.85714 0.200179 1.90606 0.122039 1.99313C0.0438988 2.0802 0 2.19829 0 2.32143C0 2.44456 0.0438988 2.56266 0.122039 2.64973C0.200179 2.7368 0.30616 2.78571 0.416667 2.78571H0.859375L1.35417 11.6338C1.39115 12.413 1.92708 13 2.60417 13H7.39583C8.0763 13 8.60156 12.426 8.64583 11.6362L9.14062 2.78571H9.58333C9.69384 2.78571 9.79982 2.7368 9.87796 2.64973C9.9561 2.56266 10 2.44456 10 2.32143C10 2.19829 9.9561 2.0802 9.87796 1.99313C9.79982 1.90606 9.69384 1.85714 9.58333 1.85714ZM3.34818 11.1429H3.33333C3.22535 11.1429 3.12156 11.0963 3.04383 11.0128C2.9661 10.9292 2.92051 10.8154 2.91667 10.6951L2.70833 4.19511C2.7044 4.07198 2.74452 3.95214 2.81988 3.86197C2.89523 3.7718 2.99965 3.71867 3.11016 3.71429C3.22066 3.7099 3.32821 3.75461 3.40913 3.83858C3.49006 3.92254 3.53773 4.03889 3.54167 4.16203L3.75 10.662C3.75198 10.723 3.74316 10.7838 3.72404 10.841C3.70491 10.8982 3.67586 10.9506 3.63854 10.9953C3.60122 11.0399 3.55636 11.0759 3.50654 11.1013C3.45672 11.1266 3.40291 11.1407 3.34818 11.1429ZM5.41667 10.6786C5.41667 10.8017 5.37277 10.9198 5.29463 11.0069C5.21649 11.0939 5.11051 11.1429 5 11.1429C4.88949 11.1429 4.78351 11.0939 4.70537 11.0069C4.62723 10.9198 4.58333 10.8017 4.58333 10.6786V4.17857C4.58333 4.05544 4.62723 3.93734 4.70537 3.85027C4.78351 3.7632 4.88949 3.71429 5 3.71429C5.11051 3.71429 5.21649 3.7632 5.29463 3.85027C5.37277 3.93734 5.41667 4.05544 5.41667 4.17857V10.6786ZM6.25 1.85714H3.75V1.16071C3.74969 1.13013 3.75486 1.09979 3.76522 1.07146C3.77558 1.04314 3.79091 1.01741 3.81032 0.995785C3.82973 0.974158 3.85282 0.957072 3.87824 0.945529C3.90366 0.933987 3.93089 0.928221 3.95833 0.928571H6.04167C6.06911 0.928221 6.09634 0.933987 6.12176 0.945529C6.14718 0.957072 6.17027 0.974158 6.18968 0.995785C6.20909 1.01741 6.22442 1.04314 6.23478 1.07146C6.24514 1.09979 6.25031 1.13013 6.25 1.16071V1.85714ZM7.08333 10.6951C7.07949 10.8154 7.0339 10.9292 6.95617 11.0128C6.87844 11.0963 6.77465 11.1429 6.66667 11.1429H6.65156C6.59686 11.1407 6.54307 11.1265 6.49328 11.1012C6.44348 11.0758 6.39866 11.0398 6.36137 10.9952C6.32408 10.9505 6.29505 10.8981 6.27594 10.8409C6.25683 10.7838 6.24801 10.723 6.25 10.662L6.45833 4.16203C6.46028 4.10106 6.47299 4.04111 6.49573 3.98562C6.51847 3.93012 6.5508 3.88015 6.59087 3.83858C6.63094 3.797 6.67796 3.76462 6.72926 3.7433C6.78056 3.72197 6.83513 3.71211 6.88984 3.71429C6.94456 3.71646 6.99836 3.73062 7.04816 3.75596C7.09797 3.7813 7.14281 3.81732 7.18012 3.86197C7.21744 3.90662 7.24649 3.95902 7.26563 4.01618C7.28477 4.07334 7.29362 4.13414 7.29167 4.19511L7.08333 10.6951Z" fill="#C91919"/>
+              </svg>              
+            </button>
+          </div>
+        </div>
+        <p class="software-details__description">Проверьте правильность данных или внесите необходимые изменения</p>
+      </div>
+    </div>
+
+    <div class="container container-small container-small_tabs">
+      <div class="tabs-wrapper">
+        <div class="tabs-block flex">
+          <button class="tab  active-tab tab--js" data-tab="info">Общая информация</button>
+          <button class="tab  tab--js" data-tab="comments">Комментарии</button>
+        </div>
+      </div>
+    </div>
+
+      <!-- НАЧАЛО ФОРМЫ -->
+
+    <div class="container container-small">
+      <form action="javascript:void(0)" method="post" class="tab-page current-tab-page form--js" data-page="info">
+        <div class="software-details__input-group flex fd-column">
+
+          <div class="form-input-field-group form-input-field-group--js">
+            <input type="text" placeholder="Наименование" name="title" required value="Ноутбук HP 250 G9 Core i5">
+            <label for="title">Наименование</label>
+          </div>
+
+          <div class="software-details__type">
+            <div class="__select __select_tariff __select-form-js " data-state="">
+              <div class="__select__title __select_tariff__title" data-default="">Тип</div>
+              <div class="select_placeholder">Тип</div>
+              <div class="__select__content __select_tariff__content">
+
+                <input id="type1" class="__select__input" type="radio" name="type1" />
+                <label for="type1" class="__select__label __select_tariff__label ">
+                  Операционная система</label>
+                <input id="type2" class="__select__input" type="radio" name="type2" />
+                <label for="type2" class="__select__label __select_tariff__label ">
+                  Операционная система 2</label>
+                <input id="type3" class="__select__input" type="radio" name="type3" />
+                <label for="type3" class="__select__label __select_tariff__label ">
+                  Операционная система 3</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="software-details__supplier">
+            <div class="__select __select_tariff __select-form-js " data-state="">
+              <div class="__select__title __select_tariff__title" data-default="">Поставщик</div>
+              <div class="select_placeholder">Поставщик</div>
+              <div class="__select__content __select_tariff__content">
+
+                <input id="supplier1" class="__select__input" type="radio" name="supplier1" />
+                <label for="supplier1" class="__select__label __select_tariff__label ">Microsoft</label>
+                <input id="supplier2" class="__select__input" type="radio" name="supplier2" />
+                <label for="supplier2" class="__select__label __select_tariff__label ">Kaspersky</label>
+                <input id="supplier3" class="__select__input" type="radio" name="supplier3" />
+                <label for="supplier3" class="__select__label __select_tariff__label ">Client Access Licenses (CAL)</label>
+                <input id="supplier4" class="__select__input" type="radio" name="supplier4" />
+                <label for="supplier4" class="__select__label __select_tariff__label ">Adobe</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="datepickers-group flex fd-column-xs">
+            <div class="form-input-field-group form-datepicker-group form-input-field-group--js">
+              <input type="text" placeholder="Дата начала" id="date-start" name="date-start" required value="03.04.2023" class="date-input--js date-input-start--js datepicker--js">
+              <label for="date-start">Дата начала</label>
+
+              <div class="help-icon help-icon_small help-icon--js">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.15613 1.75062C5.58992 0.792596 7.2756 0.28125 9 0.28125C11.3124 0.28125 13.53 1.19983 15.1651 2.83491C16.8002 4.47 17.7188 6.68764 17.7188 9C17.7188 10.7244 17.2074 12.4101 16.2494 13.8439C15.2914 15.2777 13.9297 16.3952 12.3365 17.0551C10.7434 17.715 8.99033 17.8876 7.29906 17.5512C5.60779 17.2148 4.05426 16.3844 2.83492 15.1651C1.61558 13.9457 0.785197 12.3922 0.448782 10.7009C0.112367 9.00967 0.285028 7.25662 0.944929 5.66348C1.60483 4.07034 2.72233 2.70865 4.15613 1.75062ZM9 1.21875C7.46102 1.21875 5.95659 1.67511 4.67697 2.53013C3.39735 3.38514 2.40001 4.60041 1.81107 6.02225C1.22212 7.44408 1.06803 9.00863 1.36827 10.518C1.66851 12.0275 2.4096 13.4139 3.49783 14.5022C4.58606 15.5904 5.97254 16.3315 7.48196 16.6317C8.99137 16.932 10.5559 16.7779 11.9778 16.1889C13.3996 15.6 14.6149 14.6027 15.4699 13.323C16.3249 12.0434 16.7813 10.539 16.7813 9C16.7813 6.93628 15.9614 4.95709 14.5022 3.49783C13.0429 2.03856 11.0637 1.21875 9 1.21875Z" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0382 4.99126C9.86307 4.90654 9.4873 4.82255 9.00736 4.82836C8.49868 4.83531 7.99618 4.94728 7.59306 5.27762M10.0382 4.99126C10.4905 5.21163 11.1498 5.64489 11.1498 6.51584C11.1498 7.47363 10.5921 7.90351 9.63129 8.56045C9.11013 8.91677 8.7437 9.29654 8.51271 9.72347C8.27968 10.1542 8.20798 10.5896 8.20798 11.0156C8.20798 11.3263 8.46127 11.5781 8.77371 11.5781C9.08616 11.5781 9.33944 11.3263 9.33944 11.0156C9.33944 10.7206 9.38768 10.4809 9.50915 10.2564C9.63266 10.0281 9.8553 9.77257 10.2724 9.48739L10.2941 9.47252C11.2053 8.84965 12.2812 8.11414 12.2812 6.51584C12.2812 4.94597 11.0509 4.23178 10.5353 3.98071L10.5349 3.98049L10.5344 3.98026C10.1431 3.79059 9.57216 3.69643 8.99306 3.7035L8.99267 3.7035L8.99228 3.70351C8.34078 3.71235 7.54847 3.85633 6.8734 4.40955L6.87338 4.40956C6.33015 4.85477 6.0412 5.36035 5.88923 5.75974C5.81354 5.95865 5.77164 6.13149 5.74841 6.25875C5.73677 6.3225 5.72973 6.37526 5.72549 6.41467C5.72337 6.43439 5.72194 6.45082 5.72099 6.46368C5.72051 6.47011 5.72014 6.47565 5.71987 6.48026C5.71974 6.48257 5.71962 6.48465 5.71953 6.48649L5.7194 6.48908L5.71935 6.49024L5.71932 6.49079C5.71931 6.49105 5.7193 6.49132 6.28449 6.51584L5.7193 6.49132C5.70568 6.80167 5.94768 7.06424 6.25983 7.07778C6.56998 7.09123 6.83269 6.85377 6.84939 6.5463C6.84952 6.5447 6.84986 6.54066 6.85054 6.53434C6.85207 6.52009 6.85531 6.49452 6.86168 6.45964C6.87446 6.38963 6.89949 6.28393 6.94749 6.1578C7.04288 5.90712 7.22829 5.57658 7.59305 5.27763" />
+                  <path d="M8.71875 14.1562C9.18474 14.1562 9.5625 13.7785 9.5625 13.3125C9.5625 12.8465 9.18474 12.4688 8.71875 12.4688C8.25276 12.4688 7.875 12.8465 7.875 13.3125C7.875 13.7785 8.25276 14.1562 8.71875 14.1562Z" />
+                </svg>                  
+              </div>
+  
+              <div class="help-info help-info_small small help-info--js">
+                Если поле не заполнено, то период будет автоматически считаться «Бессрочным»
+              </div>
+            </div>
+  
+            <div class="form-input-field-group form-datepicker-group  form-input-field-group--js">
+              <input type="text" placeholder="Дата окончания" id="date-end" name="date-end" required value="03.08.2023" class="date-input--js date-input-end--js datepicker--js">
+              <label for="date-end">Дата окончания</label>
+
+              <div class="help-icon help-icon_small help-icon--js">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.15613 1.75062C5.58992 0.792596 7.2756 0.28125 9 0.28125C11.3124 0.28125 13.53 1.19983 15.1651 2.83491C16.8002 4.47 17.7188 6.68764 17.7188 9C17.7188 10.7244 17.2074 12.4101 16.2494 13.8439C15.2914 15.2777 13.9297 16.3952 12.3365 17.0551C10.7434 17.715 8.99033 17.8876 7.29906 17.5512C5.60779 17.2148 4.05426 16.3844 2.83492 15.1651C1.61558 13.9457 0.785197 12.3922 0.448782 10.7009C0.112367 9.00967 0.285028 7.25662 0.944929 5.66348C1.60483 4.07034 2.72233 2.70865 4.15613 1.75062ZM9 1.21875C7.46102 1.21875 5.95659 1.67511 4.67697 2.53013C3.39735 3.38514 2.40001 4.60041 1.81107 6.02225C1.22212 7.44408 1.06803 9.00863 1.36827 10.518C1.66851 12.0275 2.4096 13.4139 3.49783 14.5022C4.58606 15.5904 5.97254 16.3315 7.48196 16.6317C8.99137 16.932 10.5559 16.7779 11.9778 16.1889C13.3996 15.6 14.6149 14.6027 15.4699 13.323C16.3249 12.0434 16.7813 10.539 16.7813 9C16.7813 6.93628 15.9614 4.95709 14.5022 3.49783C13.0429 2.03856 11.0637 1.21875 9 1.21875Z" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0382 4.99126C9.86307 4.90654 9.4873 4.82255 9.00736 4.82836C8.49868 4.83531 7.99618 4.94728 7.59306 5.27762M10.0382 4.99126C10.4905 5.21163 11.1498 5.64489 11.1498 6.51584C11.1498 7.47363 10.5921 7.90351 9.63129 8.56045C9.11013 8.91677 8.7437 9.29654 8.51271 9.72347C8.27968 10.1542 8.20798 10.5896 8.20798 11.0156C8.20798 11.3263 8.46127 11.5781 8.77371 11.5781C9.08616 11.5781 9.33944 11.3263 9.33944 11.0156C9.33944 10.7206 9.38768 10.4809 9.50915 10.2564C9.63266 10.0281 9.8553 9.77257 10.2724 9.48739L10.2941 9.47252C11.2053 8.84965 12.2812 8.11414 12.2812 6.51584C12.2812 4.94597 11.0509 4.23178 10.5353 3.98071L10.5349 3.98049L10.5344 3.98026C10.1431 3.79059 9.57216 3.69643 8.99306 3.7035L8.99267 3.7035L8.99228 3.70351C8.34078 3.71235 7.54847 3.85633 6.8734 4.40955L6.87338 4.40956C6.33015 4.85477 6.0412 5.36035 5.88923 5.75974C5.81354 5.95865 5.77164 6.13149 5.74841 6.25875C5.73677 6.3225 5.72973 6.37526 5.72549 6.41467C5.72337 6.43439 5.72194 6.45082 5.72099 6.46368C5.72051 6.47011 5.72014 6.47565 5.71987 6.48026C5.71974 6.48257 5.71962 6.48465 5.71953 6.48649L5.7194 6.48908L5.71935 6.49024L5.71932 6.49079C5.71931 6.49105 5.7193 6.49132 6.28449 6.51584L5.7193 6.49132C5.70568 6.80167 5.94768 7.06424 6.25983 7.07778C6.56998 7.09123 6.83269 6.85377 6.84939 6.5463C6.84952 6.5447 6.84986 6.54066 6.85054 6.53434C6.85207 6.52009 6.85531 6.49452 6.86168 6.45964C6.87446 6.38963 6.89949 6.28393 6.94749 6.1578C7.04288 5.90712 7.22829 5.57658 7.59305 5.27763" />
+                  <path d="M8.71875 14.1562C9.18474 14.1562 9.5625 13.7785 9.5625 13.3125C9.5625 12.8465 9.18474 12.4688 8.71875 12.4688C8.25276 12.4688 7.875 12.8465 7.875 13.3125C7.875 13.7785 8.25276 14.1562 8.71875 14.1562Z" />
+                </svg>                  
+              </div>
+  
+              <div class="help-info help-info_small small help-info--js">
+                Если поле не заполнено, то период будет автоматически считаться «Бессрочным»
+              </div>
+            </div>
+
+            <div class="help-icon help-icon--js">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5415 2.33417C7.45322 1.05679 9.7008 0.375 12 0.375C15.0831 0.375 18.04 1.59977 20.2201 3.77988C22.4002 5.95999 23.625 8.91686 23.625 12C23.625 14.2992 22.9432 16.5468 21.6658 18.4585C20.3885 20.3702 18.5729 21.8602 16.4487 22.7401C14.3245 23.62 11.9871 23.8502 9.73208 23.4016C7.47705 22.9531 5.40567 21.8459 3.77989 20.2201C2.1541 18.5943 1.04693 16.523 0.598376 14.2679C0.149823 12.0129 0.380037 9.6755 1.25991 7.55131C2.13977 5.42711 3.62978 3.61154 5.5415 2.33417ZM12 1.625C9.94802 1.625 7.94212 2.23348 6.23596 3.3735C4.5298 4.51352 3.20001 6.13388 2.41476 8.02966C1.6295 9.92544 1.42404 12.0115 1.82436 14.0241C2.22468 16.0366 3.2128 17.8853 4.66377 19.3362C6.11474 20.7872 7.96339 21.7753 9.97594 22.1756C11.9885 22.576 14.0746 22.3705 15.9703 21.5852C17.8661 20.8 19.4865 19.4702 20.6265 17.764C21.7665 16.0579 22.375 14.052 22.375 12C22.375 9.24838 21.2819 6.60946 19.3362 4.66377C17.3905 2.71808 14.7516 1.625 12 1.625Z" />
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3842 6.65501C13.1508 6.54205 12.6497 6.43007 12.0098 6.43781C11.3316 6.44709 10.6616 6.59638 10.1241 7.03683M13.3842 6.65501C13.9874 6.94884 14.8664 7.52652 14.8664 8.68778C14.8664 9.96484 14.1228 10.538 12.8417 11.4139C12.1468 11.889 11.6583 12.3954 11.3503 12.9646C11.0396 13.5389 10.944 14.1194 10.944 14.6875C10.944 15.1017 11.2817 15.4375 11.6983 15.4375C12.1149 15.4375 12.4526 15.1017 12.4526 14.6875C12.4526 14.2942 12.5169 13.9745 12.6789 13.6752C12.8436 13.3708 13.1404 13.0301 13.6965 12.6498L13.7255 12.63C14.9404 11.7995 16.375 10.8188 16.375 8.68778C16.375 6.59463 14.7345 5.64237 14.0471 5.30762L14.0465 5.30732L14.0459 5.30702C13.5241 5.05411 12.7629 4.92857 11.9907 4.93799L11.9902 4.938L11.9897 4.93801C11.121 4.9498 10.0646 5.14178 9.16453 5.8794L9.16451 5.87942C8.4402 6.47303 8.05494 7.14713 7.8523 7.67966C7.75138 7.94487 7.69552 8.17532 7.66454 8.34499C7.64902 8.43 7.63965 8.50034 7.63399 8.55289C7.63116 8.57918 7.62926 8.60109 7.62798 8.61824C7.62734 8.62681 7.62686 8.6342 7.6265 8.64035C7.62632 8.64343 7.62616 8.6462 7.62604 8.64866L7.62587 8.65211L7.62579 8.65366L7.62576 8.65439C7.62575 8.65474 7.62573 8.65509 8.37932 8.68778L7.62573 8.65509C7.60757 9.06889 7.93024 9.41898 8.34644 9.43704C8.75998 9.45498 9.11025 9.13837 9.13253 8.7284C9.13269 8.72627 9.13314 8.72088 9.13405 8.71246C9.13609 8.69345 9.14042 8.65936 9.14891 8.61286C9.16595 8.5195 9.19933 8.37858 9.26332 8.21041C9.3905 7.87616 9.63772 7.43544 10.1241 7.03685" />
+                <path d="M11.625 18.875C12.2463 18.875 12.75 18.3713 12.75 17.75C12.75 17.1287 12.2463 16.625 11.625 16.625C11.0037 16.625 10.5 17.1287 10.5 17.75C10.5 18.3713 11.0037 18.875 11.625 18.875Z" />
+              </svg>
+            </div>
+
+            <div class="help-info small help-info--js">
+              Если поле не заполнено, то период будет автоматически считаться «Бессрочным»
+            </div>
+          </div>
+
+          <div class="form-input-field-group form-input-field-group--js">
+            <input type="text" placeholder="Стоимость" name="cost" required value="3 000" class="format-number-field--js">
+            <label for="cost">Стоимость</label>
+          </div>
+
+          <div class="form-input-field-group form-input-field-group--js">
+            <input type="number" placeholder="Артикул" id="article-number" name="article-number" required value="7947592849759">
+            <label for="article-number">Артикул</label>
+          </div>
+
+          <div class="software-details__company">
+            <div class="__select __select_tariff __select-form-js " data-state="">
+              <div class="__select__title __select_tariff__title" data-default="">Компания</div>
+              <div class="select_placeholder">Компания</div>
+              <div class="__select__content __select_tariff__content">
+
+                <input id="company1" class="__select__input" type="radio" name="company1" />
+                <label for="company1" class="__select__label __select_tariff__label ">ООО
+                  Глагол Нижний Новгород</label>
+                <input id="company2" class="__select__input" type="radio" name="company2" />
+                <label for="company2" class="__select__label __select_tariff__label ">ООО
+                  Глагол Нижний Новгород 2</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="software-details__unit">
+            <div class="__select __select_tariff __select-form-js " data-state="">
+              <div class="__select__title __select_tariff__title" data-default="">Подразделение</div>
+              <div class="select_placeholder">Подразделение</div>
+              <div class="__select__content __select_tariff__content">
+
+                <input id="unit1" class="__select__input" type="radio" name="unit1" />
+                <label for="unit1" class="__select__label __select_tariff__label ">
+                  Отдел оптовых продаж</label>
+                <input id="unit2" class="__select__input" type="radio" name="unit2" />
+                <label for="unit2" class="__select__label __select_tariff__label ">
+                  Отдел оптовых продаж 2</label>
+                <input id="unit3" class="__select__input" type="radio" name="unit3" />
+                <label for="unit3" class="__select__label __select_tariff__label ">
+                  Отдел оптовых продаж 3</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="software-details__user">
+            <div class="__select __select_tariff __select-form-js " data-state="">
+              <div class="__select__title __select_tariff__title" data-default="">Пользователь</div>
+              <div class="select_placeholder">Пользователь</div>
+              <div class="__select__content __select_tariff__content">
+
+                <input id="user1" class="__select__input" type="radio" name="user1" />
+                <label for="user1" class="__select__label __select_tariff__label ">Иванов М. А.</label>
+                <input id="user2" class="__select__input" type="radio" name="user2" />
+                <label for="user2" class="__select__label __select_tariff__label ">Петров Г. В.</label>
+                <input id="user3" class="__select__input" type="radio" name="user3" />
+                <label for="user3" class="__select__label __select_tariff__label ">Сидоров Ж. П.</label>
+                <input id="user4" class="__select__input" type="radio" name="user4" />
+                <label for="user4" class="__select__label __select_tariff__label ">Гаврилов С. М.</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-input-field-group form-input-field-group--js">
+            <textarea name="analogs" placeholder="Аналоги">Ноутбук HP 250 G9 Core i5 1235U/8Gb/256Gb SSD/15.6" FullHD/DOS Dark Silver;
+              Ноутбук HP 250 G9 Core i5 1235U/8Gb/256Gb SSD/15.6" FullHD/DOS Dark Silver;
+              Ноутбук HP 250 G9 Core i5 1235U/8Gb/256Gb SSD/15.6" FullHD/DOS Dark Silver</textarea>
+            <label for="analogs">Аналоги</label>
+          </div>
+
+          <!-- СООБЩЕНИЕ ОБ ОШИБКЕ -->
+          <div class="text-error" hidden>Проверьте корректность введенных данных</div>
+        </div>
+
+        <div class="software-details__button-group flex">
+          <button class="btn-blue p13-24 button--js save-button--js" type="submit" disabled>Сохранить</button>
+          <button class="btn-white p13-24 button--js" type="button" disabled>Отменить</button>
+        </div>
+      </form>
+
+      <!-- КОНЕЦ ФОРМЫ -->
+    </div>
+
+    <!-- НАЧАЛО БЛОКА КОММЕНТАРИЕВ -->
+
+    <form action="javascript:void(0)" method="post" class="comments tab-page" data-page="comments">
+      <ul class="comments__list">
+        <li class="comments__item">
+          <div class="comments__wrapper">
+            <div class="comments__date">21.03.23 в 15:00</div>
+            <div class="comments__message">Иванов М. А. подтвердил оборудование</div>
+          </div>
+        </li>
+  
+        <li class="comments__item">
+          <div class="comments__wrapper">
+            <div class="comments__date">21.03.23 в 15:00</div>
+            <div class="comments__message">Иванов М. А. оставил(а) комментарий:</div>
+            <div class="comments__text">
+              Необходимо вручную добавить и подтвердить оставшееся оборудование по компании ИП Инклит до 10.04.23
+            </div>
+          </div>
+        </li>
+  
+        <li class="comments__item comments__item_highlited">
+          <div class="comments__wrapper">
+            <div class="comments__date">21.03.23 в 15:00</div>
+            <div class="comments__message">Иванов М. А. оставил(а) комментарий:</div>
+            <div class="comments__text">
+              Необходимо вручную добавить и подтвердить оставшееся оборудование по компании ИП Инклит до 10.04.23
+            </div>
+          </div>
+        </li>
+      </ul>
+  
+      <div class="comments__functional">
+        <textarea name="new-comment" placeholder="Новый комментарий..."></textarea>
+  
+        <div class="comments__button-group flex fd-column-xs">
+          <button type="submit" class="btn-blue p13-24">Отправить</button>
+          <button class="btn-white p13-24">Отмена</button>
+        </div>
+      </div>
+    </form>
+
+    <!-- КОНЕЦ БЛОКА КОММЕНТАРИЕВ -->
+  </section>
+  <!-- КОНЕЦ СЕКЦИИ ДЕТАЛЬНАЯ СТРАНИЦА ПО -->
+
+
+
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/modules/imask.js"></script>
+  <script src="../scripts/date-mask.js"></script>
+  <script src="../scripts/modules/autosize.js"></script>
+  <script src="../scripts/textarea-autosize.js"></script>
+  <script src="../scripts/modules/jquery-ui.js"></script>
+  <script src="../scripts/datepicker.js"></script>
+
+</body>
+
+</html>

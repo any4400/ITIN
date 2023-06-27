@@ -1,0 +1,26 @@
+/* ТАБЛИЦА */
+
+.service {
+  width: 100%;
+  padding-bottom: 48px;
+}
+
+.service h1 {
+  margin-bottom: 8px;
+}
+
+.service__description {
+  margin-bottom: 24px;
+}
+
+@media (max-width: 1919px) {
+  .service {
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .service {
+    padding-top: 112px;
+  }
+}

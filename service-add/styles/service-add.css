@@ -1,0 +1,125 @@
+.service-add {
+    padding-bottom: 120px;
+    min-height: calc(100vh - 121px);
+    background: radial-gradient(700px at 90% 90%, #F0FAFF 60%, #FFF);
+  }
+  
+  .service-add h1 {
+    margin-bottom: 8px;
+  }
+  
+  .service-add__title-buttons-group {
+    gap: 20px;
+  }
+  
+  .service-add__description {
+    margin-bottom: 40px;
+  }
+  
+  .service-add form[data-page="info"] {
+    padding-top: 21px;
+    max-width: 552px;
+  }
+  
+  .service-add__input-group {
+    margin-bottom: 32px;
+    gap: 24px;
+  }
+  
+  .service-add__button-group {
+    gap: 16px;
+  }
+  
+  .service-add form button {
+    width: 200px;
+    height: 48px;
+  }
+  .service-add__input-group textarea {
+    min-height: 167px;
+  }
+  .required {
+    color:#C6CBD6;
+  }
+  
+  /* МЕДИА-ЗАПРОСЫ */
+  
+  @media (max-width: 1199px) {
+    .service-add {
+      padding-top: 128px;
+      padding-bottom: 90px;
+      min-height: calc(100vh);
+      text-align: center;
+      background: radial-gradient(500px at 90% 90%, #F0FAFF 60%, #FFF);
+    }
+  
+    .container {
+      margin: 0 auto;
+    }
+  
+    .container-small {
+      max-width: 528px;
+    }
+    .service-add__description {
+      margin-bottom: 48px;
+    }
+    .service-add__title-wrapper {
+      column-gap: 23px;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .service-add__title-buttons-group {
+      gap: 16px;
+    }
+  
+    .service-add form[data-page="info"] {
+      max-width: 528px;
+      margin: 0 auto;
+    }
+  
+    .service-add__input-group {
+      margin-bottom: 40px;
+    }
+  
+    .service-add input {
+      padding: 13px 16px;
+    }
+  
+    .service-add__button-group {
+      gap: 24px;
+    }
+  
+    .service-add form button {
+      width: 50%;
+    }
+  
+  }
+  
+  @media (max-width: 767px) {
+    .container-small {
+      max-width: none;
+    }
+  
+    .service-add {
+      padding-top: 112px;
+      padding-bottom: 48px;
+      background: none;
+    }
+  
+    .service-add_company-description {
+      height: 230px;
+    }
+  
+    .service-add form[data-page="info"] {
+      max-width: none;
+    }
+  
+    .service-add__button-group {
+      flex-direction: column;
+      gap: 16px;
+    }
+  
+    .service-add form button {
+      width: 100%;
+    }
+  }
