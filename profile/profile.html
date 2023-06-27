@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/index.css">
+  <link rel="stylesheet" href="./styles/profile.css">
+  <title>IT-сервис</title>
+  <script src="../scripts/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+  <div class="overlay overlay-js"></div>
+
+  <!-- "Начало модального окна личного кабинета " -->
+
+  <div class="personal-menu modal-menu">
+    <div class="personal-menu-header modal-menu-header">
+      Иванов М. А.
+    </div>
+    <div class="personal-menu-item modal-menu-item personal-menu-close-js">
+      <a href="javascript:void(0)">Личный кабинет</a>
+    </div>
+    <div class="personal-menu-item modal-menu-item personal-menu-close-js">
+      <a href="javascript:void(0)">Безопасность</a>
+    </div>
+    <div class="personal-menu-item modal-menu-item personal-menu-close-js">
+      <a href="javascript:void(0)">Выйти</a>
+    </div>
+  </div>
+
+  <!-- "Конец модального окна личного кабинета " -->
+
+
+  <!-- "Начало бокового меню" -->
+  <aside class="compaines-menu aside-menu">
+    <a href="/" class="companies-menu-logo aside-menu-logo">
+      <img src="../img/logo.svg" alt="logo">
+    </a>
+    <button class="aside-menu-btn aside-menu-btn-js"></button>
+    <nav class="compaines-nav aside-nav">
+      <ul>
+        <li>
+          <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+            <div class="companies-menu-link aside-menu-link">
+              <div>
+                <img class="companies-menu-icon aside-menu-icon" src="../img/business.svg" alt="business-icon">
+              </div>
+              <div class="companies-menu-text aside-menu-text">Компании</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+            <div class="companies-menu-link aside-menu-link">
+              <div>
+                <img class="companies-menu-icon aside-menu-icon" src="../img/wallet.svg" alt="wallet-icon">
+              </div>
+              <div class="companies-menu-text aside-menu-text">Оплаты</div>
+            </div>
+          </a>
+        </li>
+
+            <li class="li-accordion">
+                <a href="javascript:void(0)" class="companies-menu-item aside-menu-item accordion accordion-js" data-state="">
+                    <div class="companies-menu-link aside-menu-link">
+                      <div>
+                        <img class="companies-menu-icon aside-menu-icon" src="../img/receipt.svg" alt="receipt-icon">
+                      </div>
+                      <div class="companies-menu-text aside-menu-text">Мои списки</div>
+                      <div class="accordion-arrow">
+                        <img src="../img/arrow.svg" alt="arrow-down">
+                      </div>
+                    </div>                 
+                </a>
+                <div class="panel">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                                <div class="companies-menu-sublink aside-menu-sublink">
+                                    <div class="companies-menu-subtext aside-menu-subtext">Оборудование</div>
+                                </div>
+                            </a>
+                         </li>
+                        <li>
+                            <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                                <div class="companies-menu-sublink aside-menu-sublink">
+                                    <div class="companies-menu-subtext aside-menu-subtext">ПО</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                                <div class="companies-menu-sublink aside-menu-sublink">
+                                    <div class="companies-menu-subtext aside-menu-subtext">Услуги</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                                <div class="companies-menu-sublink aside-menu-sublink">
+                                    <div class="companies-menu-subtext aside-menu-subtext">Пользователи</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                                <div class="companies-menu-sublink aside-menu-sublink">
+                                    <div class="companies-menu-subtext aside-menu-subtext">Поставщики</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="aside-menu-small small aside-menu-small-js">
+                  <a href="javacript:void(0)" class="header__menu-link">Оборудование</a>
+                  <a href="javacript:void(0)" class="header__menu-link">ПО</a>
+                  <a href="javacript:void(0)" class="header__menu-link">Услуги</a>
+                  <a href="javacript:void(0)" class="header__menu-link">Пользователи</a>
+                  <a href="javacript:void(0)" class="header__menu-link">Поставщики</a>
+                </div>
+            </li>
+               
+            
+            
+            <li class="li-accordion">
+                <a href="javascript:void(0)" class="companies-menu-item aside-menu-item accordion accordion-js" data-state="">
+                    <div class="companies-menu-link aside-menu-link">
+                      <div>
+                        <img class="companies-menu-icon aside-menu-icon" src="../img/raise.svg" alt="raise-icon">
+                      </div>
+                      <div class="companies-menu-text aside-menu-text">Бюджет</div>
+                      <div class="accordion-arrow">
+                        <img src="../img/arrow.svg" alt="arrow-down">
+                      </div>
+                    </div>
+                </a>
+                <div class="panel">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                                <div class="companies-menu-sublink aside-menu-sublink">
+                                    <div class="companies-menu-subtext aside-menu-subtext">Сводная</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                                <div class="companies-menu-sublink aside-menu-sublink">
+                                    <div class="companies-menu-subtext aside-menu-subtext">Планирование</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="aside-menu-small small aside-menu-small-js">
+                  <a href="javacript:void(0)" class="header__menu-link">Сводная</a>
+                  <a href="javacript:void(0)" class="header__menu-link">Планирование</a>
+                </div>
+            </li>
+
+           
+
+
+        <li>
+          <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+            <div class="companies-menu-link aside-menu-link">
+              <div>
+                <img class="companies-menu-icon aside-menu-icon" src="../img/gear.svg" alt="gear-icon">
+              </div>
+              <div class="companies-menu-text aside-menu-text">Настройки</div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  </aside>
+  <!-- "Конец бокового меню" -->
+
+
+  <header class=" header-white header-blue">
+    <div class="header-blue-wrapper flex ai-center jc-sb">
+      <div class="flex ai-center">
+        <div class="menu__btn" for="menu__toggle">
+          <span></span>
+        </div>
+        <a href="javacript:void(0)" class="header-blue-logo">
+          <img src="../img/logo.svg" alt="logo">
+        </a>
+      </div>
+
+      <div class="flex ai-center jc-sb personal-btn personal-btn-js header__profile--js">
+        <button class="header-blue__profile header__profile--js" aria-label="Профиль пользователя"></button>
+        <div class="user_name">Иванов М. А.</div>
+      </div>
+      <div class="header__menu-small small header__menu-small--js">
+        <a href="javacript:void(0)" class="header__menu-link">Личный кабинет</a>
+        <a href="javacript:void(0)" class="header__menu-link">Сменить пароль</a>
+        <a href="javacript:void(0)" class="header__menu-link">Выйти</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- НАЧАЛО СЕКЦИИ ЛИЧНЫЙ КАБИНЕТ -->
+  <section class="profile">
+    <div class="container container-small">
+      <h1>Личный кабинет</h1>
+      <p class="profile__description">Проверьте правильность данных или внесите необходимые изменения</p>
+
+      <form action="javascript:void(0)" method="post" class="form--js">
+        <div class="profile__input-group flex fd-column">
+          <div class="form-input-field-group form-input-field-group--js">
+            <input type="text" placeholder="Фамилия" name="last-name" required value="Алексеев">
+            <label for="last-name">Фамилия</label>
+          </div>
+
+          <div class="form-input-field-group form-input-field-group--js">
+            <input type="text" placeholder="Имя" name="first-name" required value="Максим">
+            <label for="first-name">Имя</label>
+          </div>
+
+          <div class="form-input-field-group form-input-field-group--js">
+            <input type="text" placeholder="Отчество" name="middle-name" required value="Александрович">
+            <label for="middle-name">Отчество</label>
+          </div>
+
+          <div class="form-input-field-group form-input-field-group--js error">
+            <input type="email" placeholder="E-mail" name="email" required value="example@mail.ru">
+            <label for="email">Почта</label>
+          </div>
+
+          <div class="form-input-field-group form-input-field-group--js">
+            <input type="tel" placeholder="+7 (999) 999-99-99" name="phone" required value="+7 (999) 999-99-99" class="phone-input--js">
+            <label for=" phone">Номер телефона</label>
+          </div>
+        </div>
+
+        <!-- УСПЕШНОЕ СОХРАНЕНИЕ ИЗМЕНЕНИЙ -->
+        <div class="profile__result text-correct">
+          Изменения успешно сохранены
+        </div>
+
+        <!-- ОШИБКА -->
+        <!-- <div class="profile__result text-error">
+          Проверьте корректность заполненных данных
+        </div> -->
+
+        <div class="profile__button-group flex">
+          <button class="btn-blue p13-24 button--js" type="submit" disabled>Сохранить</button>
+          <button class="btn-white p13-24 button--js" type="button" disabled>Отменить</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <!-- КОНЕЦ СЕКЦИИ ЛИЧНЫЙ КАБИНЕТ -->
+
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/modules/imask.js"></script>
+  <script src="../scripts/phone-mask.js"></script>
+  <script src="../scripts/disable-btn.js"></script>
+
+</body>
+
+</html>

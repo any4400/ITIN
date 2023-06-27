@@ -1,0 +1,89 @@
+.registration {
+  padding: 56px 0;
+  background-image: radial-gradient(at top right, #F7FDFF, #FFFFFF);
+  min-height: calc(100vh - 318px);
+}
+
+.registration__container {
+  max-width: 660px;
+}
+
+.registration__info {
+    margin-bottom: 44px;
+}
+
+.registration h1 {
+  margin-bottom: 8px;
+}
+
+.registration__inputs-group {
+    margin-bottom: 16px;
+    margin-top: 44px;
+    width: 100%;
+    gap: 20px;
+}
+
+.registration form {
+  width: 100%;
+}
+
+.registration__note {
+  align-self: flex-start;
+  /* margin-bottom: 32px; */
+  color: var(--blue-gray);
+}
+
+.registration__button {
+  margin-bottom: 48px;
+  margin-top: 32px;
+
+}
+
+.registration__has-account {
+  gap: 13px;
+}
+
+@media (max-width: 1199px) {
+  .registration {
+      min-height: calc(100vh - 305px);
+
+  }
+
+  .registration__container {
+    max-width: 445px;
+  }
+
+    .registration__note {
+        align-self: auto;
+        margin-bottom: 35px;
+        font-weight: 300;
+        font-size: 14px;
+    }
+    .registration__inputs-group {
+      margin-top: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .registration {
+    background-image: none;
+  }
+  .registration__container {
+    max-width: none;
+  }
+
+  .registration legend {
+    margin-bottom: 40px;
+  }
+
+  .registration__note {
+    margin-bottom: 40px;
+  }
+
+    .registration__has-account {
+        gap: 8px;
+    }
+    .registration__inputs-group {
+      margin-top: 53px;
+  }
+}
