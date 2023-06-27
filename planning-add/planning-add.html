@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/index.css">
+  <link rel="stylesheet" href="styles/planning-add.css">
+  <link rel="stylesheet" href="../styles/modal-changes.css">
+  <link rel="stylesheet" href="../styles/comments.css">
+  <script src="../scripts/jquery-3.6.4.min.js"></script>
+
+
+  <title>IT-сервис</title>
+</head>
+
+<body>
+  <div class="overlay overlay-js"></div>
+  <div class="overlay overlay-desktop overlay-desktop-js"></div>
+
+  <!-- НАЧАЛО МОДАЛЬНОЕ ОКНО СОХРАНЕНИЯ -->
+
+  <div class="modal-changes flex fd-column ai-center">
+    <div class="modal-changes__title tac">Оборудование добавлено</div>
+    <p class="tac small">Вы можете добавить еще один элемент или вернуться к списку</p>
+
+    <div class="modal-changes__btn-wrapper flex jc-sb">
+      <button class="btn-blue p13-24">Добавить еще</button>
+      <button class="btn-white p13-24">Вернуться к списку</button>
+    </div>
+  </div>
+
+  <!-- КОНЕЦ МОДАЛЬНОЕ ОКНО СОХРАНЕНИЯ -->
+
+  <!-- "Начало модального окна личного кабинета " -->
+  <div class="personal-menu modal-menu">
+    <div class="personal-menu-header modal-menu-header">
+      Иванов М. А.
+    </div>
+    <div class="personal-menu-item modal-menu-item personal-menu-close-js">
+      <a href="javascript:void(0)">Личный кабинет</a>
+    </div>
+    <div class="personal-menu-item modal-menu-item personal-menu-close-js">
+      <a href="javascript:void(0)">Безопасность</a>
+    </div>
+    <div class="personal-menu-item modal-menu-item personal-menu-close-js">
+      <a href="javascript:void(0)">Выйти</a>
+    </div>
+  </div>
+
+  <!-- "Конец модального окна личного кабинета " -->
+
+
+  <!-- "Начало бокового меню" -->
+  <aside class="compaines-menu aside-menu">
+    <a href="/" class="companies-menu-logo aside-menu-logo">
+      <img src="../img/logo.svg" alt="logo">
+    </a>
+    <button class="aside-menu-btn aside-menu-btn-js"></button>
+    <nav class="compaines-nav aside-nav">
+      <ul>
+        <li>
+          <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+            <div class="companies-menu-link aside-menu-link">
+              <div>
+                <img class="companies-menu-icon aside-menu-icon" src="../img/business.svg" alt="business-icon">
+              </div>
+              <div class="companies-menu-text aside-menu-text">Компании</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+            <div class="companies-menu-link aside-menu-link">
+              <div>
+                <img class="companies-menu-icon aside-menu-icon" src="../img/wallet.svg" alt="wallet-icon">
+              </div>
+              <div class="companies-menu-text aside-menu-text">Оплаты</div>
+            </div>
+          </a>
+        </li>
+
+        <li class="li-accordion">
+          <a href="javascript:void(0)" class="companies-menu-item aside-menu-item accordion accordion-js" data-state="">
+            <div class="companies-menu-link aside-menu-link">
+              <div>
+                <img class="companies-menu-icon aside-menu-icon" src="../img/receipt.svg" alt="receipt-icon">
+              </div>
+              <div class="companies-menu-text aside-menu-text">Мои списки</div>
+              <div class="accordion-arrow">
+                <img src="../img/arrow.svg" alt="arrow-down">
+              </div>
+            </div>
+          </a>
+          <div class="panel">
+            <ul>
+              <li>
+                <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                  <div class="companies-menu-sublink aside-menu-sublink">
+                    <div class="companies-menu-subtext aside-menu-subtext">Оборудование</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                  <div class="companies-menu-sublink aside-menu-sublink">
+                    <div class="companies-menu-subtext aside-menu-subtext">ПО</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                  <div class="companies-menu-sublink aside-menu-sublink">
+                    <div class="companies-menu-subtext aside-menu-subtext">Услуги</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                  <div class="companies-menu-sublink aside-menu-sublink">
+                    <div class="companies-menu-subtext aside-menu-subtext">Пользователи</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                  <div class="companies-menu-sublink aside-menu-sublink">
+                    <div class="companies-menu-subtext aside-menu-subtext">Поставщики</div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="aside-menu-small small aside-menu-small-js">
+            <a href="javacript:void(0)" class="header__menu-link">Оборудование</a>
+            <a href="javacript:void(0)" class="header__menu-link">ПО</a>
+            <a href="javacript:void(0)" class="header__menu-link">Услуги</a>
+            <a href="javacript:void(0)" class="header__menu-link">Пользователи</a>
+            <a href="javacript:void(0)" class="header__menu-link">Поставщики</a>
+          </div>
+        </li>
+
+
+
+        <li class="li-accordion">
+          <a href="javascript:void(0)" class="companies-menu-item aside-menu-item accordion accordion-js" data-state="">
+            <div class="companies-menu-link aside-menu-link">
+              <div>
+                <img class="companies-menu-icon aside-menu-icon" src="../img/raise.svg" alt="raise-icon">
+              </div>
+              <div class="companies-menu-text aside-menu-text">Бюджет</div>
+              <div class="accordion-arrow">
+                <img src="../img/arrow.svg" alt="arrow-down">
+              </div>
+            </div>
+          </a>
+          <div class="panel">
+            <ul>
+              <li>
+                <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                  <div class="companies-menu-sublink aside-menu-sublink">
+                    <div class="companies-menu-subtext aside-menu-subtext">Сводная</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+                  <div class="companies-menu-sublink aside-menu-sublink">
+                    <div class="companies-menu-subtext aside-menu-subtext">Планирование</div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="aside-menu-small small aside-menu-small-js">
+            <a href="javacript:void(0)" class="header__menu-link">Сводная</a>
+            <a href="javacript:void(0)" class="header__menu-link">Планирование</a>
+          </div>
+        </li>
+
+
+
+
+        <li>
+          <a href="javascript:void(0)" class="companies-menu-item aside-menu-item">
+            <div class="companies-menu-link aside-menu-link">
+              <div>
+                <img class="companies-menu-icon aside-menu-icon" src="../img/gear.svg" alt="gear-icon">
+              </div>
+              <div class="companies-menu-text aside-menu-text">Настройки</div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  </aside>
+  <!-- "Конец бокового меню" -->
+
+
+  <header class=" header-white header-blue">
+    <div class="header-blue-wrapper flex ai-center jc-sb">
+      <div class="flex ai-center">
+        <div class="menu__btn" for="menu__toggle">
+          <span></span>
+        </div>
+        <a href="javacript:void(0)" class="header-blue-logo">
+          <img src="../img/logo.svg" alt="logo">
+        </a>
+      </div>
+
+      <div class="flex ai-center jc-sb personal-btn personal-btn-js header__profile--js">
+        <button class="header-blue__profile header__profile--js" aria-label="Профиль пользователя"></button>
+        <div class="user_name">Иванов М. А.</div>
+      </div>
+      <div class="header__menu-small small header__menu-small--js">
+        <a href="javacript:void(0)" class="header__menu-link">Личный кабинет</a>
+        <a href="javacript:void(0)" class="header__menu-link">Сменить пароль</a>
+        <a href="javacript:void(0)" class="header__menu-link">Выйти</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- НАЧАЛО СЕКЦИИ ДОБАВЛЕНИЕ НОВОГО ПЛАНИРОВАНИЯ -->
+  <section class="planning-add">
+    <div class="container container-small">
+      <div class="title-wrapper">
+        <h1>Добавление нового планирования</h1>
+        <p class="planning-add__description">Заполните все необходимые поля для добавления нового планирования</p>
+      </div>
+
+      <!-- НАЧАЛО ФОРМЫ -->
+
+      <form action="javascript:void(0)" method="post" class="tab-page current-tab-page form--js" data-page="info">
+        <div class="planning-add__input-group flex fd-column">
+
+          <div class="form-input-field-group form-input-field-group--js">
+            <input type="text" placeholder="Наименование" name="title" required value="">
+            <label for="title">Наименование*</label>
+          </div>
+
+          <div class="planning-add__company">
+            <div class="__select __select_tariff __select-form-js " data-state="">
+              <div class="__select__title __select_tariff__title" data-default="">Компания</div>
+              <div class="select_placeholder">Компания</div>
+              <div class="__select__content __select_tariff__content">
+
+                <input id="company1" class="__select__input" type="radio" name="company1" />
+                <label for="company1" class="__select__label __select_tariff__label ">ООО
+                  Глагол Нижний Новгород</label>
+                <input id="company2" class="__select__input" type="radio" name="company2" />
+                <label for="company2" class="__select__label __select_tariff__label ">ООО
+                  Глагол Нижний Новгород 2</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="planning-add__cost-class">
+            <div class="__select __select_tariff __select-form-js " data-state="">
+              <div class="__select__title __select_tariff__title" data-default="">Класс затрат</div>
+              <div class="select_placeholder">Класс затрат</div>
+              <div class="__select__content __select_tariff__content">
+
+                <input id="cost-class1" class="__select__input" type="radio" name="cost-class1" />
+                <label for="cost-class1" class="__select__label __select_tariff__label ">
+                  Основные</label>
+                <input id="cost-class2" class="__select__input" type="radio" name="cost-class2" />
+                <label for="cost-class2" class="__select__label __select_tariff__label ">
+                  Дополнительные</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-input-field-group form-input-field-group--js">
+            <input type="text" placeholder="Сумма" id="cost" name="cost" class="format-number-field--js">
+            <label for="cost">Сумма</label>
+          </div>
+
+          <div class="form-input-field-group form-datepicker-group datepicker-without-info form-input-field-group--js">
+            <input type="text" placeholder="Срок покупки" id="date-purchase" name="date-purchase" class="date-input--js datepicker--js datepicker-big--js">
+            <label for="date-purchase">Срок покупки</label>
+          </div>
+
+          <div class="required">*Поля обязательные для заполнения</div>
+
+          <!-- СООБЩЕНИЕ ОБ ОШИБКЕ -->
+          <div class="text-error" hidden>Проверьте правильность введенных данных</div>
+        </div>
+
+        <div class="planning-add__button-group flex">
+          <button class="btn-blue p13-24 button--js save-button--js" type="submit" disabled>Сохранить</button>
+          <button class="btn-white p13-24 button--js" type="button" disabled>Отменить</button>
+        </div>
+      </form>
+
+      <!-- КОНЕЦ ФОРМЫ -->
+    </div>
+  </section>
+  <!-- КОНЕЦ СЕКЦИИ ДОБАВЛЕНИЕ НОВОГО ПЛАНИРОВАНИЯ -->
+
+
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/modules/imask.js"></script>
+  <script src="../scripts/date-mask.js"></script>
+  <script src="../scripts/modules/jquery-ui.js"></script>
+  <script src="../scripts/datepicker.js"></script>
+
+</body>
+
+</html>
