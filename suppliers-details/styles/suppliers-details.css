@@ -1,0 +1,126 @@
+.suppliers-details {
+  padding-bottom: 120px;
+  min-height: calc(100vh - 121px);
+  background: radial-gradient(700px at 90% 90%, #F0FAFF 60%, #FFF);
+}
+
+.suppliers-details__title-wrapper {
+  flex-wrap: wrap;
+  column-gap: 37px;
+  row-gap: 8px;
+  margin-bottom: 8px;
+}
+
+.suppliers-details__title-buttons-group {
+  gap: 20px;
+}
+
+.suppliers-details__description {
+  margin-bottom: 40px;
+}
+
+.suppliers-details form[data-page="info"] {
+  padding-top: 21px;
+  max-width: 552px;
+}
+
+.suppliers-details__input-group {
+  margin-bottom: 32px;
+  gap: 24px;
+}
+
+.suppliers-details__datepickers-group {
+  gap: 16px;
+}
+
+.suppliers-details__button-group {
+  gap: 16px;
+}
+
+.suppliers-details form button {
+  width: 200px;
+  height: 48px;
+}
+
+/* МЕДИА-ЗАПРОСЫ */
+
+@media (max-width: 1199px) {
+  .suppliers-details {
+    padding-top: 128px;
+    padding-bottom: 90px;
+    min-height: calc(100vh);
+    text-align: center;
+    background: radial-gradient(500px at 90% 90%, #F0FAFF 60%, #FFF);
+  }
+
+  .container {
+    margin: 0 auto;
+  }
+
+  .container-small {
+    max-width: 528px;
+  }
+  .suppliers-details__description {
+    margin-bottom: 48px;
+  }
+
+  .suppliers-details__title-wrapper {
+    column-gap: 23px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .suppliers-details__title-buttons-group {
+    gap: 16px;
+  }
+
+  .suppliers-details form[data-page="info"] {
+    max-width: 528px;
+    margin: 0 auto;
+  }
+
+  .suppliers-details__input-group {
+    margin-bottom: 40px;
+  }
+
+  .suppliers-details input {
+    padding: 13px 16px;
+  }
+
+  .suppliers-details__button-group {
+    gap: 24px;
+  }
+
+  .suppliers-details form button {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .container-small {
+    max-width: none;
+  }
+
+  .suppliers-details {
+    padding-top: 112px;
+    padding-bottom: 48px;
+    background: none;
+  }
+
+  .suppliers-details__company-description {
+    height: 230px;
+  }
+
+  .suppliers-details form[data-page="info"] {
+    max-width: none;
+  }
+
+  .suppliers-details__button-group {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .suppliers-details form button {
+    width: 100%;
+  }
+}

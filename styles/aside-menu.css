@@ -1,0 +1,370 @@
+/* БОКОВОЕ МЕНЮ */
+
+/* Начало стилей для десктопной версии на 1920px */
+aside {
+    height: 100%;
+    width: 256px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    background-color: var(--light-black); 
+    /* overflow-x: hidden; */
+    padding-top: 40px;
+    transition: all 0.2s;
+}
+aside.small {
+    width: 88px;
+}
+.header-blue {
+    padding-bottom: 33px;
+}
+
+.personal-btn {
+    margin-right: 48px;
+    height: 30px;
+}
+.header-blue__profile {
+    background-image: url(../img/person-icon-blue.svg);
+    transition: background-image .3s;
+}
+.user_name {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--blue);
+    transition: color .3s;
+}
+.personal-btn:hover {
+    cursor: pointer;
+}
+.personal-btn:hover .user_name {
+    color: var(--dark-blue);
+    /* text-shadow:  0.3px 0.3px 0.5px #1B254A; */
+}
+.personal-btn:hover .header-blue__profile {
+  background-image: url(../img/person-icon-dark-blue.svg);
+}
+.personal-btn:disabled .header-blue__profile{
+    background-image: url(../img/person-icon-gray.svg);
+
+}
+.aside-menu-logo {
+    display: inline-block;
+    padding-left: 40px;
+    height: 40px;  
+}
+aside.small .aside-menu-logo {
+    visibility: hidden;
+    opacity: 0;
+}
+.aside-menu-logo img {
+    width: 88px;
+    height: 40px;
+}
+.aside-menu-btn {
+    position: absolute;
+    padding: 0;
+    right: 0;
+    top: 46px;
+    width: 56px;
+    height: 29px;
+    background-color: #374264;
+    border-radius: 4px 0px 0px 4px;
+}
+.aside-menu-btn:hover {
+    background-color: #606E8C;;
+}
+.aside-menu-btn::after {
+    content:"";
+    display: block;
+    width: 18.5px;
+    height: 13px;
+    margin-left: 8px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='19' height='13' viewBox='0 0 19 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.9364 0.271972C7.28787 0.634602 7.28787 1.22254 6.9364 1.58517L3.07279 5.57143H17.6C18.0971 5.57143 18.5 5.98716 18.5 6.5C18.5 7.01284 18.0971 7.42857 17.6 7.42857H3.07279L6.9364 11.4148C7.28787 11.7775 7.28787 12.3654 6.9364 12.728C6.58492 13.0907 6.01508 13.0907 5.6636 12.728L0.263604 7.1566C-0.087868 6.79397 -0.087868 6.20603 0.263604 5.8434L5.6636 0.271972C6.01508 -0.0906574 6.58492 -0.0906574 6.9364 0.271972Z' fill='white'/%3e%3c/svg%3e ");
+}
+aside.small .aside-menu-btn::after {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='19' height='13' viewBox='0 0 19 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.5636 12.728C11.2121 12.3654 11.2121 11.7775 11.5636 11.4148L15.4272 7.42857L0.9 7.42857C0.402945 7.42857 5.23415e-07 7.01283 5.68248e-07 6.5C6.13082e-07 5.98716 0.402945 5.57143 0.9 5.57143L15.4272 5.57143L11.5636 1.58517C11.2121 1.22254 11.2121 0.634601 11.5636 0.271972C11.9151 -0.0906578 12.4849 -0.0906578 12.8364 0.271972L18.2364 5.8434C18.5879 6.20603 18.5879 6.79397 18.2364 7.1566L12.8364 12.728C12.4849 13.0907 11.9151 13.0907 11.5636 12.728Z' fill='white'/%3e%3c/svg%3e ");
+}
+.aside-nav {
+    padding-top: 38px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--white);
+}
+
+.aside-menu-item {
+    position: relative;
+    color: var(--white);
+}
+
+.aside-menu-link:hover {
+    background-color: #374264;
+}
+.aside-menu-sublink:hover {
+    cursor: pointer;
+    background-color: #374264;
+}
+.aside-menu-link {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 56px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    /* transition: 0.4s; */
+}
+.aside-menu-sublink {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 38px;
+    /* transition: 0.4s; */
+}
+aside.small .aside-menu-sublink {
+    display: none;
+}
+
+.aside-menu-icon {
+    padding-left: 40px;
+}
+aside.small .aside-menu-icon {
+    padding-left: 33px;
+}
+.aside-menu-text {
+    margin-left: 16px;
+}
+aside.small .aside-menu-text {
+    /* visibility: hidden;
+    opacity: 0;  */
+    display: none;
+}
+.aside-menu-subtext {
+    margin-left: 38px;
+}
+
+.aside-menu-small {
+    display: none;
+    position: absolute;
+    top: 28px;
+    left: 44px;
+    width: 144px;
+    background-color: var(--white);
+    box-shadow: 0px 4px 10px rgba(10, 22, 58, 0.1);
+    border-radius: 8px;
+    z-index: 100;
+    overflow: visible;
+  }
+  
+  .aside-menu-small.active {
+    display: block;
+  }
+  
+  .aside-menu-small a {
+    display: block;
+    padding: 10px 16px;
+    color: var(--light-black);
+    transition: background-color 0.2s;
+  }
+  
+  .aside-menu-small a:hover {
+    background-color: var(--ghost-gray);
+  }
+.accordion-arrow {
+    position: absolute;
+    left: 205px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.accordion.active .accordion-arrow {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.aside-menu-item .active, .accordion:hover {
+    background-color: #ccc;
+}
+.panel {
+    display: none;
+    overflow: hidden;
+}
+.panel.active {
+    display: block;
+}
+.li-accordion {
+    position: relative;
+}
+aside .accordion-arrow img {
+  width: 16px;
+  height: 10px;
+}
+/* Конец стилей для десктопной версии на 1920px */
+
+
+/* Начало стилей для планшетной версии*/
+@media (max-width:1199px) {
+    aside {
+        width: 374px;
+    }
+    .accordion-arrow {
+        left: 277px;
+    }
+    .header-blue {
+        padding-bottom: 33px;
+        height: 72px;
+        background-color: var(--light-black);
+        padding: 22px 0;
+    }
+    .header-blue__profile {
+        background-image: url(../img/person-icon.svg);
+    }
+    
+    .personal-btn  {
+        margin-right: 0;
+    }
+    .user_name {
+        color: var(--white);
+    }
+
+    .personal-btn:hover .header-blue__profile {
+        background-image: url(../img/person-icon-grey.svg);
+    }
+    .personal-btn:hover .user_name {
+        color: #EFF0F3;
+    }
+    .header-blue__profile:disabled {
+        background-image: url(../img/person-icon-dis.svg);
+    }
+    .header-blue__profile:disabled .user_name {
+        color: #C6CBD6;
+    }
+    .aside-menu {
+        opacity: 0;
+        visibility: hidden;
+    }
+    .aside-menu-btn{
+        display: none;
+    }
+    .arrow_down {
+        left: 277px;
+    }
+    .header-blue {
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 72px;
+        z-index: 4;
+    }
+    .header-blue-wrapper {
+        height: 28px;
+        padding-right: 48px; 
+        padding-left: 38px; 
+    }
+    .header-blue-logo {
+        display: inline-block;
+        margin-left: 74px;
+        width: 57px;
+        height: 28px;
+    }
+    .btn-logo {
+        height: 28px;
+    }
+    .header-blue-logo img {
+        width: 100%;
+        height: 100%;
+    }
+    .menu__btn {
+        display: inline-flex;
+        position: relative; 
+        align-items: center;
+        width: 27px;
+        height: 21px;
+        cursor: pointer;
+        z-index: 1;
+        background-color: var(--light-black);
+  }
+  
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: var(--white);
+    }
+    .menu__btn > span::before {
+        content: '';
+        top: -8px;
+    }
+    .menu__btn > span::after {
+        content: '';
+        top: 8px;
+    }
+    .menu__btn.active span {
+        transform: rotate(-45deg);
+    }
+    .menu__btn.active  span::before {
+        top: 0;
+        transform: rotate(90deg);
+    }
+    .menu__btn.active  span::after {
+        width: 0;
+    }
+    .aside-menu-logo {
+        display: none;
+    }
+    .aside-menu.active {
+        opacity: 1;
+        visibility: visible;
+        background-color: var(--light-black);
+        z-index: 6;
+    }
+    .aside-menu.active ~ header {
+        z-index: 6;
+    }
+}
+
+
+/* Конец стилей для планшетной версии*/
+
+/* Начало стилей для мобильной версии */
+@media (max-width: 767px) {
+    
+    .arrow_down {
+        left: 173px;
+    }
+    .header-white {
+        padding-bottom: 41px;
+    }
+    .header-blue {
+        padding-top: 22px;
+    }
+    .header-blue-wrapper {
+        padding: 0 16px 0 19px;
+    }
+    .header-blue-logo {
+        width: 46px;
+        height: 23px;
+        margin-left: calc(50vw - 64px);
+    }
+    
+    .header-blue__profile {
+        width: 26px;
+        height: 26px;
+        background-size: 100% 100%;
+    }
+    .menu__btn {
+        width: 21px;
+    }
+    .aside-menu-icon {
+        padding-left:  17px;
+    }
+    .accordion-arrow {
+        left: 173px;
+    }
+    .user_name {
+        display: none;
+      }
+}
+/* Конец стилей для мобильной версии */
+

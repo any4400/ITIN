@@ -1,0 +1,304 @@
+.__select {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 48px;
+}
+.__select-big {
+  min-width:  368px;
+  width: 368px;
+  height: 48px;
+}
+.__select-small{
+  width: 80px;
+  height: 28px;
+}
+.__select-search {
+
+  /* min-width: auto !important; */
+  min-width: auto;
+  width: 100%;
+}
+.__select[data-state=active]>.__select__title::before {
+  transform: translate(-4px, -50%) rotate(-45deg);
+}
+.__select[data-state=active]> .__select__title::after {
+  transform: translate(3px, -50%) rotate(45deg);
+}
+.__select[data-state=active]> .__select__content {
+  opacity: 1;
+  visibility: visible;
+}
+.input__select.active__content> .input__select__content {
+  opacity: 1;
+  visibility: visible;
+}
+.input__select.active__content .__select__title::before {
+  display: block;
+  transform: translate(-4px, -50%) rotate(-45deg);
+
+}
+.input__select.active__content .__select__title::after {
+  display: block;
+  transform: translate(3px, -50%) rotate(45deg);
+}
+/* .__select[data-state=active] .__select__label + .__select__input + .__select__label {
+  max-height: 40px;
+  border-top-width: 1px;
+} */
+
+.__select__title {
+  display: flex;
+  text-align: left;
+  align-items: center;
+  padding-right: 20px;
+  width: 100%;
+  height: 100%;
+  border: solid 1px #C6CBD6;
+  color: #C6CBD6;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 13px 16px;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  -ms-line-clamp: 1;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  /* display: -webkit-box;
+  display: inline-block; */
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;  
+  vertical-align: top;
+}
+.__select__title__span {
+  margin-right: 20px;  
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  -ms-line-clamp: 1;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  display: -webkit-box;
+  display: inline-block;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;  
+  vertical-align: top;
+}
+.__select__title-big, .__select__title-search {
+  padding: 13px 16px;
+  border-radius: 8px;
+
+}
+.__select__title-small {
+  padding: 7px 8px;
+  color:#606E8C;
+  border-radius: 4px;
+}
+.input__select__title {
+  padding: 0;
+  border: none;
+}
+
+.__select__title::before, .__select__title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 10px;
+  height: 1px;
+  /* transition: all 0.3s ease-out; */
+  background-color: #C6CBD6;
+  transform: translate(-4px, -50%) rotate(45deg);
+}
+.input__select__title::before, .input__select__title::after {
+  display: none;
+}
+.input__select__title::before, .input__select__title::after {
+  display: none;
+}
+.__select__title::before, .__select__title::after {
+  right: 21px;
+}
+
+.__select__title-big::before, .__select__title-big::after {
+  right: 20px;
+}
+.__select__title-small::before, .__select__title-small::after {
+  right: 13px;
+}
+.__select__title::after {
+  transform: translate(3px, -50%) rotate(-45deg);
+}
+.__select__content {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 10px rgba(10, 22, 58, 0.1);
+  border-radius: 8px;
+  border-top: none;
+  /* transition: all 0.3s ease-out; */
+  opacity: 0;
+  visibility: hidden;
+  z-index: 5;
+}
+
+.__select__content-big {
+  top: 49px;
+  width: 368px;
+}
+.__select__content-small {
+  top: 29px;
+  width: 80px;
+}
+.search-checkbox-wrapper {
+  max-height: 488px;
+  overflow-y: scroll;
+  margin-right: 16px;
+  margin-bottom: 16px;
+}
+.__select__input {
+  display: none;
+}
+
+.__select__input:disabled + label {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.__select__label {
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  padding: 13px 16px;
+  /* max-height: 0; */
+  /* transition: all 0.2s ease-out; */
+  cursor: pointer;
+  overflow: hidden;
+  color: #1B254A;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: left;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  -ms-line-clamp: 1;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  display: -webkit-box;
+  display: inline-block;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;  
+  vertical-align: top;
+}
+.__select__content .__select_tariff__label:first-of-type {
+  padding-top: 20px;
+  border-radius:8px 8px 0 0;
+}
+.__select__content .__select_tariff__label:last-of-type {
+  padding-bottom: 20px;
+  border-radius: 0 0 8px 8px;
+}
+.__select__label-big {
+  height: 40px;
+  padding: 10px 16px;
+}
+.__select__label-small {
+  height: 24px;
+  padding: 0 7px;
+}
+
+.__select__label:hover {
+  background-color: #F5F6F8 !important;
+}
+.__select_tariff__title {
+  position: relative;
+  padding: 13px 16px;
+  padding-right: 35px;
+  border: 1px solid #8895BB;
+  border-radius: 8px;
+}
+.__select_tariff__label {
+  width: 100%;
+  height: 48px;
+}
+.select_placeholder {
+  position: absolute;
+  padding: 4px 10px;
+  top: 8px;
+  left: 8px;
+  z-index: -1;
+  background-color: var(--white);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 19px;
+  color: var(--light-black);
+  transition: top 0.1s;
+}
+.select_placeholder.visible {
+  top: -14px;
+  z-index: 1;
+} 
+
+@media(max-width:1919px) {
+  .__select-big {
+    min-width:200px;
+    width: 200px;
+  }
+
+  .__select__content-big {
+    width: 200px;
+  }
+}
+
+
+
+@media(max-width:1199px) {
+  .__select-big {
+    width: 216px;
+  }
+  .__select__content {
+    display: none;
+  }
+  .__select__content-big {
+    display: none;
+  }
+  .__select__content-small {
+    display: none;
+  }
+  form .__select__content:not(.__select__content-small) {
+    display: block;
+  }
+  .__select[data-state=active] .__select__title::before {
+    transform: translate(-4px, -50%) rotate(45deg);
+  }
+  .__select[data-state=active] .__select__title::after {
+    transform: translate(3px, -50%) rotate(-45deg);
+  }
+  .__select-search {
+    min-width: 216px;
+  }
+}
+
+@media(max-width:767px) {
+  .__select-big {
+    width: 100%;
+  }
+  .__select-search {
+    min-width: auto;
+  }
+}

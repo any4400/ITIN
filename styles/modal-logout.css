@@ -1,0 +1,82 @@
+/* СТИЛИ МОДАЛЬНОГО ОКНА С РЕЗУЛЬТАТОМ ИЗМЕНЕНИЯ */
+
+.modal-logout {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 32px;
+  width: 564px;
+  box-shadow: 0px 4px 10px rgba(10, 22, 58, 0.1);
+  border-radius: 8px;
+  background-color: var(--white);
+  z-index: 6;
+  color: var(--light-black);
+}
+
+.modal-logout.active {
+  display: flex;
+}
+
+.modal-logout__title {
+  margin-bottom: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.modal-logout p {
+  margin-bottom: 32px;
+}
+
+.modal-logout__btn-wrapper {
+  width: 100%;
+  gap: 16px;
+}
+
+.modal-logout__btn-wrapper button {
+  width: 100%;
+}
+
+.modal-logout button {
+  height: 48px;
+}
+
+/* МЕДИА-ЗАПРОСЫ */
+
+@media (max-width: 1199px) {
+  .modal-logout {
+    width: 456px;
+  }
+
+  .modal-logout button {
+    width: 100%;
+  }
+
+  .modal-logout__btn-wrapper {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 767px) {
+  .modal-logout {
+    padding: 32px 16px;
+    left: 17px;
+    max-width: none;
+    width: calc(100% - 17px * 2);
+    height: auto;
+    transform: translateY(-50%);
+  }
+
+  .modal-logout__title {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .modal-logout button {
+    display: block;
+    width: 100%;
+  }
+}

@@ -1,0 +1,91 @@
+/* для элемента input c type="checkbox" */
+.custom-checkbox {
+    position: absolute;
+    cursor: pointer;
+    /* top: 50%;
+    transform: translateY(-50%); */
+}
+
+.company-menu .custom-checkbox,
+.status-menu .custom-checkbox,
+.tariff-menu .custom-checkbox {
+  width: calc(100% - 48px);
+}
+
+.custom-checkbox>input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  .checkbox_wrapper {
+    position: relative;
+  }
+  /* для элемента label, связанного с .custom-checkbox */
+  .custom-checkbox>span {
+    position: relative;
+    padding-left: 30px;
+    align-items: center;
+    user-select: none;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-line-clamp: 1;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+  }
+  
+  /* создание в label псевдоэлемента before со следующими стилями */
+  .custom-checkbox>span::before {
+    content: '';
+    position: absolute;
+    left:0;
+    top: calc(50% - 11px);
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #C6CBD6;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 80% 80%;
+  }
+  
+  /* стили при наведении курсора на checkbox */
+  /* .custom-checkbox>input:not(:disabled):not(:checked)+span:hover::before {
+    border-color: #b3d7ff;
+  } */
+  
+  /* стили для активного чекбокса (при нажатии на него) */
+  .custom-checkbox>input:not(:disabled):active+span::before {
+    background-color: var(--blue);
+    border-color: var(--blue);
+  }
+  
+  /* стили для чекбокса, находящегося в фокусе */
+  /* .custom-checkbox>input:focus+span::before {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  } */
+  
+  /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+  /* .custom-checkbox>input:focus:not(:checked)+span::before {
+    border-color: #80bdff;
+  } */
+  
+  /* стили для чекбокса, находящегося в состоянии checked */
+  .custom-checkbox>input:checked+span::before {
+    border-color: var(--blue);
+    background-color: var(--blue);
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.6384 4.87372L6.63845 11.8737C6.3781 12.1341 5.95599 12.1341 5.69564 11.8737L2.3623 8.54038L3.30511 7.59757L6.16704 10.4595L12.6956 3.93091L13.6384 4.87372Z' fill='white'/%3e%3c/svg%3e");
+  }
+  
+  /* стили для чекбокса, находящегося в состоянии disabled */
+  .custom-checkbox>input:disabled+span::before {
+    background-color: #e9ecef;
+  }
+

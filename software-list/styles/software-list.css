@@ -1,0 +1,26 @@
+/* ТАБЛИЦА */
+
+.software {
+  width: 100%;
+  padding-bottom: 48px;
+}
+
+.software h1 {
+  margin-bottom: 8px;
+}
+
+.software__description {
+  margin-bottom: 24px;
+}
+
+@media (max-width: 1919px) {
+  .software {
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .software {
+    padding-top: 112px;
+  }
+}

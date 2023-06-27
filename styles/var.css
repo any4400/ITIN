@@ -1,0 +1,22 @@
+:root {
+    /* ЦВЕТА ДЛЯ САЙТА */
+    --dark-gray: #606E8C;
+    --blue-gray: #8895BB;
+    --light-black: #1B254A;
+    --light-gray: #C6CBD6;
+    --ghost-gray: #EFF0F3;
+    --white: #FFFFFF;
+
+    /* ОТТЕНКИ ДЛЯ КНОПОК */
+    --blue: #3546E9;
+    --dark-blue: #170F87; 
+
+    --red: #C91919;
+    --dark-red: #A90B0B;
+
+    --green:#329B0D;
+
+    /* ЦВЕТА СТАТУСОВ */
+    --green-status: #329B0D;
+    --yellow-status: #FFCA63;
+}

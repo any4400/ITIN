@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/index.css">
+  <link rel="stylesheet" href="styles/software-list.css">
+  <link rel="stylesheet" href="../styles/control-elements-adaptive.css">
+  <link rel="stylesheet" href="../styles/filters-modal.css">
+  <link rel="stylesheet" href="../styles/modal-loading-result.css">
+  <link rel="stylesheet" href="../styles/modal-delete-confirm.css">
+  <link rel="stylesheet" href="../styles/modal-comments.css">
+  <script src="../scripts/jquery-3.6.4.min.js"></script>
+  <title>IT-сервис</title>
+</head>
+
+<body>
+
+<div class="overlay overlay-js"></div>
+<div class="overlay overlay-desktop overlay-desktop-js"></div>
+
+  <!-- "Начало модального окна "Три точки" " -->
+ 
+  <div class="modal-menu">
+    <div class="modal-menu-header">
+      ООО Глагол Нижний Новгород Сормово
+    </div>
+    <div class="modal-menu-item menu-close-js">
+      <a href="javascript:void(0)">Редактировать</a>
+    </div>
+    <div class="modal-menu-item menu-close-js">
+      <a href="javascript:void(0)">Бюджет</a>
+    </div>
+    <div class="modal-menu-item menu-close-js">
+      <a href="javascript:void(0)">Оборудование</a>
+    </div>
+    <div class="modal-menu-item menu-close-js">
+      <a href="javascript:void(0)">ПО</a>
+    </div>
+    <div class="modal-menu-item menu-close-js">
+      <a href="javascript:void(0)">Услуги</a>
+    </div>
+    <div class="modal-menu-item menu-close-js">
+      <a href="javascript:void(0)">Пользователи</a>
+    </div>
+    <div class="modal-menu-item menu-close-js">
+      <a href="javascript:void(0)">Поставщики</a>
+    </div>
+  </div>
+
+  <!-- "Конец модального окна "Три точки"" -->
+
+   <!-- "Начало модального окна личного кабинета " -->
+
+   <div class="personal-menu modal-menu">
+     <div class="personal-menu-header modal-menu-header">
+      Иванов М. А.
+     </div>
+     <div class="personal-menu-item modal-menu-item personal-menu-close-js">
+       <a href="javascript:void(0)">Личный кабинет</a>
+     </div>
+     <div class="personal-menu-item modal-menu-item personal-menu-close-js">
+       <a href="javascript:void(0)">Безопасность</a>
+     </div>
+     <div class="personal-menu-item modal-menu-item personal-menu-close-js">
+       <a href="javascript:void(0)">Выйти</a>
+      </div>
+   </div>
+ 
+   <!-- "Конец модального окна личного кабинета " -->
+
+      <!-- "Начало модального окна количества строк на странице " -->
+
+      <div class="row-count-menu modal-menu">
+        <div class="row-count-menu-header modal-menu-header">
+          Отображать по:
+        </div>
+        <div class="row-count-menu-item modal-menu-item row-count-menu-close-js">
+          <a href="javascript:void(0)">10</a>
+        </div>
+        <div class="row-count-menu-item modal-menu-item row-count-menu-close-js">
+          <a href="javascript:void(0)">20</a>
+        </div>
+        <div class="row-count-menu-item modal-menu-item row-count-menu-close-js">
+          <a href="javascript:void(0)">40</a>
+         </div>
+      </div>
+    
+      <!-- "Конец модального окна количества строк на странице " -->
+
+      
+      <!-- "Начало модального окна фильтров " -->
+
+        <div class="modal-menu filters-modal software__filters __filters filters-modal--js">
+          <div class="filters-modal__title modal-menu-header">
+            <h2>Фильтры</h2>
+            <button class="modal-close-btn modal-close-btn--js"></button>
+          </div>
+
+                <div class="filters-modal-content">
+    
+                    <div class="__filters_content_filter">
+                        <div class="filters_wrapper">
+                            <div class="__filter">
+                                <div class="filter_title">Тип</div>
+                                <div class="__select __select-types  __select-checkbox-js __select-js " data-state="">
+                                    <div class="__select__title __select__title__filter" data-default="Все типы">
+                                      <span class="__select__title__span ">Все типы</span>
+                                    </div>
+                                    <div class="__select__content __select__content_filter">
+                                      
+                         
+                                       <div class="checkbox_wrapper">
+                                        <label class="custom-checkbox __select__label __select__label-big">
+                                          <input type="checkbox"  name="" id="">
+                                          <span class="checkbox_content">Операционнная система</span>
+                                        </label>
+                                       </div>
+                        
+                                       <div class="checkbox_wrapper">
+                                        <label class="custom-checkbox __select__label __select__label-big">
+                                          <input type="checkbox"  name="" id="">
+                                          <span class="checkbox_content">Графический редактор</span>
+                                        </label>
+                                       </div>
+                        
+                                       <div class="checkbox_wrapper">
+                                        <label class="custom-checkbox __select__label __select__label-big">
+                                          <input type="checkbox"  name="" id="">
+                                          <span class="checkbox_content">Офисное ПО</span>
+                                        </label>
+                                       </div>
+
+                                       <div class="checkbox_wrapper">
+                                        <label class="custom-checkbox __select__label __select__label-big">
+                                          <input type="checkbox"  name="" id="">
+                                          <span class="checkbox_content">Антивирус</span>
+                                        </label>
+                                       </div>
+                                    </div>
+                                  </div>
+                            </div>
+                                               
+                                <div class="__filter">
+                                    <div class="filter_title">Подразделения</div>
+                                    <div class="__select  __select-checkbox-js __select-js " data-state="">
+                                        <div class="__select__title __select__title__filter" data-default="Все подразделения">
+                                        <span class="__select__title__span ">Все подразделения</span>
+                                        </div>
+                                        <div class="__select__content __select__content_filter">
+                                        
+                            
+                                        <div class="checkbox_wrapper">
+                                            <label class="custom-checkbox __select__label __select__label-big">
+                                            <input type="checkbox"  name="" id="">
+                                            <span class="checkbox_content">Руководство</span>
+                                            </label>
+                                        </div>
+                            
+                                        <div class="checkbox_wrapper">
+                                            <label class="custom-checkbox __select__label __select__label-big">
+                                            <input type="checkbox"  name="" id="">
+                                            <span class="checkbox_content">Отдел продаж</span>
+                                            </label>
+                                        </div>
+                            
+                                        <div class="checkbox_wrapper">
+                                            <label class="custom-checkbox __select__label __select__label-big">
+                                            <input type="checkbox"  name="" id="">
+                                            <span class="checkbox_content">Отдел кадров</span>
+                                            </label>
+                                        </div>
+    
+                                        <div class="checkbox_wrapper">
+                                            <label class="custom-checkbox __select__label __select__label-big">
+                                            <input type="checkbox"  name="" id="">
+                                            <span class="checkbox_content">Экономический отдел</span>
+                                            </label>
+                                        </div>
+    
+                                        <div class="checkbox_wrapper">
+                                            <label class="custom-checkbox __select__label __select__label-big">
+                                            <input type="checkbox"  name="" id="">
+                                            <span class="checkbox_content">Отдел закупок</span>
+                                            </label>
+                                        </div>
+    
+                                        <div class="checkbox_wrapper">
+                                            <label class="custom-checkbox __select__label __select__label-big">
+                                            <input type="checkbox"  name="" id="">
+                                            <span class="checkbox_content">Бухгалтерия</span>
+                                            </label>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="__filter">
+                                  <div class="filter_title">Поставщики</div>
+                                  <div class="__select  __select__suppliers __select-checkbox-js __select-js " data-state="">
+                                      <div class="__select__title __select__title__filter" data-default="Все поставщики">
+                                      <span class="__select__title__span ">Все поставщики</span>
+                                      </div>
+                                      <div class="__select__content __select__content_filter">
+                                      
+                          
+                                      <div class="checkbox_wrapper">
+                                          <label class="custom-checkbox __select__label __select__label-big">
+                                          <input type="checkbox"  name="" id="">
+                                          <span class="checkbox_content">Microsoft</span>
+                                          </label>
+                                      </div>
+                          
+                                      <div class="checkbox_wrapper">
+                                          <label class="custom-checkbox __select__label __select__label-big">
+                                          <input type="checkbox"  name="" id="">
+                                          <span class="checkbox_content">Kaspersky</span>
+                                          </label>
+                                      </div>
+                          
+                                      <div class="checkbox_wrapper">
+                                          <label class="custom-checkbox __select__label __select__label-big">
+                                          <input type="checkbox"  name="" id="">
+                                          <span class="checkbox_content">Client Access Licenses (CAL)</span>
+                                          </label>
+                                      </div>
+  
+                                      <div class="checkbox_wrapper">
+                                          <label class="custom-checkbox __select__label __select__label-big">
+                                          <input type="checkbox"  name="" id="">
+                                          <span class="checkbox_content">Adobe</span>
+                                          </label>
+                                      </div>
+  
+                                      </div>
+                                  </div>
+                              </div>
+                            
+                                <div class="__filter">
+                                    <div class="filter_title">Комментарии</div>
+                                    <div class="__select  __select-checkbox-js __select-js " data-state="">
+                                        <div class="__select__title __select__title__filter" data-default="Все комментарии">
+                                        <span class="__select__title__span ">Все комментарии</span>
+                                        </div>
+                                        <div class="__select__content __select__content_filter">
+                                        
+                            
+                                        <div class="checkbox_wrapper">
+                                            <label class="custom-checkbox __select__label __select__label-big">
+                                            <input type="checkbox"  name="" id="">
+                                            <span class="checkbox_content">Не просмотренные</span>
+                                            </label>
+                                        </div>
+                            
+                                        <div class="checkbox_wrapper">
+                                            <label class="custom-checkbox __select__label __select__label-big">
+                                            <input type="checkbox"  name="" id="">
+                                            <span class="checkbox_content">С комментариями</span>
+                                            </label>
+                                        </div>
+                            
+                                        <div class="checkbox_wrapper">
+                                            <label class="custom-checkbox __select__label __select__label-big">
+                                            <input type="checkbox"  name="" id="">
+                                            <span class="checkbox_content">Без комментариев</span>
+                                            </label>
+                                        </div>
+    
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+    
+                        <div class="btn-wrapper">
+                            <button class="btn-confirm modal-btn-blue btn-blue btn-confirm--js">Применить</button>
+                            <button class="reset__filters  reset__filters--js">Сбросить все фильтры</button>
+                        </div>
+                    </div>
+    
+                    <div class="__filters_content_search search-wrapper-js __select-checkbox-js">
+                        <div class="__filters__search-wrapper ">
+                            <input type="search" placeholder="Поиск по названию" class="__select__title search--js" value="">
+                            <button class="search-clear-btn search-clear-btn_small search-clear-btn--js">
+                              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M8.59093 7L13.0441 2.54687C13.2554 2.3359 13.3743 2.04961 13.3745 1.75099C13.3748 1.45237 13.2564 1.16587 13.0455 0.95453C12.8345 0.743185 12.5482 0.624305 12.2496 0.624041C11.951 0.623778 11.6645 0.742152 11.4531 0.953123L7 5.40625L2.54687 0.953123C2.33553 0.741779 2.04888 0.623047 1.75 0.623047C1.45111 0.623047 1.16447 0.741779 0.953123 0.953123C0.741779 1.16447 0.623047 1.45111 0.623047 1.75C0.623047 2.04888 0.741779 2.33553 0.953123 2.54687L5.40625 7L0.953123 11.4531C0.741779 11.6645 0.623047 11.9511 0.623047 12.25C0.623047 12.5489 0.741779 12.8355 0.953123 13.0469C1.16447 13.2582 1.45111 13.3769 1.75 13.3769C2.04888 13.3769 2.33553 13.2582 2.54687 13.0469L7 8.59375L11.4531 13.0469C11.6645 13.2582 11.9511 13.3769 12.25 13.3769C12.5489 13.3769 12.8355 13.2582 13.0469 13.0469C13.2582 12.8355 13.3769 12.5489 13.3769 12.25C13.3769 11.9511 13.2582 11.6645 13.0469 11.4531L8.59093 7Z"
+                                  fill="#C6CBD6" />
+                              </svg>
+                            </button>
+                          </div>
+        
+                        <div class="search-checkbox-wrapper">
+                            <div class="checkbox_wrapper">
+                              <label class="custom-checkbox __select__label __select__label-search">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkbox_content">ООО Литтера</span>
+                              </label>
+                             </div>
+              
+                             <div class="checkbox_wrapper">
+                              <label class="custom-checkbox __select__label __select__label-search">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkbox_content">ИП ГрандГарант</span>
+                              </label>
+                             </div>
+              
+                             <div class="checkbox_wrapper">
+                              <label class="custom-checkbox __select__label __select__label-search">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkbox_content">ООО Глагол Нижний Новгород Советский район ул. Чукотская</span>
+                              </label>
+                             </div>
+              
+                             <div class="checkbox_wrapper">
+                              <label class="custom-checkbox __select__label __select__label-search">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkbox_content">ИП Инкликит</span>
+                              </label>
+                             </div>
+              
+                             <div class="checkbox_wrapper">
+                              <label class="custom-checkbox __select__label __select__label-search">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkbox_content">ИП МувБиз Трансфер</span>
+                              </label>
+                             </div>
+              
+                             <div class="checkbox_wrapper">
+                              <label class="custom-checkbox __select__label __select__label-search">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkbox_content">Торговая сеть Юность</span>
+                              </label>
+                             </div>
+              
+                             <div class="checkbox_wrapper">
+                              <label class="custom-checkbox __select__label __select__label-search">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkbox_content">Торговая сеть Развитие Нижний Новгород</span>
+                              </label>
+                             </div>
+              
+                             <div class="checkbox_wrapper">
+                              <label class="custom-checkbox __select__label __select__label-search">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkbox_content">Торговая сеть Восход</span>
+                              </label>
+                             </div>
+              
+                             <div class="checkbox_wrapper">
+                              <label class="custom-checkbox __select__label __select__label-search">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkbox_content">ООО Глагол Нижний Новгород Советский район ул. Чукотская</span>
+                              </label>
+                             </div>
+              
+                             <div class="checkbox_wrapper">
+                              <label class="custom-checkbox __select__label __select__label-search">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkbox_content">ИП Инкликит</span>
+                              </label>
+                             </div>
+              
+                             <div class="checkbox_wrapper">
+                              <label class="custom-checkbox __select__label __select__label-search">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkbox_content">ИП Инкликит</span>
+                              </label>
+                             </div>
+              
+                             <div class="checkbox_wrapper">
+                              <label class="custom-checkbox __select__label __select__label-search">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkbox_content">ИП Инкликит</span>
+                              </label>
+                             </div>
+              
+                             <div class="checkbox_wrapper">
+                              <label class="custom-checkbox __select__label __select__label-search">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkbox_content">ИП Инкликит</span>
+                              </label>
+                             </div>
+              
+                             <div class="checkbox_wrapper">
+                              <label class="custom-checkbox __select__label __select__label-search">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkbox_content">ИП Инкликит</span>
+                              </label>
+                             </div>
+              
+                             <div class="checkbox_wrapper">
+                              <label class="custom-checkbox __select__label __select__label-search">
+                                <input type="checkbox" name="" id="">
+                                <span class="checkbox_content">ИП Инкликит</span>
+                              </label>
+                             </div>
+                          </div>
+                    </div>
+                </div>
+              </div>
+
+    
+      <!-- "Конец модального окна фильтров" -->
+
+
+  <!-- НАЧАЛО МОДАЛЬНОЕ ОКНО ЗАГРУЗКА -->
+
+  <div class="modal-loading-result flex fd-column ai-center">
+    <div class="modal-loading-result__title tac">Загрузка прошла успешно</div>
+    <p class="tac small">Было загружено 10 новых элементов</p>
+    <button class="btn-blue p13-24">Продолжить работу</button>
+  </div>
+
+  <!-- КОНЕЦ МОДАЛЬНОЕ ОКНО ЗАГРУЗКА -->
+
+  <!-- НАЧАЛО МОДАЛЬНОЕ ОКНО УДАЛЕНИЕ -->
+
+  <div class="modal-delete-confirm flex fd-column ai-center">
+    <div class="modal-delete-confirm__title tac">Удалить элементы?</div>
+    <p class="tac small">Выбранные элементы будут удалены из системы</p>
+    <div class="modal-delete-confirm__button-group flex fd-column-xs">
+      <button class="btn-red p13-24">Удалить</button>
+      <button class="btn-white p13-24">Отмена</button>
+    </div>
+  </div>
+
+  <!-- КОНЕЦ МОДАЛЬНОЕ ОКНО УДАЛЕНИЕ -->
+
+  <!-- НАЧАЛО МОДАЛЬНОЕ ОКНО КОММЕНТАРИИ -->
+
+  <div class="modal-comments flex fd-column ai-center">
+    <h4 class="modal-comments__title">Комментарии к Ноутбук HP 250 G9 Core i5</h4>
+    <button class="modal-close-btn modal-close-btn--js"></button>
+
+    <ul class="modal-comments__list">
+      <li class="modal-comments__item">
+        <div class="modal-comments__date">21.03.23 в 15:00</div>
+        <div class="modal-comments__message">Иванов М. А. подтвердил оборудование</div>
+      </li>
+
+      <li class="modal-comments__item">
+        <div class="modal-comments__date">21.03.23 в 15:00</div>
+        <div class="modal-comments__message">Иванов М. А. оставил(а) комментарий:</div>
+        <div class="modal-comments__text">
+          Необходимо вручную добавить и подтвердить оставшееся оборудование по компании ИП Инклит до 10.04.23
+        </div>
+      </li>
+
+      <li class="modal-comments__item modal-comments__item_highlited">
+        <div class="modal-comments__date">21.03.23 в 15:00</div>
+        <div class="modal-comments__message">Иванов М. А. оставил(а) комментарий:</div>
+        <div class="modal-comments__text">
+          Необходимо вручную добавить и подтвердить оставшееся оборудование по компании ИП Инклит до 10.04.23
+        </div>
+      </li>
+    </ul>
+
+    <div class="modal-comments__functional">
+      <textarea name="new-comment" placeholder="Новый комментарий..."></textarea>
+
+      <div class="modal-comments__button-group flex fd-column-xs">
+        <button type="submit" class="btn-blue p13-24">Отправить</button>
+        <button class="btn-white p13-24">Отмена</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- "Начало бокового меню" -->
+  <aside class="compaines-menu aside-menu">
+    <a href="/" class="software-menu-logo aside-menu-logo">
+      <img src="../img/logo.svg" alt="logo">
+    </a>
+    <button class="aside-menu-btn aside-menu-btn-js"></button>
+    <nav class="compaines-nav aside-nav">
+      <ul>
+        <li>
+          <a href="javascript:void(0)" class="software-menu-item aside-menu-item">
+            <div class="software-menu-link aside-menu-link">
+              <div>
+                <img class="software-menu-icon aside-menu-icon" src="../img/business.svg" alt="business-icon">
+              </div>
+              <div class="software-menu-text aside-menu-text">Компании</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)" class="software-menu-item aside-menu-item">
+            <div class="software-menu-link aside-menu-link">
+              <div>
+                <img class="software-menu-icon aside-menu-icon" src="../img/wallet.svg" alt="wallet-icon">
+              </div>
+              <div class="software-menu-text aside-menu-text">Оплаты</div>
+            </div>
+          </a>
+        </li>
+
+            <li class="li-accordion">
+                <a href="javascript:void(0)" class="software-menu-item aside-menu-item accordion accordion-js" data-state="">
+                    <div class="software-menu-link aside-menu-link">
+                      <div>
+                        <img class="software-menu-icon aside-menu-icon" src="../img/receipt.svg" alt="receipt-icon">
+                      </div>
+                      <div class="software-menu-text aside-menu-text">Мои&nbspсписки</div>
+                      <div class="accordion-arrow">
+                        <img src="../img/arrow.svg" alt="arrow-down">
+                      </div>
+                    </div>                 
+                </a>
+                <div class="panel">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)" class="software-menu-item aside-menu-item">
+                                <div class="software-menu-sublink aside-menu-sublink">
+                                    <div class="software-menu-subtext aside-menu-subtext">Оборудование</div>
+                                </div>
+                            </a>
+                         </li>
+                        <li>
+                            <a href="javascript:void(0)" class="software-menu-item aside-menu-item">
+                                <div class="software-menu-sublink aside-menu-sublink">
+                                    <div class="software-menu-subtext aside-menu-subtext">ПО</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="software-menu-item aside-menu-item">
+                                <div class="software-menu-sublink aside-menu-sublink">
+                                    <div class="software-menu-subtext aside-menu-subtext">Услуги</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="software-menu-item aside-menu-item">
+                                <div class="software-menu-sublink aside-menu-sublink">
+                                    <div class="software-menu-subtext aside-menu-subtext">Пользователи</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="software-menu-item aside-menu-item">
+                                <div class="software-menu-sublink aside-menu-sublink">
+                                    <div class="software-menu-subtext aside-menu-subtext">Поставщики</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="aside-menu-small small aside-menu-small-js">
+                  <a href="javacript:void(0)" class="header__menu-link">Оборудование</a>
+                  <a href="javacript:void(0)" class="header__menu-link">ПО</a>
+                  <a href="javacript:void(0)" class="header__menu-link">Услуги</a>
+                  <a href="javacript:void(0)" class="header__menu-link">Пользователи</a>
+                  <a href="javacript:void(0)" class="header__menu-link">Поставщики</a>
+                </div>
+            </li>
+               
+            
+            
+            <li class="li-accordion">
+                <a href="javascript:void(0)" class="software-menu-item aside-menu-item accordion accordion-js" data-state="">
+                    <div class="software-menu-link aside-menu-link">
+                      <div>
+                        <img class="software-menu-icon aside-menu-icon" src="../img/raise.svg" alt="raise-icon">
+                      </div>
+                      <div class="software-menu-text aside-menu-text">Бюджет</div>
+                      <div class="accordion-arrow">
+                        <img src="../img/arrow.svg" alt="arrow-down">
+                      </div>
+                    </div>
+                </a>
+                <div class="panel">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)" class="software-menu-item aside-menu-item">
+                                <div class="software-menu-sublink aside-menu-sublink">
+                                    <div class="software-menu-subtext aside-menu-subtext">Сводная</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="software-menu-item aside-menu-item">
+                                <div class="software-menu-sublink aside-menu-sublink">
+                                    <div class="software-menu-subtext aside-menu-subtext">Планирование</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="aside-menu-small small aside-menu-small-js">
+                  <a href="javacript:void(0)" class="header__menu-link">Сводная</a>
+                  <a href="javacript:void(0)" class="header__menu-link">Планирование</a>
+                </div>
+            </li>
+
+           
+
+
+        <li>
+          <a href="javascript:void(0)" class="software-menu-item aside-menu-item">
+            <div class="software-menu-link aside-menu-link">
+              <div>
+                <img class="software-menu-icon aside-menu-icon" src="../img/gear.svg" alt="gear-icon">
+              </div>
+              <div class="software-menu-text aside-menu-text">Настройки</div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  </aside>
+  <!-- "Конец бокового меню" -->
+
+
+  <header class=" header-white header-blue">
+    <div class="header-blue-wrapper flex ai-center jc-sb">
+        <div class="flex ai-center">
+            <div class="menu__btn" for="menu__toggle">
+                <span></span>
+            </div>
+            <a href="javacript:void(0)" class="header-blue-logo">
+                <img src="../img/logo.svg" alt="logo">
+            </a>
+        </div>
+
+        <div class="flex ai-center jc-sb personal-btn personal-btn-js header__profile--js">
+            <button class="header-blue__profile header__profile--js" aria-label="Профиль пользователя"></button>
+            <div class="user_name">Иванов М. А.</div> 
+        </div>
+        <div class="header__menu-small small header__menu-small--js">
+          <a href="javacript:void(0)" class="header__menu-link">Личный кабинет</a>
+          <a href="javacript:void(0)" class="header__menu-link">Сменить пароль</a>
+          <a href="javacript:void(0)" class="header__menu-link">Выйти</a>
+        </div>
+    </div>
+  </header>
+
+  <section class="software">
+    <div class="container container-small">
+      <h1>Список ПО</h1>
+      <p class="__description">Здесь вы можете управлять списком вашего ПО</p>
+
+      <div class="top-panel flex">
+        <div class="search-wrapper">
+          <input type="search" placeholder="Поиск по таблице " class="search--js">
+          <button class="search-clear-btn search-clear-btn--js">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8.59093 7L13.0441 2.54687C13.2554 2.3359 13.3743 2.04961 13.3745 1.75099C13.3748 1.45237 13.2564 1.16587 13.0455 0.95453C12.8345 0.743185 12.5482 0.624305 12.2496 0.624041C11.951 0.623778 11.6645 0.742152 11.4531 0.953123L7 5.40625L2.54687 0.953123C2.33553 0.741779 2.04888 0.623047 1.75 0.623047C1.45111 0.623047 1.16447 0.741779 0.953123 0.953123C0.741779 1.16447 0.623047 1.45111 0.623047 1.75C0.623047 2.04888 0.741779 2.33553 0.953123 2.54687L5.40625 7L0.953123 11.4531C0.741779 11.6645 0.623047 11.9511 0.623047 12.25C0.623047 12.5489 0.741779 12.8355 0.953123 13.0469C1.16447 13.2582 1.45111 13.3769 1.75 13.3769C2.04888 13.3769 2.33553 13.2582 2.54687 13.0469L7 8.59375L11.4531 13.0469C11.6645 13.2582 11.9511 13.3769 12.25 13.3769C12.5489 13.3769 12.8355 13.2582 13.0469 13.0469C13.2582 12.8355 13.3769 12.5489 13.3769 12.25C13.3769 11.9511 13.2582 11.6645 13.0469 11.4531L8.59093 7Z" fill="#C6CBD6"/>
+            </svg>
+          </button>
+        </div>
+
+          <div class="__select  __filters   __select-checkbox-js __select-js  __select-checkbox-search-js" data-state="">
+            <div class="__select__title  __filters-title" data-default="Фильтры">
+              <span class="__select__title__span">Фильтры</span>
+            </div>
+            <div class="__select__content __filters_content search-wrapper-js">
+
+                <div class="__filters_content_filter">
+                    <div class="filters_wrapper">
+                        <div class="__filter">
+                            <div class="filter_title">Тип</div>
+                            <div class="__select  __select-types __select-checkbox-js __select-js " data-state="">
+                                <div class="__select__title __select__title__filter" data-default="Все типы">
+                                  <span class="__select__title__span ">Все типы</span>
+                                </div>
+                                <div class="__select__content __select__content_filter">
+                                  
+                     
+                                   <div class="checkbox_wrapper">
+                                    <label class="custom-checkbox __select__label __select__label-big">
+                                      <input type="checkbox"  name="" id="">
+                                      <span class="checkbox_content">Операционнная система</span>
+                                    </label>
+                                   </div>
+                    
+                                   <div class="checkbox_wrapper">
+                                    <label class="custom-checkbox __select__label __select__label-big">
+                                      <input type="checkbox"  name="" id="">
+                                      <span class="checkbox_content">Графический редактор</span>
+                                    </label>
+                                   </div>
+                    
+                                   <div class="checkbox_wrapper">
+                                    <label class="custom-checkbox __select__label __select__label-big">
+                                      <input type="checkbox"  name="" id="">
+                                      <span class="checkbox_content">Офисное ПО</span>
+                                    </label>
+                                   </div>
+
+                                   <div class="checkbox_wrapper">
+                                    <label class="custom-checkbox __select__label __select__label-big">
+                                      <input type="checkbox"  name="" id="">
+                                      <span class="checkbox_content">Антивирус</span>
+                                    </label>
+                                   </div>
+                                </div>
+                              </div>
+                        </div>
+                    
+
+                            <div class="__filter">
+                                <div class="filter_title">Подразделения</div>
+                                <div class="__select  __select-checkbox-js __select-js " data-state="">
+                                    <div class="__select__title __select__title__filter" data-default="Все подразделения">
+                                    <span class="__select__title__span ">Все подразделения</span>
+                                    </div>
+                                    <div class="__select__content __select__content_filter">
+                                    
+                        
+                                    <div class="checkbox_wrapper">
+                                        <label class="custom-checkbox __select__label __select__label-big">
+                                        <input type="checkbox"  name="" id="">
+                                        <span class="checkbox_content">Руководство</span>
+                                        </label>
+                                    </div>
+                        
+                                    <div class="checkbox_wrapper">
+                                        <label class="custom-checkbox __select__label __select__label-big">
+                                        <input type="checkbox"  name="" id="">
+                                        <span class="checkbox_content">Отдел продаж</span>
+                                        </label>
+                                    </div>
+                        
+                                    <div class="checkbox_wrapper">
+                                        <label class="custom-checkbox __select__label __select__label-big">
+                                        <input type="checkbox"  name="" id="">
+                                        <span class="checkbox_content">Отдел кадров</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="checkbox_wrapper">
+                                        <label class="custom-checkbox __select__label __select__label-big">
+                                        <input type="checkbox"  name="" id="">
+                                        <span class="checkbox_content">Экономический отдел</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="checkbox_wrapper">
+                                        <label class="custom-checkbox __select__label __select__label-big">
+                                        <input type="checkbox"  name="" id="">
+                                        <span class="checkbox_content">Отдел закупок</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="checkbox_wrapper">
+                                        <label class="custom-checkbox __select__label __select__label-big">
+                                        <input type="checkbox"  name="" id="">
+                                        <span class="checkbox_content">Бухгалтерия</span>
+                                        </label>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <div class="__filter">
+                          <div class="filter_title">Поставщики</div>
+                          <div class="__select __select__suppliers __select-checkbox-js __select-js " data-state="">
+                              <div class="__select__title __select__title__filter" data-default="Все поставщики">
+                              <span class="__select__title__span ">Все поставщики</span>
+                              </div>
+                              <div class="__select__content __select__content_filter">
+                              
+                  
+                              <div class="checkbox_wrapper">
+                                  <label class="custom-checkbox __select__label __select__label-big">
+                                  <input type="checkbox"  name="" id="">
+                                  <span class="checkbox_content">Microsoft</span>
+                                  </label>
+                              </div>
+                  
+                              <div class="checkbox_wrapper">
+                                  <label class="custom-checkbox __select__label __select__label-big">
+                                  <input type="checkbox"  name="" id="">
+                                  <span class="checkbox_content">Kaspersky</span>
+                                  </label>
+                              </div>
+                  
+                              <div class="checkbox_wrapper">
+                                  <label class="custom-checkbox __select__label __select__label-big">
+                                  <input type="checkbox"  name="" id="">
+                                  <span class="checkbox_content">Client Access Licenses (CAL)</span>
+                                  </label>
+                              </div>
+
+                              <div class="checkbox_wrapper">
+                                  <label class="custom-checkbox __select__label __select__label-big">
+                                  <input type="checkbox"  name="" id="">
+                                  <span class="checkbox_content">Adobe</span>
+                                  </label>
+                              </div>
+
+                              </div>
+                          </div>
+                      </div>
+
+                            <div class="__filter">
+                                <div class="filter_title">Комментарии</div>
+                                <div class="__select  __select-checkbox-js __select-js " data-state="">
+                                    <div class="__select__title __select__title__filter" data-default="Все комментарии">
+                                    <span class="__select__title__span ">Все комментарии</span>
+                                    </div>
+                                    <div class="__select__content __select__content_filter">
+                                    
+                        
+                                    <div class="checkbox_wrapper">
+                                        <label class="custom-checkbox __select__label __select__label-big">
+                                        <input type="checkbox"  name="" id="">
+                                        <span class="checkbox_content">Не просмотренные</span>
+                                        </label>
+                                    </div>
+                        
+                                    <div class="checkbox_wrapper">
+                                        <label class="custom-checkbox __select__label __select__label-big">
+                                        <input type="checkbox"  name="" id="">
+                                        <span class="checkbox_content">С комментариями</span>
+                                        </label>
+                                    </div>
+                        
+                                    <div class="checkbox_wrapper">
+                                        <label class="custom-checkbox __select__label __select__label-big">
+                                        <input type="checkbox"  name="" id="">
+                                        <span class="checkbox_content">Без комментариев</span>
+                                        </label>
+                                    </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                    </div>
+
+                    <div class="btn-wrapper">
+                        <button class="btn-confirm modal-btn-blue btn-blue btn-confirm--js">Применить</button>
+                        <button class="reset__filters  reset__filters--js">Сбросить все фильтры</button>
+                    </div>
+                </div>
+
+                <div class="__filters_content_search search-wrapper-js ">
+                    <div class="__filters__search-wrapper ">
+                        <input type="search" placeholder="Поиск по названию" class=" search--js" value="">
+                        <button class="search-clear-btn search-clear-btn_small search-clear-btn--js">
+                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M8.59093 7L13.0441 2.54687C13.2554 2.3359 13.3743 2.04961 13.3745 1.75099C13.3748 1.45237 13.2564 1.16587 13.0455 0.95453C12.8345 0.743185 12.5482 0.624305 12.2496 0.624041C11.951 0.623778 11.6645 0.742152 11.4531 0.953123L7 5.40625L2.54687 0.953123C2.33553 0.741779 2.04888 0.623047 1.75 0.623047C1.45111 0.623047 1.16447 0.741779 0.953123 0.953123C0.741779 1.16447 0.623047 1.45111 0.623047 1.75C0.623047 2.04888 0.741779 2.33553 0.953123 2.54687L5.40625 7L0.953123 11.4531C0.741779 11.6645 0.623047 11.9511 0.623047 12.25C0.623047 12.5489 0.741779 12.8355 0.953123 13.0469C1.16447 13.2582 1.45111 13.3769 1.75 13.3769C2.04888 13.3769 2.33553 13.2582 2.54687 13.0469L7 8.59375L11.4531 13.0469C11.6645 13.2582 11.9511 13.3769 12.25 13.3769C12.5489 13.3769 12.8355 13.2582 13.0469 13.0469C13.2582 12.8355 13.3769 12.5489 13.3769 12.25C13.3769 11.9511 13.2582 11.6645 13.0469 11.4531L8.59093 7Z"
+                              fill="#C6CBD6" />
+                          </svg>
+                        </button>
+                      </div>
+    
+                    <div class="search-checkbox-wrapper">
+                        <div class="checkbox_wrapper">
+                          <label class="custom-checkbox __select__label __select__label-search">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkbox_content">ООО Литтера</span>
+                          </label>
+                         </div>
+          
+                         <div class="checkbox_wrapper">
+                          <label class="custom-checkbox __select__label __select__label-search">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkbox_content">ИП ГрандГарант</span>
+                          </label>
+                         </div>
+          
+                         <div class="checkbox_wrapper">
+                          <label class="custom-checkbox __select__label __select__label-search">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkbox_content">ООО Глагол Нижний Новгород Советский район ул. Чукотская</span>
+                          </label>
+                         </div>
+          
+                         <div class="checkbox_wrapper">
+                          <label class="custom-checkbox __select__label __select__label-search">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkbox_content">ИП Инкликит</span>
+                          </label>
+                         </div>
+          
+                         <div class="checkbox_wrapper">
+                          <label class="custom-checkbox __select__label __select__label-search">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkbox_content">ИП МувБиз Трансфер</span>
+                          </label>
+                         </div>
+          
+                         <div class="checkbox_wrapper">
+                          <label class="custom-checkbox __select__label __select__label-search">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkbox_content">Торговая сеть Юность</span>
+                          </label>
+                         </div>
+          
+                         <div class="checkbox_wrapper">
+                          <label class="custom-checkbox __select__label __select__label-search">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkbox_content">Торговая сеть Развитие Нижний Новгород</span>
+                          </label>
+                         </div>
+          
+                         <div class="checkbox_wrapper">
+                          <label class="custom-checkbox __select__label __select__label-search">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkbox_content">Торговая сеть Восход</span>
+                          </label>
+                         </div>
+          
+                         <div class="checkbox_wrapper">
+                          <label class="custom-checkbox __select__label __select__label-search">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkbox_content">ООО Глагол Нижний Новгород Советский район ул. Чукотская</span>
+                          </label>
+                         </div>
+          
+                         <div class="checkbox_wrapper">
+                          <label class="custom-checkbox __select__label __select__label-search">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkbox_content">ИП Инкликит</span>
+                          </label>
+                         </div>
+          
+                         <div class="checkbox_wrapper">
+                          <label class="custom-checkbox __select__label __select__label-search">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkbox_content">ИП Инкликит</span>
+                          </label>
+                         </div>
+          
+                         <div class="checkbox_wrapper">
+                          <label class="custom-checkbox __select__label __select__label-search">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkbox_content">ИП Инкликит</span>
+                          </label>
+                         </div>
+          
+                         <div class="checkbox_wrapper">
+                          <label class="custom-checkbox __select__label __select__label-search">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkbox_content">ИП Инкликит</span>
+                          </label>
+                         </div>
+          
+                         <div class="checkbox_wrapper">
+                          <label class="custom-checkbox __select__label __select__label-search">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkbox_content">ИП Инкликит</span>
+                          </label>
+                         </div>
+          
+                         <div class="checkbox_wrapper">
+                          <label class="custom-checkbox __select__label __select__label-search">
+                            <input type="checkbox" name="" id="">
+                            <span class="checkbox_content">ИП Инкликит</span>
+                          </label>
+                         </div>
+                      </div>
+                </div>      
+            </div>
+          </div>
+
+          <button class="btn_filters btn_filters--js"></button>
+
+          <div class="__select __download __select-count-js " data-state="">
+            <a href="javascript:void(0)" class="__download__title " data-default="">Загрузить автоматически</a>
+            <a href="javascript:void(0)" class="button-download button-download--js"></a>
+
+            <div class="__select__content __download__content">
+
+              <input id="buisness" class="__select__input" type="radio" name="buisness" />
+              <label for="buisness" class="__select__label" data-default="javascript:void(1)">Загрузить автоматически</label>
+              <input id="standart" class="__select__input" type="radio" name="standart" />
+              <label for="standart" class="__select__label" data-default="javascript:void(2)">Добавить вручную</label>
+            
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="table-wrapper container-small container-small_table container-few-tables">
+      <div class="table-container">
+        <!-- НАДПИСЬ ПРИ ОТСУТСТВИИ ЭЛЕМЕНТОВ -->
+        <div class="filter-not-found hidden">По такому фильтру совпадений не найдено...</div>
+
+        <table class="small pr-big">
+          <thead>
+            <tr>
+              <th></th>
+              <th class="checkbox-field">
+                <label class="custom-checkbox">
+                  <input type="checkbox"  name="" id="">
+                  <span></span>
+                </label>
+              </th>
+              <!-- ЗАГОЛОВОК С СОРТИРОВКОЙ -->
+              <th class="sort-up stretch-130">Наименование</th>
+              <th class="fix-90">Тип</th>
+              <th class="fix-90">Поставщик</th>
+              <th class="fix-150">Дата начала</th>
+              <th class="fix-150">Дата окончания</th>
+              <th class="fix-150">Стоимость за ед.</th>
+              <th class="fix-90">Артикул</th>
+              <th class="fix-90">Компания</th>
+              <th class="fix-150">Подразделение</th>
+              <th class="fix-150">Пользователь</th>
+              <th class="fix-90">Аналоги</th>
+              <th></th>
+            </tr>
+          </thead>
+  
+          <tbody>
+            <tr data-index="1">
+              <td></td>
+              <td class="checkbox-field">
+                <label class="custom-checkbox">
+                  <input type="checkbox"  name="" id="">
+                  <span></span>
+                </label>
+              </td>
+              <td class="stretch-130">
+                <a href="javascript:void(0)">Касперский Лучший Антивирус во всем мире</a>
+              </td>
+              <td class="fix-90">Программное обеспечение</td>
+              <td class="fix-90">Microsoft</td>
+              <td class="fix-150">22.09.2021</td>
+              <td class="fix-150">22.09.2023</td>
+              <td class="fix-150">5 000₽</td>
+              <td class="fix-90">663891Р</td>
+              <td class="fix-90">ООО Глагол Нижний Новгород, Сормово</td>
+              <td class="fix-150">Отдел продаж</td>
+              <td class="fix-150">Иванов М. А.</td>
+              <td class="fix-90">Нет таких</td>
+              <td></td>
+            </tr>
+  
+            <tr data-index="2">
+              <td></td>
+              <td class="checkbox-field">
+                <label class="custom-checkbox">
+                  <input type="checkbox"  name="" id="">
+                  <span></span>
+                </label>
+              </td>
+              <td class="stretch-130">
+                <a href="javascript:void(0)">Касперский Лучший Антивирус</a>
+              </td>
+              <td class="fix-90">Программное обеспечение</td>
+              <td class="fix-90">Microsoft</td>
+              <td class="fix-150">22.09.2021</td>
+              <td class="fix-150">22.09.2023</td>
+              <td class="fix-150">5 000₽</td>
+              <td class="fix-90">663891Р</td>
+              <td class="fix-90">ООО Глагол Нижний Новгород, Сормово</td>
+              <td class="fix-150">Отдел продаж</td>
+              <td class="fix-150">Иванов М. А.</td>
+              <td class="fix-90">Нет таких</td>
+              <td></td>
+            </tr>
+  
+            <tr data-index="3">
+              <td></td>
+              <td class="checkbox-field">
+                <label class="custom-checkbox">
+                  <input type="checkbox"  name="" id="">
+                  <span></span>
+                </label>
+              </td>
+              <td class="stretch-130">
+                <a href="javascript:void(0)">Касперский Лучший Антивирус</a>
+              </td>
+              <td class="fix-90">Программное обеспечение</td>
+              <td class="fix-90">Microsoft</td>
+              <td class="fix-150">22.09.2021</td>
+              <td class="fix-150">22.09.2023</td>
+              <td class="fix-150">5 000₽</td>
+              <td class="fix-90">663891Р</td>
+              <td class="fix-90">ООО Глагол Нижний Новгород, Сормово</td>
+              <td class="fix-150">Отдел продаж</td>
+              <td class="fix-150">Иванов М. А.</td>
+              <td class="fix-90">Нет таких</td>
+              <td></td>
+            </tr>
+  
+            <tr data-index="4">
+              <td></td>
+              <td class="checkbox-field">
+                <label class="custom-checkbox">
+                  <input type="checkbox"  name="" id="">
+                  <span></span>
+                </label>
+              </td>
+              <td class="stretch-130">
+                <a href="javascript:void(0)">Касперский Лучший Антивирус</a>
+              </td>
+              <td class="fix-90">Программное обеспечение</td>
+              <td class="fix-90">Microsoft</td>
+              <td class="fix-150">22.09.2021</td>
+              <td class="fix-150">22.09.2023</td>
+              <td class="fix-150">5 000₽</td>
+              <td class="fix-90">663891Р</td>
+              <td class="fix-90">ООО Глагол Нижний Новгород, Сормово</td>
+              <td class="fix-150">Отдел продаж</td>
+              <td class="fix-150">Иванов М. А.</td>
+              <td class="fix-90">Нет таких</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-menu-group table-menu-group_big table-menu-group--js">
+        <table class="table-menu-list">
+          <thead>
+            <th class="table-menu-wrapper table-menu-wrapper_elements-group table-menu-wrapper_header table-menu-wrapper_header--js">
+              <div class="table-menu-button table-menu-button_comments">
+                <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.87368 0.399907L3.87539 0.399902L18.1271 0.399905C18.9812 0.402337 19.7997 0.742713 20.4036 1.34667C21.0076 1.95063 21.348 2.76908 21.3504 3.6232L21.3504 3.6249L21.3504 12.6249L21.3504 12.6266C21.348 13.4807 21.0076 14.2992 20.4036 14.9031C19.7997 15.5071 18.9812 15.8475 18.1271 15.8499L18.1254 15.8499H10.4654L6.13462 19.4607C5.95578 19.6098 5.70683 19.642 5.49597 19.5433C5.2851 19.4446 5.15039 19.2327 5.15039 18.9999V15.8499H3.87539L3.87368 15.8499C3.01956 15.8475 2.20112 15.5071 1.59716 14.9031C0.993199 14.2992 0.652823 13.4807 0.650393 12.6266L0.650391 12.6249V3.6232C0.652821 2.76908 0.993199 1.95063 1.59716 1.34667C2.20112 0.742713 3.01956 0.402337 3.87368 0.399907ZM10.5281 15.7976C10.5283 15.7975 10.528 15.7977 10.5281 15.7976ZM3.87629 1.5999C3.33954 1.60164 2.82525 1.81564 2.44569 2.1952C2.06612 2.57476 1.85213 3.08905 1.85039 3.62581V12.624C1.85213 13.1608 2.06612 13.675 2.44569 14.0546C2.82522 14.4341 3.33946 14.6481 3.87617 14.6499H5.75039C6.08176 14.6499 6.35039 14.9185 6.35039 15.2499V17.7185L9.75889 14.8766C9.93419 14.7303 10.1557 14.6499 10.384 14.6499C10.384 14.6499 10.3839 14.6499 10.384 14.6499H18.1246C18.6613 14.6481 19.1756 14.4341 19.5551 14.0546C19.9347 13.675 20.1487 13.1606 20.1504 12.6238C20.1504 12.6236 20.1504 12.624 20.1504 12.6238L20.1504 3.62661C20.1504 3.6264 20.1504 3.62682 20.1504 3.62661C20.1487 3.08979 19.9347 2.5748 19.5551 2.1952C19.1755 1.81564 18.6612 1.60164 18.1245 1.5999H3.87629Z" fill="black"/>
+                  <path d="M6.5 9.625C7.32843 9.625 8 8.95343 8 8.125C8 7.29657 7.32843 6.625 6.5 6.625C5.67157 6.625 5 7.29657 5 8.125C5 8.95343 5.67157 9.625 6.5 9.625Z" fill="black"/>
+                  <path d="M11 9.625C11.8284 9.625 12.5 8.95343 12.5 8.125C12.5 7.29657 11.8284 6.625 11 6.625C10.1716 6.625 9.5 7.29657 9.5 8.125C9.5 8.95343 10.1716 9.625 11 9.625Z" fill="black"/>
+                  <path d="M15.5 9.625C16.3284 9.625 17 8.95343 17 8.125C17 7.29657 16.3284 6.625 15.5 6.625C14.6716 6.625 14 7.29657 14 8.125C14 8.95343 14.6716 9.625 15.5 9.625Z" fill="black"/>
+                </svg>        
+              </div>
+            </th>
+          </thead>
+  
+          <tr class="table-menu-wrapper table-menu-wrapper_elements-group table-menu-wrapper--js" data-index="1">
+            <td>
+              <div class="table-menu-flex-list">
+                <button class="table-menu-button table-menu-button_comments table-button-comments--js">
+                  <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.125 0.25H3.875C2.9802 0.250993 2.12233 0.606891 1.48961 1.23961C0.856891 1.87233 0.500993 2.7302 0.5 3.625V12.625C0.500993 13.5198 0.856891 14.3777 1.48961 15.0104C2.12233 15.6431 2.9802 15.999 3.875 16H5V19C4.99996 19.1426 5.04058 19.2823 5.11709 19.4026C5.1936 19.5229 5.30284 19.619 5.43199 19.6794C5.56114 19.7399 5.70485 19.7623 5.84627 19.744C5.9877 19.7257 6.12097 19.6674 6.23047 19.5761L10.5191 16H18.125C19.0198 15.999 19.8777 15.6431 20.5104 15.0104C21.1431 14.3777 21.499 13.5198 21.5 12.625V3.625C21.499 2.7302 21.1431 1.87233 20.5104 1.23961C19.8777 0.606891 19.0198 0.250993 18.125 0.25ZM6.5 9.625C6.20333 9.625 5.91332 9.53703 5.66665 9.3722C5.41997 9.20738 5.22771 8.97311 5.11418 8.69902C5.00065 8.42494 4.97094 8.12334 5.02882 7.83236C5.0867 7.54139 5.22956 7.27412 5.43934 7.06434C5.64912 6.85456 5.91639 6.7117 6.20736 6.65382C6.49834 6.59594 6.79994 6.62565 7.07403 6.73918C7.34811 6.85271 7.58238 7.04497 7.7472 7.29164C7.91203 7.53832 8 7.82833 8 8.125C8 8.52282 7.84196 8.90436 7.56066 9.18566C7.27936 9.46696 6.89782 9.625 6.5 9.625ZM11 9.625C10.7033 9.625 10.4133 9.53703 10.1666 9.3722C9.91997 9.20738 9.72771 8.97311 9.61418 8.69902C9.50065 8.42494 9.47094 8.12334 9.52882 7.83236C9.5867 7.54139 9.72956 7.27412 9.93934 7.06434C10.1491 6.85456 10.4164 6.7117 10.7074 6.65382C10.9983 6.59594 11.2999 6.62565 11.574 6.73918C11.8481 6.85271 12.0824 7.04497 12.2472 7.29164C12.412 7.53832 12.5 7.82833 12.5 8.125C12.5 8.52282 12.342 8.90436 12.0607 9.18566C11.7794 9.46696 11.3978 9.625 11 9.625ZM15.5 9.625C15.2033 9.625 14.9133 9.53703 14.6666 9.3722C14.42 9.20738 14.2277 8.97311 14.1142 8.69902C14.0006 8.42494 13.9709 8.12334 14.0288 7.83236C14.0867 7.54139 14.2296 7.27412 14.4393 7.06434C14.6491 6.85456 14.9164 6.7117 15.2074 6.65382C15.4983 6.59594 15.7999 6.62565 16.074 6.73918C16.3481 6.85271 16.5824 7.04497 16.7472 7.29164C16.912 7.53832 17 7.82833 17 8.125C17 8.52282 16.842 8.90436 16.5607 9.18566C16.2794 9.46696 15.8978 9.625 15.5 9.625Z" fill="#329B0D"/>
+                  </svg>           
+                </button>
+      
+                <button class="table-menu-button table-menu-button_confirmed">
+                  <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8137 1.13746C13.0404 1.33951 13.0634 1.69049 12.865 1.9214L5.22868 10.8103C5.12926 10.926 4.98721 10.9946 4.83633 10.9997C4.68545 11.0048 4.53923 10.946 4.43249 10.8373L1.15976 7.50395C0.946747 7.28699 0.946747 6.93523 1.15976 6.71828C1.37277 6.50132 1.71814 6.50132 1.93115 6.71828L4.79161 9.63171L12.044 1.18973C12.2424 0.958818 12.587 0.935419 12.8137 1.13746Z" fill="#329B0D" stroke="#329B0D" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>              
+                </button>
+      
+                <button class="table-menu-button table-menu-button_trash table-button-delete--js">
+                  <svg width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.58333 1.85714H7.08333V1.16071C7.08333 0.852874 6.97359 0.557642 6.77824 0.339965C6.58289 0.122289 6.31793 0 6.04167 0H3.95833C3.68207 0 3.41711 0.122289 3.22176 0.339965C3.02641 0.557642 2.91667 0.852874 2.91667 1.16071V1.85714H0.416667C0.30616 1.85714 0.200179 1.90606 0.122039 1.99313C0.0438988 2.0802 0 2.19829 0 2.32143C0 2.44456 0.0438988 2.56266 0.122039 2.64973C0.200179 2.7368 0.30616 2.78571 0.416667 2.78571H0.859375L1.35417 11.6338C1.39115 12.413 1.92708 13 2.60417 13H7.39583C8.0763 13 8.60156 12.426 8.64583 11.6362L9.14062 2.78571H9.58333C9.69384 2.78571 9.79982 2.7368 9.87796 2.64973C9.9561 2.56266 10 2.44456 10 2.32143C10 2.19829 9.9561 2.0802 9.87796 1.99313C9.79982 1.90606 9.69384 1.85714 9.58333 1.85714ZM3.34818 11.1429H3.33333C3.22535 11.1429 3.12156 11.0963 3.04383 11.0128C2.9661 10.9292 2.92051 10.8154 2.91667 10.6951L2.70833 4.19511C2.7044 4.07198 2.74452 3.95214 2.81988 3.86197C2.89523 3.7718 2.99965 3.71867 3.11016 3.71429C3.22066 3.7099 3.32821 3.75461 3.40913 3.83858C3.49006 3.92254 3.53773 4.03889 3.54167 4.16203L3.75 10.662C3.75198 10.723 3.74316 10.7838 3.72404 10.841C3.70491 10.8982 3.67586 10.9506 3.63854 10.9953C3.60122 11.0399 3.55636 11.0759 3.50654 11.1013C3.45672 11.1266 3.40291 11.1407 3.34818 11.1429ZM5.41667 10.6786C5.41667 10.8017 5.37277 10.9198 5.29463 11.0069C5.21649 11.0939 5.11051 11.1429 5 11.1429C4.88949 11.1429 4.78351 11.0939 4.70537 11.0069C4.62723 10.9198 4.58333 10.8017 4.58333 10.6786V4.17857C4.58333 4.05544 4.62723 3.93734 4.70537 3.85027C4.78351 3.7632 4.88949 3.71429 5 3.71429C5.11051 3.71429 5.21649 3.7632 5.29463 3.85027C5.37277 3.93734 5.41667 4.05544 5.41667 4.17857V10.6786ZM6.25 1.85714H3.75V1.16071C3.74969 1.13013 3.75486 1.09979 3.76522 1.07146C3.77558 1.04314 3.79091 1.01741 3.81032 0.995785C3.82973 0.974158 3.85282 0.957072 3.87824 0.945529C3.90366 0.933987 3.93089 0.928221 3.95833 0.928571H6.04167C6.06911 0.928221 6.09634 0.933987 6.12176 0.945529C6.14718 0.957072 6.17027 0.974158 6.18968 0.995785C6.20909 1.01741 6.22442 1.04314 6.23478 1.07146C6.24514 1.09979 6.25031 1.13013 6.25 1.16071V1.85714ZM7.08333 10.6951C7.07949 10.8154 7.0339 10.9292 6.95617 11.0128C6.87844 11.0963 6.77465 11.1429 6.66667 11.1429H6.65156C6.59686 11.1407 6.54307 11.1265 6.49328 11.1012C6.44348 11.0758 6.39866 11.0398 6.36137 10.9952C6.32408 10.9505 6.29505 10.8981 6.27594 10.8409C6.25683 10.7838 6.24801 10.723 6.25 10.662L6.45833 4.16203C6.46028 4.10106 6.47299 4.04111 6.49573 3.98562C6.51847 3.93012 6.5508 3.88015 6.59087 3.83858C6.63094 3.797 6.67796 3.76462 6.72926 3.7433C6.78056 3.72197 6.83513 3.71211 6.88984 3.71429C6.94456 3.71646 6.99836 3.73062 7.04816 3.75596C7.09797 3.7813 7.14281 3.81732 7.18012 3.86197C7.21744 3.90662 7.24649 3.95902 7.26563 4.01618C7.28477 4.07334 7.29362 4.13414 7.29167 4.19511L7.08333 10.6951Z" fill="#C91919"/>
+                  </svg>              
+                </button>
+              </div>
+            </td>
+          </tr>
+  
+          <tr class="table-menu-wrapper table-menu-wrapper_elements-group table-menu-wrapper--js" data-index="2">
+            <td>
+              <div class="table-menu-flex-list">
+                <button class="table-menu-button table-menu-button_comments table-button-comments--js">
+                  <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.125 0.25H3.875C2.9802 0.250993 2.12233 0.606891 1.48961 1.23961C0.856891 1.87233 0.500993 2.7302 0.5 3.625V12.625C0.500993 13.5198 0.856891 14.3777 1.48961 15.0104C2.12233 15.6431 2.9802 15.999 3.875 16H5V19C4.99996 19.1426 5.04058 19.2823 5.11709 19.4026C5.1936 19.5229 5.30284 19.619 5.43199 19.6794C5.56114 19.7399 5.70485 19.7623 5.84627 19.744C5.9877 19.7257 6.12097 19.6674 6.23047 19.5761L10.5191 16H18.125C19.0198 15.999 19.8777 15.6431 20.5104 15.0104C21.1431 14.3777 21.499 13.5198 21.5 12.625V3.625C21.499 2.7302 21.1431 1.87233 20.5104 1.23961C19.8777 0.606891 19.0198 0.250993 18.125 0.25ZM6.5 9.625C6.20333 9.625 5.91332 9.53703 5.66665 9.3722C5.41997 9.20738 5.22771 8.97311 5.11418 8.69902C5.00065 8.42494 4.97094 8.12334 5.02882 7.83236C5.0867 7.54139 5.22956 7.27412 5.43934 7.06434C5.64912 6.85456 5.91639 6.7117 6.20736 6.65382C6.49834 6.59594 6.79994 6.62565 7.07403 6.73918C7.34811 6.85271 7.58238 7.04497 7.7472 7.29164C7.91203 7.53832 8 7.82833 8 8.125C8 8.52282 7.84196 8.90436 7.56066 9.18566C7.27936 9.46696 6.89782 9.625 6.5 9.625ZM11 9.625C10.7033 9.625 10.4133 9.53703 10.1666 9.3722C9.91997 9.20738 9.72771 8.97311 9.61418 8.69902C9.50065 8.42494 9.47094 8.12334 9.52882 7.83236C9.5867 7.54139 9.72956 7.27412 9.93934 7.06434C10.1491 6.85456 10.4164 6.7117 10.7074 6.65382C10.9983 6.59594 11.2999 6.62565 11.574 6.73918C11.8481 6.85271 12.0824 7.04497 12.2472 7.29164C12.412 7.53832 12.5 7.82833 12.5 8.125C12.5 8.52282 12.342 8.90436 12.0607 9.18566C11.7794 9.46696 11.3978 9.625 11 9.625ZM15.5 9.625C15.2033 9.625 14.9133 9.53703 14.6666 9.3722C14.42 9.20738 14.2277 8.97311 14.1142 8.69902C14.0006 8.42494 13.9709 8.12334 14.0288 7.83236C14.0867 7.54139 14.2296 7.27412 14.4393 7.06434C14.6491 6.85456 14.9164 6.7117 15.2074 6.65382C15.4983 6.59594 15.7999 6.62565 16.074 6.73918C16.3481 6.85271 16.5824 7.04497 16.7472 7.29164C16.912 7.53832 17 7.82833 17 8.125C17 8.52282 16.842 8.90436 16.5607 9.18566C16.2794 9.46696 15.8978 9.625 15.5 9.625Z" fill="#606E8C"/>
+                  </svg>         
+                </button>
+      
+                <button class="table-menu-button table-menu-button--js">
+                  <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 4C3.10457 4 4 3.10457 4 2C4 0.895431 3.10457 0 2 0C0.895431 0 0 0.895431 0 2C0 3.10457 0.895431 4 2 4Z" fill="#3546E9"/>
+                    <path d="M2 10C3.10457 10 4 9.10457 4 8C4 6.89543 3.10457 6 2 6C0.895431 6 0 6.89543 0 8C0 9.10457 0.895431 10 2 10Z" fill="#3546E9"/>
+                    <path d="M2 16C3.10457 16 4 15.1046 4 14C4 12.8954 3.10457 12 2 12C0.895431 12 0 12.8954 0 14C0 15.1046 0.895431 16 2 16Z" fill="#3546E9"/>
+                  </svg>
+                </button>
+              </div>
+    
+              <div class="table-menu small table-menu--js">
+                <a href="javacript:void(0)">Редактировать</a>
+                <a href="javacript:void(0)">Бюджет</a>
+                <a href="javacript:void(0)">Оборудование</a>
+                <a href="javacript:void(0)">ПО</a>
+                <a href="javacript:void(0)">Услуги</a>
+                <a href="javacript:void(0)">Пользователи</a>
+                <a href="javacript:void(0)">Поставщики</a>
+              </div>
+            </td>
+          </tr>
+  
+          <tr class="table-menu-wrapper table-menu-wrapper_elements-group table-menu-wrapper--js" data-index="3">
+            <td>
+              <div class="table-menu-flex-list">
+                <button class="table-menu-button table-menu-button_comments table-button-comments--js">
+                  <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.125 0.25H3.875C2.9802 0.250993 2.12233 0.606891 1.48961 1.23961C0.856891 1.87233 0.500993 2.7302 0.5 3.625V12.625C0.500993 13.5198 0.856891 14.3777 1.48961 15.0104C2.12233 15.6431 2.9802 15.999 3.875 16H5V19C4.99996 19.1426 5.04058 19.2823 5.11709 19.4026C5.1936 19.5229 5.30284 19.619 5.43199 19.6794C5.56114 19.7399 5.70485 19.7623 5.84627 19.744C5.9877 19.7257 6.12097 19.6674 6.23047 19.5761L10.5191 16H18.125C19.0198 15.999 19.8777 15.6431 20.5104 15.0104C21.1431 14.3777 21.499 13.5198 21.5 12.625V3.625C21.499 2.7302 21.1431 1.87233 20.5104 1.23961C19.8777 0.606891 19.0198 0.250993 18.125 0.25ZM6.5 9.625C6.20333 9.625 5.91332 9.53703 5.66665 9.3722C5.41997 9.20738 5.22771 8.97311 5.11418 8.69902C5.00065 8.42494 4.97094 8.12334 5.02882 7.83236C5.0867 7.54139 5.22956 7.27412 5.43934 7.06434C5.64912 6.85456 5.91639 6.7117 6.20736 6.65382C6.49834 6.59594 6.79994 6.62565 7.07403 6.73918C7.34811 6.85271 7.58238 7.04497 7.7472 7.29164C7.91203 7.53832 8 7.82833 8 8.125C8 8.52282 7.84196 8.90436 7.56066 9.18566C7.27936 9.46696 6.89782 9.625 6.5 9.625ZM11 9.625C10.7033 9.625 10.4133 9.53703 10.1666 9.3722C9.91997 9.20738 9.72771 8.97311 9.61418 8.69902C9.50065 8.42494 9.47094 8.12334 9.52882 7.83236C9.5867 7.54139 9.72956 7.27412 9.93934 7.06434C10.1491 6.85456 10.4164 6.7117 10.7074 6.65382C10.9983 6.59594 11.2999 6.62565 11.574 6.73918C11.8481 6.85271 12.0824 7.04497 12.2472 7.29164C12.412 7.53832 12.5 7.82833 12.5 8.125C12.5 8.52282 12.342 8.90436 12.0607 9.18566C11.7794 9.46696 11.3978 9.625 11 9.625ZM15.5 9.625C15.2033 9.625 14.9133 9.53703 14.6666 9.3722C14.42 9.20738 14.2277 8.97311 14.1142 8.69902C14.0006 8.42494 13.9709 8.12334 14.0288 7.83236C14.0867 7.54139 14.2296 7.27412 14.4393 7.06434C14.6491 6.85456 14.9164 6.7117 15.2074 6.65382C15.4983 6.59594 15.7999 6.62565 16.074 6.73918C16.3481 6.85271 16.5824 7.04497 16.7472 7.29164C16.912 7.53832 17 7.82833 17 8.125C17 8.52282 16.842 8.90436 16.5607 9.18566C16.2794 9.46696 15.8978 9.625 15.5 9.625Z" fill="#606E8C"/>
+                  </svg>         
+                </button>
+      
+                <button class="table-menu-button table-menu-button--js">
+                  <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 4C3.10457 4 4 3.10457 4 2C4 0.895431 3.10457 0 2 0C0.895431 0 0 0.895431 0 2C0 3.10457 0.895431 4 2 4Z" fill="#3546E9"/>
+                    <path d="M2 10C3.10457 10 4 9.10457 4 8C4 6.89543 3.10457 6 2 6C0.895431 6 0 6.89543 0 8C0 9.10457 0.895431 10 2 10Z" fill="#3546E9"/>
+                    <path d="M2 16C3.10457 16 4 15.1046 4 14C4 12.8954 3.10457 12 2 12C0.895431 12 0 12.8954 0 14C0 15.1046 0.895431 16 2 16Z" fill="#3546E9"/>
+                  </svg>
+                </button>
+              </div>
+    
+              <div class="table-menu small table-menu--js">
+                <a href="javacript:void(0)">Редактировать</a>
+                <a href="javacript:void(0)">Бюджет</a>
+                <a href="javacript:void(0)">Оборудование</a>
+                <a href="javacript:void(0)">ПО</a>
+                <a href="javacript:void(0)">Услуги</a>
+                <a href="javacript:void(0)">Пользователи</a>
+                <a href="javacript:void(0)">Поставщики</a>
+              </div>
+            </td>
+          </tr>
+  
+          <tr class="table-menu-wrapper table-menu-wrapper_elements-group table-menu-wrapper--js" data-index="4">
+            <td>
+              <div class="table-menu-flex-list">
+                <button class="table-menu-button table-menu-button_comments table-button-comments--js">
+                  <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.87368 0.399907L3.87539 0.399902L18.1271 0.399905C18.9812 0.402337 19.7997 0.742713 20.4036 1.34667C21.0076 1.95063 21.348 2.76908 21.3504 3.6232L21.3504 3.6249L21.3504 12.6249L21.3504 12.6266C21.348 13.4807 21.0076 14.2992 20.4036 14.9031C19.7997 15.5071 18.9812 15.8475 18.1271 15.8499L18.1254 15.8499H10.4654L6.13462 19.4607C5.95578 19.6098 5.70683 19.642 5.49597 19.5433C5.2851 19.4446 5.15039 19.2327 5.15039 18.9999V15.8499H3.87539L3.87368 15.8499C3.01956 15.8475 2.20112 15.5071 1.59716 14.9031C0.993199 14.2992 0.652823 13.4807 0.650393 12.6266L0.650391 12.6249V3.6232C0.652821 2.76908 0.993199 1.95063 1.59716 1.34667C2.20112 0.742713 3.01956 0.402337 3.87368 0.399907ZM10.5281 15.7976C10.5283 15.7975 10.528 15.7977 10.5281 15.7976ZM3.87629 1.5999C3.33954 1.60164 2.82525 1.81564 2.44569 2.1952C2.06612 2.57476 1.85213 3.08905 1.85039 3.62581V12.624C1.85213 13.1608 2.06612 13.675 2.44569 14.0546C2.82522 14.4341 3.33946 14.6481 3.87617 14.6499H5.75039C6.08176 14.6499 6.35039 14.9185 6.35039 15.2499V17.7185L9.75889 14.8766C9.93419 14.7303 10.1557 14.6499 10.384 14.6499C10.384 14.6499 10.3839 14.6499 10.384 14.6499H18.1246C18.6613 14.6481 19.1756 14.4341 19.5551 14.0546C19.9347 13.675 20.1487 13.1606 20.1504 12.6238C20.1504 12.6236 20.1504 12.624 20.1504 12.6238L20.1504 3.62661C20.1504 3.6264 20.1504 3.62682 20.1504 3.62661C20.1487 3.08979 19.9347 2.5748 19.5551 2.1952C19.1755 1.81564 18.6612 1.60164 18.1245 1.5999H3.87629Z" fill="#606E8C"/>
+                    <path d="M6.5 9.625C7.32843 9.625 8 8.95343 8 8.125C8 7.29657 7.32843 6.625 6.5 6.625C5.67157 6.625 5 7.29657 5 8.125C5 8.95343 5.67157 9.625 6.5 9.625Z" fill="#606E8C"/>
+                    <path d="M11 9.625C11.8284 9.625 12.5 8.95343 12.5 8.125C12.5 7.29657 11.8284 6.625 11 6.625C10.1716 6.625 9.5 7.29657 9.5 8.125C9.5 8.95343 10.1716 9.625 11 9.625Z" fill="#606E8C"/>
+                    <path d="M15.5 9.625C16.3284 9.625 17 8.95343 17 8.125C17 7.29657 16.3284 6.625 15.5 6.625C14.6716 6.625 14 7.29657 14 8.125C14 8.95343 14.6716 9.625 15.5 9.625Z" fill="#606E8C"/>
+                  </svg>
+                </button>
+      
+                <button class="table-menu-button table-menu-button--js">
+                  <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 4C3.10457 4 4 3.10457 4 2C4 0.895431 3.10457 0 2 0C0.895431 0 0 0.895431 0 2C0 3.10457 0.895431 4 2 4Z" fill="#3546E9"/>
+                    <path d="M2 10C3.10457 10 4 9.10457 4 8C4 6.89543 3.10457 6 2 6C0.895431 6 0 6.89543 0 8C0 9.10457 0.895431 10 2 10Z" fill="#3546E9"/>
+                    <path d="M2 16C3.10457 16 4 15.1046 4 14C4 12.8954 3.10457 12 2 12C0.895431 12 0 12.8954 0 14C0 15.1046 0.895431 16 2 16Z" fill="#3546E9"/>
+                  </svg>
+                </button>
+              </div>
+    
+              <div class="table-menu small table-menu--js">
+                <a href="javacript:void(0)">Редактировать</a>
+                <a href="javacript:void(0)">Бюджет</a>
+                <a href="javacript:void(0)">Оборудование</a>
+                <a href="javacript:void(0)">ПО</a>
+                <a href="javacript:void(0)">Услуги</a>
+                <a href="javacript:void(0)">Пользователи</a>
+                <a href="javacript:void(0)">Поставщики</a>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="container container-small">
+      <div class="bottom-panel flex jc-sb ai-center small">
+        <p>Результатов: 1-20 из 290</p>
+
+        <div class="pagination-buttons-group flex ai-center">
+          <a class="page-button" href="javascript:void(0)">
+            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.25 0.5L0.75 5L5.25 9.5" stroke="#1B254A" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a class="page current" href="javascript:void(0)">1</a>
+          <a class="page" href="javascript:void(0)">2</a>
+          <a class="page" href="javascript:void(0)">3</a>
+          <a class="page-button" href="javascript:void(0)">
+            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.75 9.5L5.25 5L0.75 0.5" stroke="#1B254A" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="show flex ai-center">
+          <p>Отобразить</p>  
+
+          <form>
+            <div class="__select __select-small __select-count-js" data-state="">
+              <div class="__select__title __select__title-small __select-count-title-js" data-default="Option 0">20</div>
+              <div class="__select__content __select__content-small">
+
+                <input id="singleSelect1" class="__select__input" type="radio" name="singleSelect" />
+                <label for="singleSelect1" class="__select__label __select__label-small __select-count-label-js">10</label>
+                <input id="singleSelect2" class="__select__input" type="radio" name="singleSelect" />
+                <label for="singleSelect2" class="__select__label __select__label-small __select-count-label-js">20</label>
+                <input id="singleSelect3" class="__select__input" type="radio" name="singleSelect" />
+                <label for="singleSelect3" class="__select__label __select__label-small __select-count-label-js">40</label>
+              
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+      
+
+      <div class="selected flex small">
+        <div class="selected-text--js">Отмечено: 0</div>
+        <button class="highlited">Показать только выделенные</button>
+        <button class="reset reset--js">Сбросить всё</button>
+      </div>
+    </div>
+  </section>
+
+
+  <script src="../scripts/main.js"></script>
+
+
+</body>
+
+</html>

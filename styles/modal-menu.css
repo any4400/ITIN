@@ -1,0 +1,106 @@
+
+.modal-menu{
+    display:none;
+}
+.overlay {
+    display:none;
+}
+.modal-menu.active,
+.overlay.active,
+.overlay-datepicker.active {
+   opacity: 1;
+   visibility: visible;
+}
+.overlay-desktop { 
+    display:block;
+ }
+.modal-menu-item {
+    border: none;
+}
+@media(max-width:1199px) {
+    .overlay {
+        display:block;
+    }
+    .overlay-datepicker,
+    .overlay-desktop { 
+        display:none;
+     }
+    .modal-menu {
+        display: block;
+        width: 336px;
+        border-radius: 8px;
+        background-color: var(--white);
+        position: fixed;
+        z-index: 6;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        /* transition: all .2s; */
+        visibility: hidden;
+        opacity: 0;
+    }
+    .modal-menu-header {
+        height: 64px;
+        width: 100%;
+        padding: 19.5px 32px;
+        background-color: var(--light-black);
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+        color: var(--white);
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 25px;
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .modal-menu-item {
+        position: relative;
+        height: 56px;
+        width: 100%;
+        padding: 17px 32px;
+        background-color: var(--white);
+        border-bottom: 1px solid #EFF0F3;
+        font-weight: 400;
+        font-size: 16px;
+    }
+    .modal-menu-item:last-child {
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+    .modal-menu-item a {
+        color: var(--light-black);
+    }
+    .modal-menu-item:active{
+        cursor: pointer;
+        background-color: var(--ghost-gray);
+    }
+    .modal-btn-wrapper {
+        padding: 32px;
+        background-color: var(--white);
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+
+    }
+    .modal-btn-blue {
+        width: 272px;
+        height: 48px;
+    }
+}
+
+@media(max-width:767px) {
+  .overlay-datepicker {
+    display: block;
+    z-index: 7;
+  }
+ .modal-menu {
+    width: 286px;
+ }
+ .modal-btn-wrapper {
+    padding: 16px;
+ }
+ .custom-checkbox>span::before {
+    background-position: center 40%;
+    background-size: 80% 80%;
+  }
+}

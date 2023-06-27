@@ -1,0 +1,50 @@
+/* СТИЛИ МОДАЛЬНОГО ОКНА С РЕЗУЛЬТАТОМ ЗАГРУЗКИ */
+
+.modal-loading-result {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 32px;
+  width: 564px;
+  height: 206px;
+  box-shadow: 0px 4px 10px rgba(10, 22, 58, 0.1);
+  border-radius: 8px;
+  background-color: var(--white);
+  z-index: 6;
+  color: var(--light-black);
+}
+
+.modal-loading-result.active {
+  display: flex;
+}
+
+.modal-loading-result__title {
+  margin-bottom: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.modal-loading-result p {
+  margin-bottom: 32px;
+}
+
+/* МЕДИА-ЗАПРОСЫ */
+
+@media (max-width: 767px) {
+  .modal-loading-result {
+      left: 17px;
+      max-width: none;
+      width: calc(100% - 17px * 2);
+      height: auto;
+      transform: translateY(-50%);
+  }
+
+  .modal-loading-result button {
+      display: block;
+      width: 100%;
+  }
+}

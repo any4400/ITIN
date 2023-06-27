@@ -1,0 +1,61 @@
+/* СТИЛИ МОДАЛЬНОГО ОКНА С ОШИБКОЙ СОХРАНЕНИЯ */
+
+.modal-save-error {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 32px;
+  width: 564px;
+  height: 206px;
+  box-shadow: 0px 4px 10px rgba(10, 22, 58, 0.1);
+  border-radius: 8px;
+  background-color: var(--white);
+  z-index: 6;
+  color: var(--light-black);
+}
+
+.modal-save-error.active {
+  display: flex;
+}
+
+.modal-save-error__title {
+  margin-bottom: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 27px;
+  color: var(--red);
+}
+
+.modal-save-error p {
+  margin-bottom: 32px;
+}
+
+/* МЕДИА-ЗАПРОСЫ */
+
+@media (max-width: 1199px) {
+  .modal-save-error {
+    width: 456px;
+    height: auto;
+  }
+
+  .modal-save-error button {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .modal-save-error__title {
+    color: var(--light-black);
+  }
+
+  .modal-save-error {
+    left: 17px;
+    max-width: none;
+    width: calc(100% - 17px * 2);
+    transform: translateY(-50%);
+  }
+}

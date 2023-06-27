@@ -1,0 +1,26 @@
+/* ТАБЛИЦА */
+
+.users {
+  width: 100%;
+  padding-bottom: 48px;
+}
+
+.users h1 {
+  margin-bottom: 8px;
+}
+
+.users__description {
+  margin-bottom: 24px;
+}
+
+@media (max-width: 1919px) {
+  .users {
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .users {
+    padding-top: 112px;
+  }
+}

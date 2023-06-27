@@ -1,0 +1,62 @@
+/* СТИЛИ МОДАЛЬНОГО ОКНА С ПОДТВЕРЖДЕНИЕМ УДАЛЕНИЯ */
+
+.modal-delete-confirm {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 32px;
+  width: 564px;
+  height: 206px;
+  box-shadow: 0px 4px 10px rgba(10, 22, 58, 0.1);
+  border-radius: 8px;
+  background-color: var(--white);
+  z-index: 6;
+  color: var(--light-black);
+}
+
+.modal-delete-confirm.active {
+  display: flex;
+}
+
+.modal-delete-confirm__title {
+  margin-bottom: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 27px;
+  color: var(--red);
+}
+
+.modal-delete-confirm p {
+  margin-bottom: 32px;
+}
+
+.modal-delete-confirm__button-group {
+  width: 100%;
+  gap: 16px;
+}
+
+.modal-delete-confirm button {
+  display: block;
+  width: 100%;
+}
+
+/* МЕДИА-ЗАПРОСЫ */
+
+@media (max-width: 1199px) {
+  .modal-delete-confirm__title {
+    color: var(--light-black);
+  }
+}
+
+@media (max-width: 767px) {
+  .modal-delete-confirm {
+    left: 17px;
+    max-width: none;
+    width: calc(100% - 17px * 2);
+    height: auto;
+    transform: translateY(-50%);
+  }
+}

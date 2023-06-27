@@ -1,0 +1,316 @@
+.btn_filters {
+  display: none;
+}
+.__description {
+  margin-bottom: 24px;
+}
+.__filters {
+  width: 469px;
+  min-width: 469px;
+}
+.__filters-title {
+  padding: 13px 16px;
+}
+ .__filters>.__select__title::after {
+  content:'';
+  display: block;
+  width: 24px;
+  height: 24px;
+  transform: translate(2px, -50%) rotate(0deg);
+  background-color: white;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3 6.74997H13.6289C13.7841 7.18849 14.0714 7.56813 14.4512 7.83664C14.8311 8.10515 15.2848 8.24933 15.75 8.24933C16.2152 8.24933 16.6689 8.10515 17.0488 7.83664C17.4286 7.56813 17.7159 7.18849 17.8711 6.74997H21C21.1989 6.74997 21.3897 6.67095 21.5303 6.5303C21.671 6.38965 21.75 6.19888 21.75 5.99997C21.75 5.80106 21.671 5.61029 21.5303 5.46964C21.3897 5.32899 21.1989 5.24997 21 5.24997H17.8711C17.7159 4.81145 17.4286 4.43181 17.0488 4.1633C16.6689 3.89479 16.2152 3.75061 15.75 3.75061C15.2848 3.75061 14.8311 3.89479 14.4512 4.1633C14.0714 4.43181 13.7841 4.81145 13.6289 5.24997H3C2.80109 5.24997 2.61032 5.32899 2.46967 5.46964C2.32902 5.61029 2.25 5.80106 2.25 5.99997C2.25 6.19888 2.32902 6.38965 2.46967 6.5303C2.61032 6.67095 2.80109 6.74997 3 6.74997ZM21 17.25H17.8711C17.7159 16.8114 17.4286 16.4318 17.0488 16.1633C16.6689 15.8948 16.2152 15.7506 15.75 15.7506C15.2848 15.7506 14.8311 15.8948 14.4512 16.1633C14.0714 16.4318 13.7841 16.8114 13.6289 17.25H3C2.80109 17.25 2.61032 17.329 2.46967 17.4696C2.32902 17.6103 2.25 17.8011 2.25 18C2.25 18.1989 2.32902 18.3896 2.46967 18.5303C2.61032 18.671 2.80109 18.75 3 18.75H13.6289C13.7841 19.1885 14.0714 19.5681 14.4512 19.8366C14.8311 20.1052 15.2848 20.2493 15.75 20.2493C16.2152 20.2493 16.6689 20.1052 17.0488 19.8366C17.4286 19.5681 17.7159 19.1885 17.8711 18.75H21C21.1989 18.75 21.3897 18.671 21.5303 18.5303C21.671 18.3896 21.75 18.1989 21.75 18C21.75 17.8011 21.671 17.6103 21.5303 17.4696C21.3897 17.329 21.1989 17.25 21 17.25ZM21 11.25H10.3711C10.2159 10.8114 9.92861 10.4318 9.54876 10.1633C9.16891 9.89479 8.71517 9.75061 8.25 9.75061C7.78483 9.75061 7.33109 9.89479 6.95124 10.1633C6.57139 10.4318 6.2841 10.8114 6.12891 11.25H3C2.80109 11.25 2.61032 11.329 2.46967 11.4696C2.32902 11.6103 2.25 11.8011 2.25 12C2.25 12.1989 2.32902 12.3896 2.46967 12.5303C2.61032 12.671 2.80109 12.75 3 12.75H6.12891C6.2841 13.1885 6.57139 13.5681 6.95124 13.8366C7.33109 14.1052 7.78483 14.2493 8.25 14.2493C8.71517 14.2493 9.16891 14.1052 9.54876 13.8366C9.92861 13.5681 10.2159 13.1885 10.3711 12.75H21C21.1989 12.75 21.3897 12.671 21.5303 12.5303C21.671 12.3896 21.75 12.1989 21.75 12C21.75 11.8011 21.671 11.6103 21.5303 11.4696C21.3897 11.329 21.1989 11.25 21 11.25Z' fill='%23C6CBD6'/%3e%3c/svg%3e ");
+}
+
+.__filters.__select[data-state=active]>.__select__title::after {
+  transform: translate(2px, -50%) rotate(0deg);
+}
+
+.__filters_content {
+  width: 558px;
+  height: 488px;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.__filters_content_filter {
+  width: 200px;
+  padding: 16px;
+  border-right: 1px solid #EFF0F3;
+}
+.filters_wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.filter_title {
+  padding-left: 8px;
+  padding-bottom: 8px;
+  color:black;
+  font-weight: 600;
+}
+.__filter .__select {
+  height: 32px;
+}
+.__select__title__filter {
+  padding: 10px 8px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+}
+.__select__title__filter span {
+  vertical-align: bottom;
+  margin-right: 25px;
+}
+
+.__select__title__filter::before, .__select__title__filter::after {
+  top:17px;
+  right: 13px;
+}
+.btn-wrapper {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+button.btn-confirm {
+  min-width: 100%;
+  width: 100%;
+}
+button.reset__filters {
+  width: 100%;
+  min-width: 100%;
+  height: 19px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--blue);
+}
+
+.__filters_content_search {
+  width: 358px;
+}
+.__filters__search-wrapper {
+  position: relative;
+  padding: 16px;
+}
+.__filters_content_search .search-checkbox-wrapper {
+  /* height: 400px; */
+  max-height: 400px;
+}
+.__filters_content_search .__select__label {
+  padding: 10px 24px;
+}
+.__filters_content_search span {
+  /* height: 20px;
+  line-height: 20px; */
+  vertical-align: top;
+}
+
+.__filters_content_search input[type="search"] {
+  padding: 8px 44px;
+}
+
+.__download {
+  width: 272px;
+  min-width: 272px;
+}
+.__download__title {
+  padding: 13px 16px;
+  background-color: var(--blue);
+  color: white;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: solid 1px #C6CBD6;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.button-download {
+  position: absolute;
+  top: 15px;
+  right: 16px;
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3 7L9 13L15 7' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+}
+.button-download.btn-active {
+  transform: rotate(180deg);
+}
+.__select-search {
+  min-width: 400px;
+}
+.__search-wrapper {
+  position: relative;
+  width: 100%;
+  height: 72px;
+  padding: 16px;
+}
+.__search-clear-btn {
+  display: none;
+  position: absolute;
+  padding: 0;
+  min-width: auto !important;
+  top: 16px;
+  right: 30px;
+  width: 12px;
+  height: 12px;
+}
+.__select__content-search {
+  max-height: 500px;
+}
+.btn-active {
+  display: block;
+}
+.__select__year .__select__content {
+  max-height: 230px;
+
+}
+.__select__year .__select__content .wrapper {
+  overflow-y: scroll;
+  margin-right: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  max-height: 214px;
+}
+.__select__month .__select__content {
+  max-height: 336px;
+}
+.__select__month .__select__content .wrapper {
+  overflow-y: scroll;
+  margin-right: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  max-height: 320px;
+}
+
+@media (max-width: 1919px) {
+  /* .suppliers__top-panel button {
+    min-width: 272px;
+  } */
+  .__filters {
+    width: 262px;
+    min-width: 262px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .container-small {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+  .top-panel .__filters {
+    display: none;
+  }
+  .__download__content {
+    display: block;
+  }
+  .__description {
+    margin-bottom: 32px;
+  }
+
+  button.btn_filters {
+    display: block;
+    min-width: 48px;
+    width: 48px;
+    height: 48px;
+    background-color: #606E8C;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3 6.74997H13.6289C13.7841 7.18849 14.0714 7.56813 14.4512 7.83664C14.8311 8.10515 15.2848 8.24933 15.75 8.24933C16.2152 8.24933 16.6689 8.10515 17.0488 7.83664C17.4286 7.56813 17.7159 7.18849 17.8711 6.74997H21C21.1989 6.74997 21.3897 6.67095 21.5303 6.5303C21.671 6.38965 21.75 6.19888 21.75 5.99997C21.75 5.80106 21.671 5.61029 21.5303 5.46964C21.3897 5.32899 21.1989 5.24997 21 5.24997H17.8711C17.7159 4.81145 17.4286 4.43181 17.0488 4.1633C16.6689 3.89479 16.2152 3.75061 15.75 3.75061C15.2848 3.75061 14.8311 3.89479 14.4512 4.1633C14.0714 4.43181 13.7841 4.81145 13.6289 5.24997H3C2.80109 5.24997 2.61032 5.32899 2.46967 5.46964C2.32902 5.61029 2.25 5.80106 2.25 5.99997C2.25 6.19888 2.32902 6.38965 2.46967 6.5303C2.61032 6.67095 2.80109 6.74997 3 6.74997ZM21 17.25H17.8711C17.7159 16.8114 17.4286 16.4318 17.0488 16.1633C16.6689 15.8948 16.2152 15.7506 15.75 15.7506C15.2848 15.7506 14.8311 15.8948 14.4512 16.1633C14.0714 16.4318 13.7841 16.8114 13.6289 17.25H3C2.80109 17.25 2.61032 17.329 2.46967 17.4696C2.32902 17.6103 2.25 17.8011 2.25 18C2.25 18.1989 2.32902 18.3896 2.46967 18.5303C2.61032 18.671 2.80109 18.75 3 18.75H13.6289C13.7841 19.1885 14.0714 19.5681 14.4512 19.8366C14.8311 20.1052 15.2848 20.2493 15.75 20.2493C16.2152 20.2493 16.6689 20.1052 17.0488 19.8366C17.4286 19.5681 17.7159 19.1885 17.8711 18.75H21C21.1989 18.75 21.3897 18.671 21.5303 18.5303C21.671 18.3896 21.75 18.1989 21.75 18C21.75 17.8011 21.671 17.6103 21.5303 17.4696C21.3897 17.329 21.1989 17.25 21 17.25ZM21 11.25H10.3711C10.2159 10.8114 9.92861 10.4318 9.54876 10.1633C9.16891 9.89479 8.71517 9.75061 8.25 9.75061C7.78483 9.75061 7.33109 9.89479 6.95124 10.1633C6.57139 10.4318 6.2841 10.8114 6.12891 11.25H3C2.80109 11.25 2.61032 11.329 2.46967 11.4696C2.32902 11.6103 2.25 11.8011 2.25 12C2.25 12.1989 2.32902 12.3896 2.46967 12.5303C2.61032 12.671 2.80109 12.75 3 12.75H6.12891C6.2841 13.1885 6.57139 13.5681 6.95124 13.8366C7.33109 14.1052 7.78483 14.2493 8.25 14.2493C8.71517 14.2493 9.16891 14.1052 9.54876 13.8366C9.92861 13.5681 10.2159 13.1885 10.3711 12.75H21C21.1989 12.75 21.3897 12.671 21.5303 12.5303C21.671 12.3896 21.75 12.1989 21.75 12C21.75 11.8011 21.671 11.6103 21.5303 11.4696C21.3897 11.329 21.1989 11.25 21 11.25Z' fill='white'/%3e%3c/svg%3e ");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .__download {
+    width: 304px;
+    min-width: 304px;
+  }
+  .__download__title {
+    padding: 13px 24px;
+  }
+  .__filter .__select {
+    height: 48px;
+  }
+  .__select__title__filter::before, .__select__title__filter::after {
+    top:24px;
+  }
+  .__select__content-search {
+    display: block;
+  }
+  .search-checkbox-wrapper {
+    max-height: 422px;
+  }
+  .__select__year .__select__content {
+    display: block;
+  }
+  .__select__month .__select__content {
+    display: block;
+  }
+  .__select-search {
+    /* width: auto; */
+    max-width: 717px;
+  }
+  .__select__year {
+    max-width: 182px;
+  }
+  .__select__month {
+    max-width: 182px;
+  }
+}
+
+@media (max-width: 767px) {
+  .__description {
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .__download {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .tariff-menu {
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .tariff-menu-header {
+    border-radius: 0;
+  }
+
+  .tariff-menu {
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+  }
+
+  .tariff-btn-wrapper {
+    border-radius: 0;
+  }
+
+  .tariff-btn-blue {
+    width: 100%;
+  }
+
+  .tariff-btn-white {
+    display: block;
+    width: 100%;
+    height: 48px;
+    margin-top: 8px;
+  }
+  .__select-search {
+    min-width: initial;
+  }
+   .__select__year {
+    max-width: 48%;
+    margin: 0;
+  }
+  .__select__month {
+    max-width: 48%;
+    margin: 0;
+  } 
+}

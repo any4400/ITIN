@@ -1,0 +1,26 @@
+/* ТАБЛИЦА */
+
+.suppliers {
+  width: 100%;
+  padding-bottom: 48px;
+}
+
+.suppliers h1 {
+  margin-bottom: 8px;
+}
+
+.suppliers__description {
+  margin-bottom: 24px;
+}
+
+@media (max-width: 1919px) {
+  .suppliers {
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .suppliers {
+    padding-top: 112px;
+  }
+}
